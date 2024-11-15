@@ -1,0 +1,85 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Mon Dec 19 13:35:00 2022
+[*]
+[dumpfile] "/home/thk/SVNR_FPGA/svnr_vhdl_FPGA_v3_16BitAddr/waveform.ghw"
+[dumpfile_mtime] "Mon Dec 19 13:30:27 2022"
+[dumpfile_size] 330359
+[savefile] "/home/thk/SVNR_FPGA/svnr_vhdl_FPGA_v3_16BitAddr/gtkwave_config.gtkw"
+[timestart] 0
+[size] 1848 911
+[pos] 79 58
+*-33.522575 28930000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.svnr_tb.
+[treeopen] top.svnr_tb.dut.
+[treeopen] top.svnr_tb.dut.svnr_mem_1.
+[treeopen] top.svnr_tb.dut.svnr_mem_1.mem_sig.
+[sst_width] 393
+[signals_width] 392
+[sst_expanded] 1
+[sst_vpaned_height] 383
+@28
+top.svnr_tb.dut.clkreset_1.external_rstn
+top.svnr_tb.dut.clkreset_1.reset_init
+@22
+#{top.svnr_tb.btn[4:0]} top.svnr_tb.btn[4] top.svnr_tb.btn[3] top.svnr_tb.btn[2] top.svnr_tb.btn[1] top.svnr_tb.btn[0]
+@28
+#{top.svnr_tb.sw[1:0]} top.svnr_tb.sw[1] top.svnr_tb.sw[0]
+top.svnr_tb.clk
+top.svnr_tb.beep
+@420
+top.svnr_tb.dut.steuerautomat_n_0.steuerautomat_zustand
+@22
++{programmzaehler q[15:0]} #{top.svnr_tb.dut.programmzaehler.q[15:0]} top.svnr_tb.dut.programmzaehler.q[15] top.svnr_tb.dut.programmzaehler.q[14] top.svnr_tb.dut.programmzaehler.q[13] top.svnr_tb.dut.programmzaehler.q[12] top.svnr_tb.dut.programmzaehler.q[11] top.svnr_tb.dut.programmzaehler.q[10] top.svnr_tb.dut.programmzaehler.q[9] top.svnr_tb.dut.programmzaehler.q[8] top.svnr_tb.dut.programmzaehler.q[7] top.svnr_tb.dut.programmzaehler.q[6] top.svnr_tb.dut.programmzaehler.q[5] top.svnr_tb.dut.programmzaehler.q[4] top.svnr_tb.dut.programmzaehler.q[3] top.svnr_tb.dut.programmzaehler.q[2] top.svnr_tb.dut.programmzaehler.q[1] top.svnr_tb.dut.programmzaehler.q[0]
++{befehlsregister_opcode[7:0]} #{top.svnr_tb.dut.befehlsregister_opcode.q[7:0]} top.svnr_tb.dut.befehlsregister_opcode.q[7] top.svnr_tb.dut.befehlsregister_opcode.q[6] top.svnr_tb.dut.befehlsregister_opcode.q[5] top.svnr_tb.dut.befehlsregister_opcode.q[4] top.svnr_tb.dut.befehlsregister_opcode.q[3] top.svnr_tb.dut.befehlsregister_opcode.q[2] top.svnr_tb.dut.befehlsregister_opcode.q[1] top.svnr_tb.dut.befehlsregister_opcode.q[0]
+@200
+-Mnemonic:
+@2022
+^1 /home/thk/SVNR_FPGA/svnr_vhdl_FPGA_v3_16BitAddr/translate_mnemonics.txt
++{befehlsregister_opcode[7:0]} #{top.svnr_tb.dut.befehlsregister_opcode.q[7:0]} top.svnr_tb.dut.befehlsregister_opcode.q[7] top.svnr_tb.dut.befehlsregister_opcode.q[6] top.svnr_tb.dut.befehlsregister_opcode.q[5] top.svnr_tb.dut.befehlsregister_opcode.q[4] top.svnr_tb.dut.befehlsregister_opcode.q[3] top.svnr_tb.dut.befehlsregister_opcode.q[2] top.svnr_tb.dut.befehlsregister_opcode.q[1] top.svnr_tb.dut.befehlsregister_opcode.q[0]
+@22
++{befehlsregister_operand_n[7:0]} #{top.svnr_tb.dut.befehlsregister_operand_n.q[7:0]} top.svnr_tb.dut.befehlsregister_operand_n.q[7] top.svnr_tb.dut.befehlsregister_operand_n.q[6] top.svnr_tb.dut.befehlsregister_operand_n.q[5] top.svnr_tb.dut.befehlsregister_operand_n.q[4] top.svnr_tb.dut.befehlsregister_operand_n.q[3] top.svnr_tb.dut.befehlsregister_operand_n.q[2] top.svnr_tb.dut.befehlsregister_operand_n.q[1] top.svnr_tb.dut.befehlsregister_operand_n.q[0]
+@200
+-Akku
+@28
+top.svnr_tb.dut.akku.clr
+top.svnr_tb.dut.akku.clock_t
+@22
+#{top.svnr_tb.dut.akku.data[15:0]} top.svnr_tb.dut.akku.data[15] top.svnr_tb.dut.akku.data[14] top.svnr_tb.dut.akku.data[13] top.svnr_tb.dut.akku.data[12] top.svnr_tb.dut.akku.data[11] top.svnr_tb.dut.akku.data[10] top.svnr_tb.dut.akku.data[9] top.svnr_tb.dut.akku.data[8] top.svnr_tb.dut.akku.data[7] top.svnr_tb.dut.akku.data[6] top.svnr_tb.dut.akku.data[5] top.svnr_tb.dut.akku.data[4] top.svnr_tb.dut.akku.data[3] top.svnr_tb.dut.akku.data[2] top.svnr_tb.dut.akku.data[1] top.svnr_tb.dut.akku.data[0]
+@28
+top.svnr_tb.dut.akku.load
+@22
++{akku_q[15:0]} #{top.svnr_tb.dut.akku.q[15:0]} top.svnr_tb.dut.akku.q[15] top.svnr_tb.dut.akku.q[14] top.svnr_tb.dut.akku.q[13] top.svnr_tb.dut.akku.q[12] top.svnr_tb.dut.akku.q[11] top.svnr_tb.dut.akku.q[10] top.svnr_tb.dut.akku.q[9] top.svnr_tb.dut.akku.q[8] top.svnr_tb.dut.akku.q[7] top.svnr_tb.dut.akku.q[6] top.svnr_tb.dut.akku.q[5] top.svnr_tb.dut.akku.q[4] top.svnr_tb.dut.akku.q[3] top.svnr_tb.dut.akku.q[2] top.svnr_tb.dut.akku.q[1] top.svnr_tb.dut.akku.q[0]
+@200
+-Hilfsregister
+@22
+#{top.svnr_tb.dut.hilfsregister_n.q[15:0]} top.svnr_tb.dut.hilfsregister_n.q[15] top.svnr_tb.dut.hilfsregister_n.q[14] top.svnr_tb.dut.hilfsregister_n.q[13] top.svnr_tb.dut.hilfsregister_n.q[12] top.svnr_tb.dut.hilfsregister_n.q[11] top.svnr_tb.dut.hilfsregister_n.q[10] top.svnr_tb.dut.hilfsregister_n.q[9] top.svnr_tb.dut.hilfsregister_n.q[8] top.svnr_tb.dut.hilfsregister_n.q[7] top.svnr_tb.dut.hilfsregister_n.q[6] top.svnr_tb.dut.hilfsregister_n.q[5] top.svnr_tb.dut.hilfsregister_n.q[4] top.svnr_tb.dut.hilfsregister_n.q[3] top.svnr_tb.dut.hilfsregister_n.q[2] top.svnr_tb.dut.hilfsregister_n.q[1] top.svnr_tb.dut.hilfsregister_n.q[0]
+@28
+top.svnr_tb.dut.hilfsregister_n.load
+@200
+-Output
+@22
+#{top.svnr_tb.zehner[3:0]} top.svnr_tb.zehner[3] top.svnr_tb.zehner[2] top.svnr_tb.zehner[1] top.svnr_tb.zehner[0]
+#{top.svnr_tb.dut.einer[3:0]} top.svnr_tb.dut.einer[3] top.svnr_tb.dut.einer[2] top.svnr_tb.dut.einer[1] top.svnr_tb.dut.einer[0]
+@28
+top.svnr_tb.dut.svnr_mem_1.display_top_1.ws2812_out
+@200
+-Programmspeicher
+@22
+#{top.svnr_tb.dut.svnr_mem_1.ram_address[7:0]} top.svnr_tb.dut.svnr_mem_1.ram_address[7] top.svnr_tb.dut.svnr_mem_1.ram_address[6] top.svnr_tb.dut.svnr_mem_1.ram_address[5] top.svnr_tb.dut.svnr_mem_1.ram_address[4] top.svnr_tb.dut.svnr_mem_1.ram_address[3] top.svnr_tb.dut.svnr_mem_1.ram_address[2] top.svnr_tb.dut.svnr_mem_1.ram_address[1] top.svnr_tb.dut.svnr_mem_1.ram_address[0]
+#{top.svnr_tb.dut.svnr_mem_1.rdata[15:0]} top.svnr_tb.dut.svnr_mem_1.rdata[15] top.svnr_tb.dut.svnr_mem_1.rdata[14] top.svnr_tb.dut.svnr_mem_1.rdata[13] top.svnr_tb.dut.svnr_mem_1.rdata[12] top.svnr_tb.dut.svnr_mem_1.rdata[11] top.svnr_tb.dut.svnr_mem_1.rdata[10] top.svnr_tb.dut.svnr_mem_1.rdata[9] top.svnr_tb.dut.svnr_mem_1.rdata[8] top.svnr_tb.dut.svnr_mem_1.rdata[7] top.svnr_tb.dut.svnr_mem_1.rdata[6] top.svnr_tb.dut.svnr_mem_1.rdata[5] top.svnr_tb.dut.svnr_mem_1.rdata[4] top.svnr_tb.dut.svnr_mem_1.rdata[3] top.svnr_tb.dut.svnr_mem_1.rdata[2] top.svnr_tb.dut.svnr_mem_1.rdata[1] top.svnr_tb.dut.svnr_mem_1.rdata[0]
+@28
+top.svnr_tb.dut.svnr_mem_1.wnr
+top.svnr_tb.dut.svnr_mem_1.addrstrb
+@22
++{Pixel 63: 03FF} #{top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][15:0]} top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][15] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][14] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][13] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][12] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][11] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][10] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][9] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][8] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][7] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][6] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][5] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][4] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][3] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][2] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][1] top.svnr_tb.dut.svnr_mem_1.mem_sig[1023][0]
++{a} #{top.svnr_tb.dut.svnr_mem_1.mem_sig[1][15:0]} top.svnr_tb.dut.svnr_mem_1.mem_sig[1][15] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][14] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][13] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][12] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][11] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][10] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][9] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][8] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][7] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][6] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][5] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][4] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][3] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][2] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][1] top.svnr_tb.dut.svnr_mem_1.mem_sig[1][0]
+@23
++{b} #{top.svnr_tb.dut.svnr_mem_1.mem_sig[2][15:0]} top.svnr_tb.dut.svnr_mem_1.mem_sig[2][15] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][14] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][13] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][12] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][11] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][10] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][9] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][8] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][7] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][6] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][5] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][4] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][3] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][2] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][1] top.svnr_tb.dut.svnr_mem_1.mem_sig[2][0]
+@22
++{bit_0_von a} #{top.svnr_tb.dut.svnr_mem_1.mem_sig[3][15:0]} top.svnr_tb.dut.svnr_mem_1.mem_sig[3][15] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][14] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][13] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][12] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][11] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][10] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][9] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][8] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][7] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][6] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][5] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][4] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][3] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][2] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][1] top.svnr_tb.dut.svnr_mem_1.mem_sig[3][0]
++{summe} #{top.svnr_tb.dut.svnr_mem_1.mem_sig[4][15:0]} top.svnr_tb.dut.svnr_mem_1.mem_sig[4][15] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][14] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][13] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][12] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][11] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][10] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][9] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][8] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][7] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][6] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][5] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][4] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][3] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][2] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][1] top.svnr_tb.dut.svnr_mem_1.mem_sig[4][0]
++{i} #{top.svnr_tb.dut.svnr_mem_1.mem_sig[5][15:0]} top.svnr_tb.dut.svnr_mem_1.mem_sig[5][15] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][14] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][13] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][12] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][11] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][10] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][9] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][8] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][7] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][6] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][5] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][4] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][3] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][2] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][1] top.svnr_tb.dut.svnr_mem_1.mem_sig[5][0]
+[pattern_trace] 1
+[pattern_trace] 0

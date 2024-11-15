@@ -1,0 +1,138 @@
+\doxysection{main/src/breakpointmanager.c-\/\+Dateireferenz}
+\hypertarget{breakpointmanager_8c}{}\label{breakpointmanager_8c}\index{main/src/breakpointmanager.c@{main/src/breakpointmanager.c}}
+{\ttfamily \#include "{}../includes/breakpointmanager.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für breakpointmanager.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{breakpointmanager_8c_a47cc35b4beb25fa032190cd6b67d0b29}{add\+Breakpoint}} (\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top, unsigned long long address)
+\begin{DoxyCompactList}\small\item\em \doxylink{breakpointmanager_8c_a47cc35b4beb25fa032190cd6b67d0b29}{add\+Breakpoint(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, unsigned long long address)}\+: fügt einen neuen \doxylink{structBreakpoint}{Breakpoint} an die verkettete Liste. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{breakpointmanager_8c_aefa019ace866c1b96a5c4aca7aea574c}{remove\+Breakpoint}} (\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top, unsigned long long address)
+\begin{DoxyCompactList}\small\item\em \doxylink{breakpointmanager_8c_aefa019ace866c1b96a5c4aca7aea574c}{remove\+Breakpoint(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, unsigned long long address)}\+: löscht einen \doxylink{structBreakpoint}{Breakpoint} aus der verketteten Liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{breakpointmanager_8c_a91a516015143536836120d3e62b1c3d4}{get\+Breakpoints}} (\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top, char \texorpdfstring{$\ast$}{*}ret, size\+\_\+t ret\+Size)
+\begin{DoxyCompactList}\small\item\em \doxylink{breakpointmanager_8c_a91a516015143536836120d3e62b1c3d4}{get\+Breakpoints(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, char\texorpdfstring{$\ast$}{*} ret, size\+\_\+t ret\+Size)}\+: schreibt die Breakpoints in die übergebene ret Variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{breakpointmanager_8c_a6d1c80819d541e96984437450de8f742}{get\+Breakpoint}} (\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top, int index)
+\begin{DoxyCompactList}\small\item\em \doxylink{breakpointmanager_8c_a6d1c80819d541e96984437450de8f742}{get\+Breakpoint(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, int index)}\+: gibt einen bestimmten \doxylink{structBreakpoint}{Breakpoint} in der Liste zurück. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{breakpointmanager_8c_a181c06c3f096d959fd2b3d2cf65e3b8f}{mark\+Breakpoints}} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, \mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}breakpoints)
+\begin{DoxyCompactList}\small\item\em \doxylink{breakpointmanager_8c_a181c06c3f096d959fd2b3d2cf65e3b8f}{mark\+Breakpoints(\+WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, Breakpoint \texorpdfstring{$\ast$}{*}breakpoints)}\+: markiert die Breakpoints \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{breakpointmanager_8c_af9076f30af1c18c2fc0b255b5206b0dd}{del\+List}} (\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top)
+\begin{DoxyCompactList}\small\item\em \doxylink{breakpointmanager_8c_af9076f30af1c18c2fc0b255b5206b0dd}{del\+List(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top)}\+: löscht die verketteten Liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{breakpointmanager_8c_a47cc35b4beb25fa032190cd6b67d0b29}\label{breakpointmanager_8c_a47cc35b4beb25fa032190cd6b67d0b29} 
+\index{breakpointmanager.c@{breakpointmanager.c}!addBreakpoint@{addBreakpoint}}
+\index{addBreakpoint@{addBreakpoint}!breakpointmanager.c@{breakpointmanager.c}}
+\doxysubsubsection{\texorpdfstring{addBreakpoint()}{addBreakpoint()}}
+{\footnotesize\ttfamily int add\+Breakpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{top,  }\item[{unsigned long long}]{address }\end{DoxyParamCaption})}
+
+
+
+\doxylink{breakpointmanager_8c_a47cc35b4beb25fa032190cd6b67d0b29}{add\+Breakpoint(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, unsigned long long address)}\+: fügt einen neuen \doxylink{structBreakpoint}{Breakpoint} an die verkettete Liste. 
+
+Im Parameter wird der Kopf der verketteten Liste und die Adresse an welcher der neue \doxylink{structBreakpoint}{Breakpoint} gesetzt wurde übergeben. Es wird dann bis zum letztem Objekt der verketteten Liste iteriert und an daran ein neuer \doxylink{structBreakpoint}{Breakpoint} gesetzt, welcher als Adresse den im Parameter übergebenen Wert erhält.
+
+
+\begin{DoxyParams}{Parameter}
+{\em top} & Das Kopfelement der verketteten Liste. \\
+\hline
+{\em address} & Adresse an der ein \doxylink{structBreakpoint}{Breakpoint} gesetzt werden soll. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Gibt durch eine Zahl 1, 2 oder 0 an ob der \doxylink{structBreakpoint}{Breakpoint} an die verkettete Liste gehangen wurde oder nicht. 
+\end{DoxyReturn}
+\Hypertarget{breakpointmanager_8c_af9076f30af1c18c2fc0b255b5206b0dd}\label{breakpointmanager_8c_af9076f30af1c18c2fc0b255b5206b0dd} 
+\index{breakpointmanager.c@{breakpointmanager.c}!delList@{delList}}
+\index{delList@{delList}!breakpointmanager.c@{breakpointmanager.c}}
+\doxysubsubsection{\texorpdfstring{delList()}{delList()}}
+{\footnotesize\ttfamily void del\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{top }\end{DoxyParamCaption})}
+
+
+
+\doxylink{breakpointmanager_8c_af9076f30af1c18c2fc0b255b5206b0dd}{del\+List(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top)}\+: löscht die verketteten Liste. 
+
+Im Parameter wird der Kopf der verketteten Liste, welche gelöscht werden soll übergeben.
+
+
+\begin{DoxyParams}{Parameter}
+{\em top} & Das Kopfelement der verketteten Liste. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{breakpointmanager_8c_a6d1c80819d541e96984437450de8f742}\label{breakpointmanager_8c_a6d1c80819d541e96984437450de8f742} 
+\index{breakpointmanager.c@{breakpointmanager.c}!getBreakpoint@{getBreakpoint}}
+\index{getBreakpoint@{getBreakpoint}!breakpointmanager.c@{breakpointmanager.c}}
+\doxysubsubsection{\texorpdfstring{getBreakpoint()}{getBreakpoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*} get\+Breakpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{top,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+\doxylink{breakpointmanager_8c_a6d1c80819d541e96984437450de8f742}{get\+Breakpoint(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, int index)}\+: gibt einen bestimmten \doxylink{structBreakpoint}{Breakpoint} in der Liste zurück. 
+
+Im Parameter wird der Kopf der verketteten Liste und der Index übergeben. Es wird dann bis zum Index durch die Liste iteriert und der \doxylink{structBreakpoint}{Breakpoint} an der Stelle von Index zurückgegeben.
+
+
+\begin{DoxyParams}{Parameter}
+{\em top} & Das Kopfelement der verketteten Liste. \\
+\hline
+{\em index} & Das wie vielte Objekt in der verketteten Liste ausgegeben werden soll. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+gibt einen Pointer auf den \doxylink{structBreakpoint}{Breakpoint} zurück. 
+\end{DoxyReturn}
+\Hypertarget{breakpointmanager_8c_a91a516015143536836120d3e62b1c3d4}\label{breakpointmanager_8c_a91a516015143536836120d3e62b1c3d4} 
+\index{breakpointmanager.c@{breakpointmanager.c}!getBreakpoints@{getBreakpoints}}
+\index{getBreakpoints@{getBreakpoints}!breakpointmanager.c@{breakpointmanager.c}}
+\doxysubsubsection{\texorpdfstring{getBreakpoints()}{getBreakpoints()}}
+{\footnotesize\ttfamily void get\+Breakpoints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{top,  }\item[{char \texorpdfstring{$\ast$}{*}}]{ret,  }\item[{size\+\_\+t}]{ret\+Size }\end{DoxyParamCaption})}
+
+
+
+\doxylink{breakpointmanager_8c_a91a516015143536836120d3e62b1c3d4}{get\+Breakpoints(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, char\texorpdfstring{$\ast$}{*} ret, size\+\_\+t ret\+Size)}\+: schreibt die Breakpoints in die übergebene ret Variable. 
+
+Im Parameter wird der Kopf der verketteten Liste und das String an welches die \doxylink{structBreakpoint}{Breakpoint} Adressen angehangen werden sollen übergeben.
+
+
+\begin{DoxyParams}{Parameter}
+{\em top} & Das Kopfelement der verketteten Liste. \\
+\hline
+{\em ret} & String an welches die Adressen der Breakpoints in der verketteten Liste angehangen werden sollen. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{breakpointmanager_8c_a181c06c3f096d959fd2b3d2cf65e3b8f}\label{breakpointmanager_8c_a181c06c3f096d959fd2b3d2cf65e3b8f} 
+\index{breakpointmanager.c@{breakpointmanager.c}!markBreakpoints@{markBreakpoints}}
+\index{markBreakpoints@{markBreakpoints}!breakpointmanager.c@{breakpointmanager.c}}
+\doxysubsubsection{\texorpdfstring{markBreakpoints()}{markBreakpoints()}}
+{\footnotesize\ttfamily void mark\+Breakpoints (\begin{DoxyParamCaption}\item[{WINDOW \texorpdfstring{$\ast$}{*}}]{win,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{start\+\_\+line,  }\item[{int}]{num\+\_\+lines,  }\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}}]{breakpoints }\end{DoxyParamCaption})}
+
+
+
+\doxylink{breakpointmanager_8c_a181c06c3f096d959fd2b3d2cf65e3b8f}{mark\+Breakpoints(\+WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, Breakpoint \texorpdfstring{$\ast$}{*}breakpoints)}\+: markiert die Breakpoints 
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000007}{Noch zu erledigen}}]Diese Funktion funktioniert nicht und wird auch nicht gebraucht im Moment. Kann also gelöscht werden! \end{DoxyRefDesc}
+\Hypertarget{breakpointmanager_8c_aefa019ace866c1b96a5c4aca7aea574c}\label{breakpointmanager_8c_aefa019ace866c1b96a5c4aca7aea574c} 
+\index{breakpointmanager.c@{breakpointmanager.c}!removeBreakpoint@{removeBreakpoint}}
+\index{removeBreakpoint@{removeBreakpoint}!breakpointmanager.c@{breakpointmanager.c}}
+\doxysubsubsection{\texorpdfstring{removeBreakpoint()}{removeBreakpoint()}}
+{\footnotesize\ttfamily int remove\+Breakpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{top,  }\item[{unsigned long long}]{address }\end{DoxyParamCaption})}
+
+
+
+\doxylink{breakpointmanager_8c_aefa019ace866c1b96a5c4aca7aea574c}{remove\+Breakpoint(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, unsigned long long address)}\+: löscht einen \doxylink{structBreakpoint}{Breakpoint} aus der verketteten Liste. 
+
+Im Parameter wird der Kopf der verketteten Liste und die Adresse welche aus der verketteten Liste gelöscht werden soll übergeben. Es wird dann bis zum letztem Objekt der verketteten Liste iteriert und die übergebene Adresse aus der verketteten Liste gelöscht.
+
+
+\begin{DoxyParams}{Parameter}
+{\em top} & Das Kopfelement der verketteten Liste. \\
+\hline
+{\em address} & Adresse von welcher ein \doxylink{structBreakpoint}{Breakpoint} gelöscht werden soll. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Gibt durch eine Zahl 1, 2 oder 0 an ob der \doxylink{structBreakpoint}{Breakpoint} aus der verkettete Liste gelöscht wurde oder nicht. 
+\end{DoxyReturn}

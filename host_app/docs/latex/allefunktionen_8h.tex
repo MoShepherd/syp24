@@ -1,0 +1,163 @@
+\doxysection{main/includes/allefunktionen.h-\/\+Dateireferenz}
+\hypertarget{allefunktionen_8h}{}\label{allefunktionen_8h}\index{main/includes/allefunktionen.h@{main/includes/allefunktionen.h}}
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
+% FIG 0
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}~1024
+\item 
+\#define \mbox{\hyperlink{allefunktionen_8h_a5ffebe4076a44b3db27985c319e06ffe}{COLOR\+\_\+\+MATRIX\+\_\+\+GREEN}}~8
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}\+: Öffnet bei Aufruf den Dateimanager des Host PCs \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{allefunktionen_8h_ac7702553206975695c62a1b3a716f10c}{get\+\_\+filepath}} ()
+\item 
+void \mbox{\hyperlink{allefunktionen_8h_a8bf31ec161cc3926862b94331c7a7aab}{auswahlmenu}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab}{auswahlmenu()}\+: Auswahlmenü wird geöffnet; Startseite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{allefunktionen_8h_a0bea76931a7bc8758570dc3144bf8210}{configserial}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{configserial_8c_a0bea76931a7bc8758570dc3144bf8210}{configserial()}\+: Seite vom Menüpunkt "{}config serial"{} wird geöffnet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{allefunktionen_8h_a8a25febfe7fa1335d3fa12a052d4c7c4}{bootloader}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4}{bootloader()}\+: Seite vom Menüpunkt "{}\+Bootloader"{} wird geöffnet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{allefunktionen_8h_a19c86e0d31779f284e91d4d016448264}{debugger}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_a19c86e0d31779f284e91d4d016448264}{debugger()}\+: Öffnet im Terminal ein neues Fenster mit Debugger Funktionen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{allefunktionen_8h_a17f4436338d69d2a944cf5920d7e5a23}{read\+Register}} (int y, int x)
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23}{read\+Register(int y, int x)}\+: Öffnet im Terminal ein neues Fenster. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{allefunktionen_8h_a5ffebe4076a44b3db27985c319e06ffe}\label{allefunktionen_8h_a5ffebe4076a44b3db27985c319e06ffe} 
+\index{allefunktionen.h@{allefunktionen.h}!COLOR\_MATRIX\_GREEN@{COLOR\_MATRIX\_GREEN}}
+\index{COLOR\_MATRIX\_GREEN@{COLOR\_MATRIX\_GREEN}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_MATRIX\_GREEN}{COLOR\_MATRIX\_GREEN}}
+{\footnotesize\ttfamily \#define COLOR\+\_\+\+MATRIX\+\_\+\+GREEN~8}
+
+\Hypertarget{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}\label{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6} 
+\index{allefunktionen.h@{allefunktionen.h}!MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}}
+\index{MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_BUFFER\_SIZE}{MAX\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+BUFFER\+\_\+\+SIZE~1024}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{allefunktionen_8h_a8bf31ec161cc3926862b94331c7a7aab}\label{allefunktionen_8h_a8bf31ec161cc3926862b94331c7a7aab} 
+\index{allefunktionen.h@{allefunktionen.h}!auswahlmenu@{auswahlmenu}}
+\index{auswahlmenu@{auswahlmenu}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{auswahlmenu()}{auswahlmenu()}}
+{\footnotesize\ttfamily void auswahlmenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab}{auswahlmenu()}\+: Auswahlmenü wird geöffnet; Startseite 
+
+Das Auswahlmenü dient als Startseite und dort wird dem User ein Überblick der Optionen angezeigt, sowie der Pfad der Datei, die man unter "{}\+Load Mnemonics"{} auswählt
+
+Die Applikation beendet man durch Drücken von \textquotesingle{}Esc\textquotesingle{}.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000005}{Noch zu erledigen}}]Wenn man \doxylink{allefunktionen_8h_a19c86e0d31779f284e91d4d016448264}{debugger()} schließt und \textquotesingle{}Esc\textquotesingle{} drückt, wird die Applikation nicht beendet, sondern es treten Bugs auf. 
+
+evtl. "{}\+EXIT"{}-\/Option \end{DoxyRefDesc}
+\Hypertarget{allefunktionen_8h_a8a25febfe7fa1335d3fa12a052d4c7c4}\label{allefunktionen_8h_a8a25febfe7fa1335d3fa12a052d4c7c4} 
+\index{allefunktionen.h@{allefunktionen.h}!bootloader@{bootloader}}
+\index{bootloader@{bootloader}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{bootloader()}{bootloader()}}
+{\footnotesize\ttfamily void bootloader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4}{bootloader()}\+: Seite vom Menüpunkt "{}\+Bootloader"{} wird geöffnet. 
+
+Nach Aufruf werden im Terminal drei neue Optionen angezeigt, sowie eine ähnliche Anzeige, die wie "{}\+Current File\+: "{} im Auswahlmenü den Dateipfad der Binärdatei anzeigt, die man über "{}\+Load Binary"{} auswählt.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000006}{Noch zu erledigen}}]Execute wurde noch nicht implementiert. \end{DoxyRefDesc}
+\Hypertarget{allefunktionen_8h_a0bea76931a7bc8758570dc3144bf8210}\label{allefunktionen_8h_a0bea76931a7bc8758570dc3144bf8210} 
+\index{allefunktionen.h@{allefunktionen.h}!configserial@{configserial}}
+\index{configserial@{configserial}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{configserial()}{configserial()}}
+{\footnotesize\ttfamily void configserial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{configserial_8c_a0bea76931a7bc8758570dc3144bf8210}{configserial()}\+: Seite vom Menüpunkt "{}config serial"{} wird geöffnet. 
+
+Nach Aufruf werden im Terminal zwei neue Optionen angezeigt,
+\begin{DoxyItemize}
+\item die erste zeigt die baudrate bzw. gibt die Möglich eine serielle Konfiguration vorzunehmen um mit dem FPGA dei Verbindung zu erstellen.
+\item die zweite Option gibt die Möglichkeit eine USB Schnittstelle zu definieren für die Verbindung mit dem FPGA \begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000009}{Noch zu erledigen}}]\end{DoxyRefDesc}
+
+\end{DoxyItemize}\Hypertarget{allefunktionen_8h_a19c86e0d31779f284e91d4d016448264}\label{allefunktionen_8h_a19c86e0d31779f284e91d4d016448264} 
+\index{allefunktionen.h@{allefunktionen.h}!debugger@{debugger}}
+\index{debugger@{debugger}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{debugger()}{debugger()}}
+{\footnotesize\ttfamily void debugger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_a19c86e0d31779f284e91d4d016448264}{debugger()}\+: Öffnet im Terminal ein neues Fenster mit Debugger Funktionen. 
+
+Durch diese Funktion wird dem Nutzer die zuvor ausgewählte Datei angezeigt, mit welcher der Nutzer auch interagieren kann. Dem Nutzer werden Optionen angezeigt womit markierungen an den jeweiligen Stellen in der Textdatei auftauchen. Durch eine switch-\/case Anweisung werden verschiedene Optionen zur Interaktion mit dem Programmcode ermöglicht.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000010}{Noch zu erledigen}}]Breakpoints müssen noch an den FPGA übertragen werden. 
+
+Single Steps fehlen komplett. 
+
+Read RAM fehlt. 
+
+Continue fehlt. 
+
+Read Register öffnet ein neues Fenster jedoch fehlt der Inhalt komplett. 
+
+Write Register fehlt. 
+
+Es gibt einige Bugs die auftreten wenn zu oft \textquotesingle{}Esc\textquotesingle{} und \textquotesingle{}Q\textquotesingle{} gedrückt wird.\end{DoxyRefDesc}
+\Hypertarget{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}\label{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f} 
+\index{allefunktionen.h@{allefunktionen.h}!filechooser@{filechooser}}
+\index{filechooser@{filechooser}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{filechooser()}{filechooser()}}
+{\footnotesize\ttfamily void filechooser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}\+: Öffnet bei Aufruf den Dateimanager des Host PCs 
+
+Der Dateimanager des Host-\/\+PCs öffnet sich im Home-\/\+Verzeichnis und man kann eine beliebige Datei auswählen, dessen Pfad dann dementsprechend (abhängig von der gewählten Option in der Applikation) anzeigt.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000018}{Noch zu erledigen}}]Evtl. implementieren, dass bei "{}\+Load Mnemonics"{} nur .asm-\/\+Dateien und bei "{}\+Load Binary"{} nur .bin-\/\+Dateien ausgewählt werden können. \end{DoxyRefDesc}
+\Hypertarget{allefunktionen_8h_ac7702553206975695c62a1b3a716f10c}\label{allefunktionen_8h_ac7702553206975695c62a1b3a716f10c} 
+\index{allefunktionen.h@{allefunktionen.h}!get\_filepath@{get\_filepath}}
+\index{get\_filepath@{get\_filepath}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{get\_filepath()}{get\_filepath()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} get\+\_\+filepath (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{allefunktionen_8h_a17f4436338d69d2a944cf5920d7e5a23}\label{allefunktionen_8h_a17f4436338d69d2a944cf5920d7e5a23} 
+\index{allefunktionen.h@{allefunktionen.h}!readRegister@{readRegister}}
+\index{readRegister@{readRegister}!allefunktionen.h@{allefunktionen.h}}
+\doxysubsubsection{\texorpdfstring{readRegister()}{readRegister()}}
+{\footnotesize\ttfamily void read\+Register (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23}{read\+Register(int y, int x)}\+: Öffnet im Terminal ein neues Fenster. 
+
+Durch diese Funktion wird dem Nutzer die Möglichkeit geboten die verschiedenen Register des FPGAs auszulesen.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000017}{Noch zu erledigen}}]Keine der Auswahlmöglichkeiten außer \textquotesingle{}b\textquotesingle{} funktionieren.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameter}
+{\em x} & x-\/\+Koordinate wo die Register angezeigt werden sollen. \\
+\hline
+{\em y} & y-\/\+Koordinate wo die Register angezeigt werden sollen. \\
+\hline
+\end{DoxyParams}

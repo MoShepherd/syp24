@@ -1,0 +1,62 @@
+\doxysection{main/src/config.c-\/\+Dateireferenz}
+\hypertarget{config_8c}{}\label{config_8c}\index{main/src/config.c@{main/src/config.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für config.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{config_8c_a9473d02f8564f338e552916777ab64a5}{save\+Config\+To\+File}} (char \texorpdfstring{$\ast$}{*}filename)
+\item 
+void \mbox{\hyperlink{config_8c_a5b81eb4bede3ce8ceb599e0985a4c348}{read\+Config\+From\+File}} (char \texorpdfstring{$\ast$}{*}filename)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{config_8c_a4858bb3109a37110e12bd7765d6f18ee}{baud}}
+\begin{DoxyCompactList}\small\item\em cpnfig()\+: öffnet das Fenster für Dateibrowser des Betriebsystems um eine Datai auszuwählen; es speichert den Pfad der ausgewählten datei als Char\texorpdfstring{$\ast$}{*} und zeigt diese an. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{config_8c_aa4ed14a864cbe0bc2a31f89c0a7ba87b}{comport\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em speichert COMPort (Config Serial) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{config_8c_a5b81eb4bede3ce8ceb599e0985a4c348}\label{config_8c_a5b81eb4bede3ce8ceb599e0985a4c348} 
+\index{config.c@{config.c}!readConfigFromFile@{readConfigFromFile}}
+\index{readConfigFromFile@{readConfigFromFile}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{readConfigFromFile()}{readConfigFromFile()}}
+{\footnotesize\ttfamily void read\+Config\+From\+File (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+\Hypertarget{config_8c_a9473d02f8564f338e552916777ab64a5}\label{config_8c_a9473d02f8564f338e552916777ab64a5} 
+\index{config.c@{config.c}!saveConfigToFile@{saveConfigToFile}}
+\index{saveConfigToFile@{saveConfigToFile}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{saveConfigToFile()}{saveConfigToFile()}}
+{\footnotesize\ttfamily void save\+Config\+To\+File (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{config_8c_a4858bb3109a37110e12bd7765d6f18ee}\label{config_8c_a4858bb3109a37110e12bd7765d6f18ee} 
+\index{config.c@{config.c}!baud@{baud}}
+\index{baud@{baud}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{baud}{baud}}
+{\footnotesize\ttfamily int baud\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+cpnfig()\+: öffnet das Fenster für Dateibrowser des Betriebsystems um eine Datai auszuwählen; es speichert den Pfad der ausgewählten datei als Char\texorpdfstring{$\ast$}{*} und zeigt diese an. 
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000008}{Noch zu erledigen}}]Execute wurde noch nicht implementiert. \end{DoxyRefDesc}
+
+
+cpnfig()\+: öffnet das Fenster für Dateibrowser des Betriebsystems um eine Datai auszuwählen; es speichert den Pfad der ausgewählten datei als Char\texorpdfstring{$\ast$}{*} und zeigt diese an. \Hypertarget{config_8c_aa4ed14a864cbe0bc2a31f89c0a7ba87b}\label{config_8c_aa4ed14a864cbe0bc2a31f89c0a7ba87b} 
+\index{config.c@{config.c}!comport\_path@{comport\_path}}
+\index{comport\_path@{comport\_path}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{comport\_path}{comport\_path}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} comport\+\_\+path\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+speichert COMPort (Config Serial) 
+

@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>host_app: main/src/configserial.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">host_app
+   </div>
+   <div id="projectbrief">Client Applikation des SVNR-Bootloaders</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_2101cd0b22112584ff59816a4bc911f7.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makrodefinitionen</a> &#124;
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle"><div class="title">configserial.c-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;ncurses.h&gt;</code><br />
+<code>#include &lt;termios.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="statusbar_8h_source.html">../includes/statusbar.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="config_8h_source.html">../includes/config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart_8h_source.html">../../uart/include/uart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="allefunktionen_8h_source.html">../includes/allefunktionen.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für configserial.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="configserial_8c__incl.png" border="0" usemap="#amain_2src_2configserial_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Makrodefinitionen</h2></td></tr>
+<tr class="memitem:ad4d796b98c583d49e83adabd74a63bf6" id="r_ad4d796b98c583d49e83adabd74a63bf6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d796b98c583d49e83adabd74a63bf6">MAX_BUFFER_SIZE</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="separator:ad4d796b98c583d49e83adabd74a63bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a0bea76931a7bc8758570dc3144bf8210" id="r_a0bea76931a7bc8758570dc3144bf8210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bea76931a7bc8758570dc3144bf8210">configserial</a> ()</td></tr>
+<tr class="memdesc:a0bea76931a7bc8758570dc3144bf8210"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a0bea76931a7bc8758570dc3144bf8210" title="configserial(): Seite vom Menüpunkt &quot;config serial&quot; wird geöffnet.">configserial()</a>: Seite vom Menüpunkt "config serial" wird geöffnet.  <br /></td></tr>
+<tr class="separator:a0bea76931a7bc8758570dc3144bf8210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a4e1e0e72dd773439e333c84dd762a9c3" id="r_a4e1e0e72dd773439e333c84dd762a9c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e1e0e72dd773439e333c84dd762a9c3">c</a></td></tr>
+<tr class="memdesc:a4e1e0e72dd773439e333c84dd762a9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">für switch-cases  <br /></td></tr>
+<tr class="separator:a4e1e0e72dd773439e333c84dd762a9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbfffc6003d78ece1c271ec64e5a6759" id="r_abbfffc6003d78ece1c271ec64e5a6759"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbfffc6003d78ece1c271ec64e5a6759">comport_path</a> [<a class="el" href="allefunktionen_8h.html#ad4d796b98c583d49e83adabd74a63bf6">MAX_BUFFER_SIZE</a>]</td></tr>
+<tr class="memdesc:abbfffc6003d78ece1c271ec64e5a6759"><td class="mdescLeft">&#160;</td><td class="mdescRight">speichert COMPort (Config Serial)  <br /></td></tr>
+<tr class="separator:abbfffc6003d78ece1c271ec64e5a6759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4858bb3109a37110e12bd7765d6f18ee" id="r_a4858bb3109a37110e12bd7765d6f18ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4858bb3109a37110e12bd7765d6f18ee">baud</a></td></tr>
+<tr class="memdesc:a4858bb3109a37110e12bd7765d6f18ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">speichert Baudrate (Config Serial)  <br /></td></tr>
+<tr class="separator:a4858bb3109a37110e12bd7765d6f18ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19654fc7adf235ce5ee3a8c1ec69be6" id="r_ad19654fc7adf235ce5ee3a8c1ec69be6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a></td></tr>
+<tr class="separator:ad19654fc7adf235ce5ee3a8c1ec69be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae470f89750d29fcf5ee65ee9cc8401b3" id="r_ae470f89750d29fcf5ee65ee9cc8401b3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae470f89750d29fcf5ee65ee9cc8401b3">config_file</a></td></tr>
+<tr class="separator:ae470f89750d29fcf5ee65ee9cc8401b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d0de2c2e317f2b9164e5a2a93d3b76" id="r_ae8d0de2c2e317f2b9164e5a2a93d3b76"><td class="memItemLeft" align="right" valign="top">struct Config&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8d0de2c2e317f2b9164e5a2a93d3b76">config</a></td></tr>
+<tr class="separator:ae8d0de2c2e317f2b9164e5a2a93d3b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makro-Dokumentation</h2>
+<a id="ad4d796b98c583d49e83adabd74a63bf6" name="ad4d796b98c583d49e83adabd74a63bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d796b98c583d49e83adabd74a63bf6">&#9670;&#160;</a></span>MAX_BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_BUFFER_SIZE&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a0bea76931a7bc8758570dc3144bf8210" name="a0bea76931a7bc8758570dc3144bf8210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bea76931a7bc8758570dc3144bf8210">&#9670;&#160;</a></span>configserial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configserial </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a0bea76931a7bc8758570dc3144bf8210" title="configserial(): Seite vom Menüpunkt &quot;config serial&quot; wird geöffnet.">configserial()</a>: Seite vom Menüpunkt "config serial" wird geöffnet. </p>
+<p>Nach Aufruf werden im Terminal zwei neue Optionen angezeigt,</p><ul>
+<li>die erste zeigt die baudrate bzw. gibt die Möglich eine serielle Konfiguration vorzunehmen um mit dem FPGA dei Verbindung zu erstellen.</li>
+<li>die zweite Option gibt die Möglichkeit eine USB Schnittstelle zu definieren für die Verbindung mit dem FPGA <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Noch zu erledigen</a></b></dt><dd></dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a id="a4858bb3109a37110e12bd7765d6f18ee" name="a4858bb3109a37110e12bd7765d6f18ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4858bb3109a37110e12bd7765d6f18ee">&#9670;&#160;</a></span>baud</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int baud</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>speichert Baudrate (Config Serial) </p>
+<p>cpnfig(): öffnet das Fenster für Dateibrowser des Betriebsystems um eine Datai auszuwählen; es speichert den Pfad der ausgewählten datei als Char* und zeigt diese an. </p>
+
+</div>
+</div>
+<a id="a4e1e0e72dd773439e333c84dd762a9c3" name="a4e1e0e72dd773439e333c84dd762a9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1e0e72dd773439e333c84dd762a9c3">&#9670;&#160;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>für switch-cases </p>
+
+</div>
+</div>
+<a id="abbfffc6003d78ece1c271ec64e5a6759" name="abbfffc6003d78ece1c271ec64e5a6759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbfffc6003d78ece1c271ec64e5a6759">&#9670;&#160;</a></span>comport_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char comport_path[<a class="el" href="allefunktionen_8h.html#ad4d796b98c583d49e83adabd74a63bf6">MAX_BUFFER_SIZE</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>speichert COMPort (Config Serial) </p>
+
+</div>
+</div>
+<a id="ae8d0de2c2e317f2b9164e5a2a93d3b76" name="ae8d0de2c2e317f2b9164e5a2a93d3b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d0de2c2e317f2b9164e5a2a93d3b76">&#9670;&#160;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct Config config</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae470f89750d29fcf5ee65ee9cc8401b3" name="ae470f89750d29fcf5ee65ee9cc8401b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae470f89750d29fcf5ee65ee9cc8401b3">&#9670;&#160;</a></span>config_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* config_file</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad19654fc7adf235ce5ee3a8c1ec69be6" name="ad19654fc7adf235ce5ee3a8c1ec69be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19654fc7adf235ce5ee3a8c1ec69be6">&#9670;&#160;</a></span>fd_uart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fd_uart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

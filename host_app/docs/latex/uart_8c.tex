@@ -1,0 +1,138 @@
+\doxysection{uart/src/uart.c-\/\+Dateireferenz}
+\hypertarget{uart_8c}{}\label{uart_8c}\index{uart/src/uart.c@{uart/src/uart.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$sys/select.\+h$>$}\newline
+{\ttfamily \#include "{}../include/uart.\+h"{}}\newline
+{\ttfamily \#include "{}../../main/includes/statusbar.\+h"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für uart.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8c_a8ab2a1c038465abf01576818aaa2f177}{set\+\_\+interface\+\_\+attribs}} (int fd, int speed, int parity)
+\begin{DoxyCompactList}\small\item\em Konfiguriert die UART Schnittstelle mit teils gesetzten, teils parametrisierten Konfigurationen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8c_abdfc548828d35bf9fe92ca5e0d257b8f}{uart\+\_\+tx\+\_\+bl\+\_\+packet}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}, uint8\+\_\+t pack\+\_\+type, uint16\+\_\+t pack\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Überträgt ein Bootloader Paket (3 Byte) per UART Schnittstelle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_a949f7105b89b6f151322a3052d570259}{uart\+\_\+rx\+\_\+bl\+\_\+packet}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Empfängt ein Bootloader Paket (3 Byte) per UART Schnittstelle. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8c_a5b9b15605a9b0156188bbfe415bae08f}{tx\+\_\+mem\+\_\+image}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}, uint8\+\_\+t \texorpdfstring{$\ast$}{*}image, int size)
+\begin{DoxyCompactList}\small\item\em Überträgt ein gesamtes Bootloader Binärimage (3072 Byte) per UART Schnittstelle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8c_ab99cb82a6d1dd2cc590853642a4c95db}{open\+\_\+file}} (char \texorpdfstring{$\ast$}{*}filepath, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{bootloader_8c_a742cda7da9192ce964d73452a11f2825}{mem\+\_\+image}}, off\+\_\+t \texorpdfstring{$\ast$}{*}file\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Liest ein gesamtes Binärimage in einen Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{uart_8c_abfbc1b73f4492c253a69da329b3e2d14}{timeout\+\_\+enabled}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{uart_8c_ab99cb82a6d1dd2cc590853642a4c95db}\label{uart_8c_ab99cb82a6d1dd2cc590853642a4c95db} 
+\index{uart.c@{uart.c}!open\_file@{open\_file}}
+\index{open\_file@{open\_file}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{open\_file()}{open\_file()}}
+{\footnotesize\ttfamily int open\+\_\+file (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filepath,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{mem\+\_\+image,  }\item[{off\+\_\+t \texorpdfstring{$\ast$}{*}}]{file\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Liest ein gesamtes Binärimage in einen Buffer. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em filepath} & Pfad der zu öffnenden Datei \\
+\hline
+{\em mem\+\_\+image} & Pufferspeicher, in welchen die Datei eingelesen wird \\
+\hline
+{\em file\+\_\+size} & Größe der zu lesenden Datei in Byte \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8c_a8ab2a1c038465abf01576818aaa2f177}\label{uart_8c_a8ab2a1c038465abf01576818aaa2f177} 
+\index{uart.c@{uart.c}!set\_interface\_attribs@{set\_interface\_attribs}}
+\index{set\_interface\_attribs@{set\_interface\_attribs}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{set\_interface\_attribs()}{set\_interface\_attribs()}}
+{\footnotesize\ttfamily void set\+\_\+interface\+\_\+attribs (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{speed,  }\item[{int}]{parity }\end{DoxyParamCaption})}
+
+
+
+Konfiguriert die UART Schnittstelle mit teils gesetzten, teils parametrisierten Konfigurationen. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fd} & UART Handle \\
+\hline
+{\em speed} & Baudrate der UART Verbindung \\
+\hline
+{\em parity} & Anzahl an Parity Bits \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8c_a5b9b15605a9b0156188bbfe415bae08f}\label{uart_8c_a5b9b15605a9b0156188bbfe415bae08f} 
+\index{uart.c@{uart.c}!tx\_mem\_image@{tx\_mem\_image}}
+\index{tx\_mem\_image@{tx\_mem\_image}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{tx\_mem\_image()}{tx\_mem\_image()}}
+{\footnotesize\ttfamily uint8\+\_\+t tx\+\_\+mem\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{image,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Überträgt ein gesamtes Bootloader Binärimage (3072 Byte) per UART Schnittstelle. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fd\+\_\+uart} & UART Handle \\
+\hline
+{\em image} & gesamtes Bootloader Binärimage \\
+\hline
+{\em size} & Größe des Binärimage in Byte \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8c_a949f7105b89b6f151322a3052d570259}\label{uart_8c_a949f7105b89b6f151322a3052d570259} 
+\index{uart.c@{uart.c}!uart\_rx\_bl\_packet@{uart\_rx\_bl\_packet}}
+\index{uart\_rx\_bl\_packet@{uart\_rx\_bl\_packet}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_rx\_bl\_packet()}{uart\_rx\_bl\_packet()}}
+{\footnotesize\ttfamily int uart\+\_\+rx\+\_\+bl\+\_\+packet (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Empfängt ein Bootloader Paket (3 Byte) per UART Schnittstelle. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fd\+\_\+uart} & UART Handle \\
+\hline
+{\em data} & gesamtes Bootloader Paket \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8c_abdfc548828d35bf9fe92ca5e0d257b8f}\label{uart_8c_abdfc548828d35bf9fe92ca5e0d257b8f} 
+\index{uart.c@{uart.c}!uart\_tx\_bl\_packet@{uart\_tx\_bl\_packet}}
+\index{uart\_tx\_bl\_packet@{uart\_tx\_bl\_packet}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{uart\_tx\_bl\_packet()}{uart\_tx\_bl\_packet()}}
+{\footnotesize\ttfamily void uart\+\_\+tx\+\_\+bl\+\_\+packet (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart,  }\item[{uint8\+\_\+t}]{pack\+\_\+type,  }\item[{uint16\+\_\+t}]{pack\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Überträgt ein Bootloader Paket (3 Byte) per UART Schnittstelle. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fd\+\_\+uart} & UART Handle \\
+\hline
+{\em pack\+\_\+type} & Bootloader Pakettyp -\/ MACROs in /host\+\_\+app/uart/include/uart.h \\
+\hline
+{\em pack\+\_\+data} & Bootloader Paketdaten -\/ MACROs in /host\+\_\+app/uart/include/uart.h \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{uart_8c_abfbc1b73f4492c253a69da329b3e2d14}\label{uart_8c_abfbc1b73f4492c253a69da329b3e2d14} 
+\index{uart.c@{uart.c}!timeout\_enabled@{timeout\_enabled}}
+\index{timeout\_enabled@{timeout\_enabled}!uart.c@{uart.c}}
+\doxysubsubsection{\texorpdfstring{timeout\_enabled}{timeout\_enabled}}
+{\footnotesize\ttfamily int timeout\+\_\+enabled = 0}
+

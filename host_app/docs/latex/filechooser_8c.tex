@@ -1,0 +1,86 @@
+\doxysection{main/src/filechooser.c-\/\+Dateireferenz}
+\hypertarget{filechooser_8c}{}\label{filechooser_8c}\index{main/src/filechooser.c@{main/src/filechooser.c}}
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}../includes/allefunktionen.\+h"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für filechooser.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}\+: Öffnet bei Aufruf den Dateimanager des Host PCs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{filechooser_8c_af6dfd479b7e5d3e23f4813dd488fe43b}{current\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em \doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{filechooser_8c_a4584b2762b7bb51655594ed0854b3969}{current\+\_\+binary}}
+\begin{DoxyCompactList}\small\item\em speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{filechooser_8c_a1ea53ae199e75f00244cb09d11e7b24d}{modus\+Filechooser}}
+\begin{DoxyCompactList}\small\item\em für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{filechooser_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}}
+\begin{DoxyCompactList}\small\item\em für switch-\/cases \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f}\label{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f} 
+\index{filechooser.c@{filechooser.c}!filechooser@{filechooser}}
+\index{filechooser@{filechooser}!filechooser.c@{filechooser.c}}
+\doxysubsubsection{\texorpdfstring{filechooser()}{filechooser()}}
+{\footnotesize\ttfamily void filechooser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}\+: Öffnet bei Aufruf den Dateimanager des Host PCs 
+
+Der Dateimanager des Host-\/\+PCs öffnet sich im Home-\/\+Verzeichnis und man kann eine beliebige Datei auswählen, dessen Pfad dann dementsprechend (abhängig von der gewählten Option in der Applikation) anzeigt.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000018}{Noch zu erledigen}}]Evtl. implementieren, dass bei "{}\+Load Mnemonics"{} nur .asm-\/\+Dateien und bei "{}\+Load Binary"{} nur .bin-\/\+Dateien ausgewählt werden können. \end{DoxyRefDesc}
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{filechooser_8c_a4e1e0e72dd773439e333c84dd762a9c3}\label{filechooser_8c_a4e1e0e72dd773439e333c84dd762a9c3} 
+\index{filechooser.c@{filechooser.c}!c@{c}}
+\index{c@{c}!filechooser.c@{filechooser.c}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int c\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für switch-\/cases 
+
+\Hypertarget{filechooser_8c_a4584b2762b7bb51655594ed0854b3969}\label{filechooser_8c_a4584b2762b7bb51655594ed0854b3969} 
+\index{filechooser.c@{filechooser.c}!current\_binary@{current\_binary}}
+\index{current\_binary@{current\_binary}!filechooser.c@{filechooser.c}}
+\doxysubsubsection{\texorpdfstring{current\_binary}{current\_binary}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} current\+\_\+binary\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) 
+
+\Hypertarget{filechooser_8c_af6dfd479b7e5d3e23f4813dd488fe43b}\label{filechooser_8c_af6dfd479b7e5d3e23f4813dd488fe43b} 
+\index{filechooser.c@{filechooser.c}!current\_file@{current\_file}}
+\index{current\_file@{current\_file}!filechooser.c@{filechooser.c}}
+\doxysubsubsection{\texorpdfstring{current\_file}{current\_file}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} current\+\_\+file\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+\doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. 
+
+die Main beinhaltet alle gloalen Variablen, die in den einhzelnen Fenstern festgelegt werden und als Wert für andere Programmfunktionen verwendet. die Auswahlmenu Funktion wird als Hauptfenster bei der Ausführung aufgerufen \begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000019}{Noch zu erledigen}}]eventuelle Auslagerug der while-\/schleifen als Steurungsfunktion für alle Fenster. Hierfür wird in erster Linie ein gutes Konzept zur Realisierung in C gebraucht. \end{DoxyRefDesc}
+speichert Dateipfad hinter "{}\+Current File\+: "{} (Load Mnemonics) \Hypertarget{filechooser_8c_a1ea53ae199e75f00244cb09d11e7b24d}\label{filechooser_8c_a1ea53ae199e75f00244cb09d11e7b24d} 
+\index{filechooser.c@{filechooser.c}!modusFilechooser@{modusFilechooser}}
+\index{modusFilechooser@{modusFilechooser}!filechooser.c@{filechooser.c}}
+\doxysubsubsection{\texorpdfstring{modusFilechooser}{modusFilechooser}}
+{\footnotesize\ttfamily int modus\+Filechooser\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird 
+

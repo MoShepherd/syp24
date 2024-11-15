@@ -1,0 +1,306 @@
+\doxysection{main/src/debugger.c-\/\+Dateireferenz}
+\hypertarget{debugger_8c}{}\label{debugger_8c}\index{main/src/debugger.c@{main/src/debugger.c}}
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}../includes/allefunktionen.\+h"{}}\newline
+{\ttfamily \#include "{}../includes/breakpointmanager.\+h"{}}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für debugger.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{debugger_8c_a19c86e0d31779f284e91d4d016448264}{debugger}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_a19c86e0d31779f284e91d4d016448264}{debugger()}\+: Öffnet im Terminal ein neues Fenster mit Debugger Funktionen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debugger_8c_aa84631c803d364c3a438579a70a652eb}{print\+BPs}} (\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top, char status\mbox{[}$\,$\mbox{]}, int \mbox{\hyperlink{debugger_8c_a1ad5c2870914444611d64205bc15673e}{breakpoint\+Num}})
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_aa84631c803d364c3a438579a70a652eb}{print\+BPs(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, char status\mbox{[}$\,$\mbox{]}, int breakpoint\+Num)}\+: gibt die Breakpoints in der Statusleiste aus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debugger_8c_a89314e3a69768ea29b7e39a21b0979de}{print\+XY}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_a89314e3a69768ea29b7e39a21b0979de}{print\+XY(int x, int y)}\+: gibt die Position des Cursors im editor\+Window an. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debugger_8c_a43ad2779ed14b5b768100cac5d087c13}{print\+File}} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, \mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top)
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_a43ad2779ed14b5b768100cac5d087c13}{print\+File(\+WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top)}\+: schreibt den Inhalt des übergebenen Dateinamen in das Debugger Fenster. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debugger_8c_a50bb1defdd5cf04ac2ed5c55c2d5344f}{mark\+Line}} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)
+\begin{DoxyCompactList}\small\item\em mark\+Line(\+WINDOW $<$em$>$win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)\+: markiert eine bestimmte Zeile mit einem \textquotesingle{}\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debugger_8c_a19b22144694590f898d23442237aecac}{del\+Marked\+Line}} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)
+\begin{DoxyCompactList}\small\item\em del\+Marked\+Line(\+WINDOW $<$em$>$win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)\+: hebt \textquotesingle{}\textquotesingle{}-\/Markierung auf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debugger_8c_aabd40a78225de224f26b54c84693903d}{highlight\+Line}} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_aabd40a78225de224f26b54c84693903d}{highlight\+Line(\+WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)}\+: markiert eine Zeile. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{debugger_8c_ae16e3293f006339f3d6e659bed97f8e2}{count\+Lines}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_ae16e3293f006339f3d6e659bed97f8e2}{count\+Lines(const char \texorpdfstring{$\ast$}{*}filename)}\+: zählt die Zeilen in der übergebenen Datei. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{debugger_8c_ae75207d90c78483a554bece5f1a2d479}{check\+Hex}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_ae75207d90c78483a554bece5f1a2d479}{check\+Hex(const char \texorpdfstring{$\ast$}{*}str)}\+: überprüft ob ein übergebener String einen gültigen HExwert enthält \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23}{read\+Register}} (int y, int x)
+\begin{DoxyCompactList}\small\item\em \doxylink{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23}{read\+Register(int y, int x)}\+: Öffnet im Terminal ein neues Fenster. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{debugger_8c_a3ce959412f05b5151cbae0b30b02c158}{selected\+\_\+file}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{debugger_8c_af6dfd479b7e5d3e23f4813dd488fe43b}{current\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em \doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{debugger_8c_a4584b2762b7bb51655594ed0854b3969}{current\+\_\+binary}}
+\begin{DoxyCompactList}\small\item\em speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{debugger_8c_a1ea53ae199e75f00244cb09d11e7b24d}{modus\+Filechooser}}
+\begin{DoxyCompactList}\small\item\em für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{debugger_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}}
+\begin{DoxyCompactList}\small\item\em für switch-\/cases \end{DoxyCompactList}\item 
+WINDOW \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{debugger_8c_aa5553d7a971c23d1b88a6e2a86332cd9}{editor\+Window}}
+\item 
+int \mbox{\hyperlink{debugger_8c_abaa275d8b2c76fd77dd271402a4425d3}{y\+\_\+offset}}
+\item 
+int \mbox{\hyperlink{debugger_8c_a823c723e08fba15ffa51449440bbca56}{breakpoint\+Active}} = 1
+\item 
+int \mbox{\hyperlink{debugger_8c_a1ad5c2870914444611d64205bc15673e}{breakpoint\+Num}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{debugger_8c_ae75207d90c78483a554bece5f1a2d479}\label{debugger_8c_ae75207d90c78483a554bece5f1a2d479} 
+\index{debugger.c@{debugger.c}!checkHex@{checkHex}}
+\index{checkHex@{checkHex}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{checkHex()}{checkHex()}}
+{\footnotesize\ttfamily int check\+Hex (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_ae75207d90c78483a554bece5f1a2d479}{check\+Hex(const char \texorpdfstring{$\ast$}{*}str)}\+: überprüft ob ein übergebener String einen gültigen HExwert enthält 
+
+
+\begin{DoxyParams}{Parameter}
+{\em str} & String welcher auf Hexwert geprüft werden soll \\
+\hline
+\end{DoxyParams}
+\Hypertarget{debugger_8c_ae16e3293f006339f3d6e659bed97f8e2}\label{debugger_8c_ae16e3293f006339f3d6e659bed97f8e2} 
+\index{debugger.c@{debugger.c}!countLines@{countLines}}
+\index{countLines@{countLines}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{countLines()}{countLines()}}
+{\footnotesize\ttfamily int count\+Lines (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_ae16e3293f006339f3d6e659bed97f8e2}{count\+Lines(const char \texorpdfstring{$\ast$}{*}filename)}\+: zählt die Zeilen in der übergebenen Datei. 
+
+Durch diese Funktion wird eine Zeile markiert.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000016}{Noch zu erledigen}}]Funktion wird nicht verwendet! Jedoch soll sie dazu dienen die Stelle anzuzeigen an welcher das Programm stehen geblieben ist (Breakpoints, Single Steps).\end{DoxyRefDesc}
+\Hypertarget{debugger_8c_a19c86e0d31779f284e91d4d016448264}\label{debugger_8c_a19c86e0d31779f284e91d4d016448264} 
+\index{debugger.c@{debugger.c}!debugger@{debugger}}
+\index{debugger@{debugger}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{debugger()}{debugger()}}
+{\footnotesize\ttfamily void debugger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_a19c86e0d31779f284e91d4d016448264}{debugger()}\+: Öffnet im Terminal ein neues Fenster mit Debugger Funktionen. 
+
+Durch diese Funktion wird dem Nutzer die zuvor ausgewählte Datei angezeigt, mit welcher der Nutzer auch interagieren kann. Dem Nutzer werden Optionen angezeigt womit markierungen an den jeweiligen Stellen in der Textdatei auftauchen. Durch eine switch-\/case Anweisung werden verschiedene Optionen zur Interaktion mit dem Programmcode ermöglicht.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000010}{Noch zu erledigen}}]Breakpoints müssen noch an den FPGA übertragen werden. 
+
+Single Steps fehlen komplett. 
+
+Read RAM fehlt. 
+
+Continue fehlt. 
+
+Read Register öffnet ein neues Fenster jedoch fehlt der Inhalt komplett. 
+
+Write Register fehlt. 
+
+Es gibt einige Bugs die auftreten wenn zu oft \textquotesingle{}Esc\textquotesingle{} und \textquotesingle{}Q\textquotesingle{} gedrückt wird.\end{DoxyRefDesc}
+\Hypertarget{debugger_8c_a19b22144694590f898d23442237aecac}\label{debugger_8c_a19b22144694590f898d23442237aecac} 
+\index{debugger.c@{debugger.c}!delMarkedLine@{delMarkedLine}}
+\index{delMarkedLine@{delMarkedLine}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{delMarkedLine()}{delMarkedLine()}}
+{\footnotesize\ttfamily void del\+Marked\+Line (\begin{DoxyParamCaption}\item[{WINDOW \texorpdfstring{$\ast$}{*}}]{win,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{start\+\_\+line,  }\item[{int}]{num\+\_\+lines,  }\item[{char \texorpdfstring{$\ast$}{*}}]{adr }\end{DoxyParamCaption})}
+
+
+
+del\+Marked\+Line(\+WINDOW $<$em$>$win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)\+: hebt \textquotesingle{}\textquotesingle{}-\/Markierung auf. 
+
+Durch diese Funktion wird der \textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{} vor einer Zeile gelöscht.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000014}{Noch zu erledigen}}]Funktion wird nicht verwendet!\end{DoxyRefDesc}
+\Hypertarget{debugger_8c_aabd40a78225de224f26b54c84693903d}\label{debugger_8c_aabd40a78225de224f26b54c84693903d} 
+\index{debugger.c@{debugger.c}!highlightLine@{highlightLine}}
+\index{highlightLine@{highlightLine}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{highlightLine()}{highlightLine()}}
+{\footnotesize\ttfamily void highlight\+Line (\begin{DoxyParamCaption}\item[{WINDOW \texorpdfstring{$\ast$}{*}}]{win,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{start\+\_\+line,  }\item[{int}]{num\+\_\+lines,  }\item[{char \texorpdfstring{$\ast$}{*}}]{adr }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_aabd40a78225de224f26b54c84693903d}{highlight\+Line(\+WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)}\+: markiert eine Zeile. 
+
+Durch diese Funktion wird eine Zeile markiert.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000015}{Noch zu erledigen}}]Funktion wird nicht verwendet! Jedoch soll sie dazu dienen die Stelle anzuzeigen an welcher das Programm stehen geblieben ist (Breakpoints, Single Steps).\end{DoxyRefDesc}
+\Hypertarget{debugger_8c_a50bb1defdd5cf04ac2ed5c55c2d5344f}\label{debugger_8c_a50bb1defdd5cf04ac2ed5c55c2d5344f} 
+\index{debugger.c@{debugger.c}!markLine@{markLine}}
+\index{markLine@{markLine}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{markLine()}{markLine()}}
+{\footnotesize\ttfamily void mark\+Line (\begin{DoxyParamCaption}\item[{WINDOW \texorpdfstring{$\ast$}{*}}]{win,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{start\+\_\+line,  }\item[{int}]{num\+\_\+lines,  }\item[{char \texorpdfstring{$\ast$}{*}}]{adr }\end{DoxyParamCaption})}
+
+
+
+mark\+Line(\+WINDOW $<$em$>$win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)\+: markiert eine bestimmte Zeile mit einem \textquotesingle{}\textquotesingle{}. 
+
+Durch diese Funktion wird einem die Breakpoint-\/\+Zeilen angezeigt.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000013}{Noch zu erledigen}}]Funktion wird nicht verwendet!\end{DoxyRefDesc}
+\Hypertarget{debugger_8c_aa84631c803d364c3a438579a70a652eb}\label{debugger_8c_aa84631c803d364c3a438579a70a652eb} 
+\index{debugger.c@{debugger.c}!printBPs@{printBPs}}
+\index{printBPs@{printBPs}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{printBPs()}{printBPs()}}
+{\footnotesize\ttfamily void print\+BPs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{top,  }\item[{char}]{status\mbox{[}$\,$\mbox{]},  }\item[{int}]{breakpoint\+Num }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_aa84631c803d364c3a438579a70a652eb}{print\+BPs(\+Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top, char status\mbox{[}$\,$\mbox{]}, int breakpoint\+Num)}\+: gibt die Breakpoints in der Statusleiste aus. 
+
+Durch diese Funktion wird unten Links die Statusleiste aktualisiert.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000011}{Noch zu erledigen}}]Funktion wird nicht verwendet!\end{DoxyRefDesc}
+\Hypertarget{debugger_8c_a43ad2779ed14b5b768100cac5d087c13}\label{debugger_8c_a43ad2779ed14b5b768100cac5d087c13} 
+\index{debugger.c@{debugger.c}!printFile@{printFile}}
+\index{printFile@{printFile}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{printFile()}{printFile()}}
+{\footnotesize\ttfamily void print\+File (\begin{DoxyParamCaption}\item[{WINDOW \texorpdfstring{$\ast$}{*}}]{win,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{start\+\_\+line,  }\item[{int}]{num\+\_\+lines,  }\item[{\mbox{\hyperlink{structBreakpoint}{Breakpoint}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{top }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_a43ad2779ed14b5b768100cac5d087c13}{print\+File(\+WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, Breakpoint\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} top)}\+: schreibt den Inhalt des übergebenen Dateinamen in das Debugger Fenster. 
+
+Durch diese Funktion wird einem die Datei angezeigt die zuvor gewählt wurde. Hierzu wird für jede Zeile geschaut ob es sich um eine \doxylink{structBreakpoint}{Breakpoint} Zeile handelt. Sollte das der Fall sein wird sie mit einem \textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{} gekennzeichnet.
+
+
+\begin{DoxyParams}{Parameter}
+{\em win} & Das Fenster in welchem die Datei angezeigt werden soll. \\
+\hline
+{\em filename} & Dateipfad zu der Datei die angezeigt werden soll. \\
+\hline
+{\em start\+\_\+line} & Zeile in der die Datei starten soll angezeigt zu werden (Fensterformatierung). \\
+\hline
+{\em num\+\_\+lines\+Anzahl} & der Zeilen in der Datei. \\
+\hline
+{\em top} & Kopfelement der verketteten Liste. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{debugger_8c_a89314e3a69768ea29b7e39a21b0979de}\label{debugger_8c_a89314e3a69768ea29b7e39a21b0979de} 
+\index{debugger.c@{debugger.c}!printXY@{printXY}}
+\index{printXY@{printXY}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{printXY()}{printXY()}}
+{\footnotesize\ttfamily void print\+XY (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_a89314e3a69768ea29b7e39a21b0979de}{print\+XY(int x, int y)}\+: gibt die Position des Cursors im editor\+Window an. 
+
+Durch diese Funktion wird einem angezeigt wo sich der Cursor im editor\+Window befindet.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000012}{Noch zu erledigen}}]Funktion diente eigentlich für einen Texteditor im Debugger Fenster, welcher verworfen wurde. Methode wird nicht verwendet!\end{DoxyRefDesc}
+\Hypertarget{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23}\label{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23} 
+\index{debugger.c@{debugger.c}!readRegister@{readRegister}}
+\index{readRegister@{readRegister}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{readRegister()}{readRegister()}}
+{\footnotesize\ttfamily void read\+Register (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+\doxylink{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23}{read\+Register(int y, int x)}\+: Öffnet im Terminal ein neues Fenster. 
+
+Durch diese Funktion wird dem Nutzer die Möglichkeit geboten die verschiedenen Register des FPGAs auszulesen.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000017}{Noch zu erledigen}}]Keine der Auswahlmöglichkeiten außer \textquotesingle{}b\textquotesingle{} funktionieren.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameter}
+{\em x} & x-\/\+Koordinate wo die Register angezeigt werden sollen. \\
+\hline
+{\em y} & y-\/\+Koordinate wo die Register angezeigt werden sollen. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{debugger_8c_a823c723e08fba15ffa51449440bbca56}\label{debugger_8c_a823c723e08fba15ffa51449440bbca56} 
+\index{debugger.c@{debugger.c}!breakpointActive@{breakpointActive}}
+\index{breakpointActive@{breakpointActive}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{breakpointActive}{breakpointActive}}
+{\footnotesize\ttfamily int breakpoint\+Active = 1}
+
+\Hypertarget{debugger_8c_a1ad5c2870914444611d64205bc15673e}\label{debugger_8c_a1ad5c2870914444611d64205bc15673e} 
+\index{debugger.c@{debugger.c}!breakpointNum@{breakpointNum}}
+\index{breakpointNum@{breakpointNum}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{breakpointNum}{breakpointNum}}
+{\footnotesize\ttfamily int breakpoint\+Num = 0}
+
+\Hypertarget{debugger_8c_a4e1e0e72dd773439e333c84dd762a9c3}\label{debugger_8c_a4e1e0e72dd773439e333c84dd762a9c3} 
+\index{debugger.c@{debugger.c}!c@{c}}
+\index{c@{c}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int c\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für switch-\/cases 
+
+\Hypertarget{debugger_8c_a4584b2762b7bb51655594ed0854b3969}\label{debugger_8c_a4584b2762b7bb51655594ed0854b3969} 
+\index{debugger.c@{debugger.c}!current\_binary@{current\_binary}}
+\index{current\_binary@{current\_binary}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{current\_binary}{current\_binary}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} current\+\_\+binary\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) 
+
+\Hypertarget{debugger_8c_af6dfd479b7e5d3e23f4813dd488fe43b}\label{debugger_8c_af6dfd479b7e5d3e23f4813dd488fe43b} 
+\index{debugger.c@{debugger.c}!current\_file@{current\_file}}
+\index{current\_file@{current\_file}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{current\_file}{current\_file}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} current\+\_\+file\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+\doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. 
+
+die Main beinhaltet alle gloalen Variablen, die in den einhzelnen Fenstern festgelegt werden und als Wert für andere Programmfunktionen verwendet. die Auswahlmenu Funktion wird als Hauptfenster bei der Ausführung aufgerufen \begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000019}{Noch zu erledigen}}]eventuelle Auslagerug der while-\/schleifen als Steurungsfunktion für alle Fenster. Hierfür wird in erster Linie ein gutes Konzept zur Realisierung in C gebraucht. \end{DoxyRefDesc}
+speichert Dateipfad hinter "{}\+Current File\+: "{} (Load Mnemonics) \Hypertarget{debugger_8c_aa5553d7a971c23d1b88a6e2a86332cd9}\label{debugger_8c_aa5553d7a971c23d1b88a6e2a86332cd9} 
+\index{debugger.c@{debugger.c}!editorWindow@{editorWindow}}
+\index{editorWindow@{editorWindow}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{editorWindow}{editorWindow}}
+{\footnotesize\ttfamily WINDOW\texorpdfstring{$\ast$}{*} editor\+Window}
+
+\Hypertarget{debugger_8c_a1ea53ae199e75f00244cb09d11e7b24d}\label{debugger_8c_a1ea53ae199e75f00244cb09d11e7b24d} 
+\index{debugger.c@{debugger.c}!modusFilechooser@{modusFilechooser}}
+\index{modusFilechooser@{modusFilechooser}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{modusFilechooser}{modusFilechooser}}
+{\footnotesize\ttfamily int modus\+Filechooser\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird 
+
+\Hypertarget{debugger_8c_a3ce959412f05b5151cbae0b30b02c158}\label{debugger_8c_a3ce959412f05b5151cbae0b30b02c158} 
+\index{debugger.c@{debugger.c}!selected\_file@{selected\_file}}
+\index{selected\_file@{selected\_file}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{selected\_file}{selected\_file}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} selected\+\_\+file\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{debugger_8c_abaa275d8b2c76fd77dd271402a4425d3}\label{debugger_8c_abaa275d8b2c76fd77dd271402a4425d3} 
+\index{debugger.c@{debugger.c}!y\_offset@{y\_offset}}
+\index{y\_offset@{y\_offset}!debugger.c@{debugger.c}}
+\doxysubsubsection{\texorpdfstring{y\_offset}{y\_offset}}
+{\footnotesize\ttfamily int y\+\_\+offset\hspace{0.3cm}{\ttfamily [extern]}}
+

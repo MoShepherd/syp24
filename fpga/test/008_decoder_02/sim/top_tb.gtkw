@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.114 (w)1999-2023 BSI
+[*] Fri Dec  8 15:13:57 2023
+[*]
+[dumpfile] "/home/ismail/Dokumente/0_ismail/0_uni/Semester/5/SYP/gitlab/team04/fpga/test/008_decoder_02/sim/simulation/top_tb.ghw"
+[dumpfile_mtime] "Fri Dec  8 15:13:22 2023"
+[dumpfile_size] 4650937
+[savefile] "/home/ismail/Dokumente/0_ismail/0_uni/Semester/5/SYP/gitlab/team04/fpga/test/008_decoder_02/sim/top_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-40.715179 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.top_tb.
+[treeopen] top.top_tb.top_inst.
+[treeopen] top.top_tb.top_inst.decoder_inst.
+[sst_width] 276
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 157
+@28
+top.top_tb.r_clk
+@22
+#{top.top_tb.top_inst.decoder_inst.o_data[23:0]} top.top_tb.top_inst.decoder_inst.o_data[23] top.top_tb.top_inst.decoder_inst.o_data[22] top.top_tb.top_inst.decoder_inst.o_data[21] top.top_tb.top_inst.decoder_inst.o_data[20] top.top_tb.top_inst.decoder_inst.o_data[19] top.top_tb.top_inst.decoder_inst.o_data[18] top.top_tb.top_inst.decoder_inst.o_data[17] top.top_tb.top_inst.decoder_inst.o_data[16] top.top_tb.top_inst.decoder_inst.o_data[15] top.top_tb.top_inst.decoder_inst.o_data[14] top.top_tb.top_inst.decoder_inst.o_data[13] top.top_tb.top_inst.decoder_inst.o_data[12] top.top_tb.top_inst.decoder_inst.o_data[11] top.top_tb.top_inst.decoder_inst.o_data[10] top.top_tb.top_inst.decoder_inst.o_data[9] top.top_tb.top_inst.decoder_inst.o_data[8] top.top_tb.top_inst.decoder_inst.o_data[7] top.top_tb.top_inst.decoder_inst.o_data[6] top.top_tb.top_inst.decoder_inst.o_data[5] top.top_tb.top_inst.decoder_inst.o_data[4] top.top_tb.top_inst.decoder_inst.o_data[3] top.top_tb.top_inst.decoder_inst.o_data[2] top.top_tb.top_inst.decoder_inst.o_data[1] top.top_tb.top_inst.decoder_inst.o_data[0]
+[pattern_trace] 1
+[pattern_trace] 0

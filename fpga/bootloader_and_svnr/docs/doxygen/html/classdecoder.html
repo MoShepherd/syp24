@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SVNR Bootloader - FPGA: decoder Entwurfseinheit-Referenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SVNR Bootloader - FPGA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#Bibliotheken">Bibliotheken</a> &#124;
+<a href="#Schnittstellen">Schnittstellen</a> &#124;
+<a href="#Use_20Klauseln">Use Klauseln</a>  </div>
+  <div class="headertitle"><div class="title">decoder Entwurfseinheit-Referenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Verarbeitet Bootloader Pakete und leitet diese an die entsprechenden Funktionalitäten des Bootloaders weiter.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Bibliotheken" name="Bibliotheken"></a>
+Bibliotheken</h2></td></tr>
+ <tr class="memitem:a754743211e92f9caf6ae332e789fbe90" id="r_a754743211e92f9caf6ae332e789fbe90"><td class="memItemLeft" align="right" valign="top"><a id="a754743211e92f9caf6ae332e789fbe90" name="a754743211e92f9caf6ae332e789fbe90"></a>
+<a class="el" href="#a754743211e92f9caf6ae332e789fbe90">ieee</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Use_20Klauseln" name="Use_20Klauseln"></a>
+Use Klauseln</h2></td></tr>
+ <tr class="memitem:ae9ef345b06f9b1c82930eecabff00732" id="r_ae9ef345b06f9b1c82930eecabff00732"><td class="memItemLeft" align="right" valign="top"><a id="ae9ef345b06f9b1c82930eecabff00732" name="ae9ef345b06f9b1c82930eecabff00732"></a>
+<a class="el" href="#ae9ef345b06f9b1c82930eecabff00732">std_logic_1164</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+<tr class="memitem:a9adfa334e4a19fad42e637ea3fcc9346" id="r_a9adfa334e4a19fad42e637ea3fcc9346"><td class="memItemLeft" align="right" valign="top"><a id="a9adfa334e4a19fad42e637ea3fcc9346" name="a9adfa334e4a19fad42e637ea3fcc9346"></a>
+<a class="el" href="#a9adfa334e4a19fad42e637ea3fcc9346">numeric_std</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+<tr class="memitem:acdcc010bdef070e84ff499c67a777fdd" id="r_acdcc010bdef070e84ff499c67a777fdd"><td class="memItemLeft" align="right" valign="top"><a id="acdcc010bdef070e84ff499c67a777fdd" name="acdcc010bdef070e84ff499c67a777fdd"></a>
+<a class="el" href="#acdcc010bdef070e84ff499c67a777fdd">fifo_3_type</a>&#160;</td><td class="memItemRight" valign="bottom">   <b>Paket</b><em><a class="el" href="classfifo__3__type.html"> &lt;fifo_3_type&gt;</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Schnittstellen" name="Schnittstellen"></a>
+Schnittstellen</h2></td></tr>
+ <tr class="memitem:a3f15a09c3bf1c4afd888dc09aec1799b" id="r_a3f15a09c3bf1c4afd888dc09aec1799b"><td class="memItemLeft" align="right" valign="top"><a id="a3f15a09c3bf1c4afd888dc09aec1799b" name="a3f15a09c3bf1c4afd888dc09aec1799b"></a>
+<a class="el" href="#a3f15a09c3bf1c4afd888dc09aec1799b">i_rst_sync</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a8cf2cce67bcdf9a95693a3ffe7f3d69c" id="r_a8cf2cce67bcdf9a95693a3ffe7f3d69c"><td class="memItemLeft" align="right" valign="top"><a id="a8cf2cce67bcdf9a95693a3ffe7f3d69c" name="a8cf2cce67bcdf9a95693a3ffe7f3d69c"></a>
+<a class="el" href="#a8cf2cce67bcdf9a95693a3ffe7f3d69c">i_clk</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:ac44f96399a82d2db1c000a29ac552dbe" id="r_ac44f96399a82d2db1c000a29ac552dbe"><td class="memItemLeft" align="right" valign="top"><a id="ac44f96399a82d2db1c000a29ac552dbe" name="ac44f96399a82d2db1c000a29ac552dbe"></a>
+<a class="el" href="#ac44f96399a82d2db1c000a29ac552dbe">i_rd_data_burst</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">c_WIDTH</span><span class="vhdlchar"> </span><span class="vhdlchar">*</span><span class="vhdlchar"> </span><span class="vhdlchar">c_DEPTH</span><span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ac44f96399a82d2db1c000a29ac552dbe"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">3 Byte - 1 Bootloader Paket Input aus dem FIFO RX Input Buffer <br /></td></tr>
+<tr class="memitem:a1839a2a59bfa0de8f97f98c03fec2a99" id="r_a1839a2a59bfa0de8f97f98c03fec2a99"><td class="memItemLeft" align="right" valign="top"><a id="a1839a2a59bfa0de8f97f98c03fec2a99" name="a1839a2a59bfa0de8f97f98c03fec2a99"></a>
+<a class="el" href="#a1839a2a59bfa0de8f97f98c03fec2a99">i_read</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a1839a2a59bfa0de8f97f98c03fec2a99"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Signal welches die anliegenden 3 Byte. <br /></td></tr>
+<tr class="memitem:afc9ea5e6523a312cd87450797eec89d1" id="r_afc9ea5e6523a312cd87450797eec89d1"><td class="memItemLeft" align="right" valign="top"><a id="afc9ea5e6523a312cd87450797eec89d1" name="afc9ea5e6523a312cd87450797eec89d1"></a>
+<a class="el" href="#afc9ea5e6523a312cd87450797eec89d1">i_bp_edit_done</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:afc9ea5e6523a312cd87450797eec89d1"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signalisiert Breakpoint Hinzufuegen/Loeschen abgeschlossen. <br /></td></tr>
+<tr class="memitem:af5275e09f2c4c887f3a6583429b4e5b8" id="r_af5275e09f2c4c887f3a6583429b4e5b8"><td class="memItemLeft" align="right" valign="top"><a id="af5275e09f2c4c887f3a6583429b4e5b8" name="af5275e09f2c4c887f3a6583429b4e5b8"></a>
+<a class="el" href="#af5275e09f2c4c887f3a6583429b4e5b8">i_cpu_halt</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:af5275e09f2c4c887f3a6583429b4e5b8"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signalisiert CPU ist angehalten (Enweder in Breakpoint gefahren, oder im Single-Step Modus Step vollzogen) <br /></td></tr>
+<tr class="memitem:a65945b968e0d23eb4931e9641219029f" id="r_a65945b968e0d23eb4931e9641219029f"><td class="memItemLeft" align="right" valign="top"><a id="a65945b968e0d23eb4931e9641219029f" name="a65945b968e0d23eb4931e9641219029f"></a>
+<a class="el" href="#a65945b968e0d23eb4931e9641219029f">i_halt_address</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a65945b968e0d23eb4931e9641219029f"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Indiziert die Adresse, an der die CPU angehalten hat. <br /></td></tr>
+<tr class="memitem:a414a4677ca57f3aea101368de2bef817" id="r_a414a4677ca57f3aea101368de2bef817"><td class="memItemLeft" align="right" valign="top"><a id="a414a4677ca57f3aea101368de2bef817" name="a414a4677ca57f3aea101368de2bef817"></a>
+<a class="el" href="#a414a4677ca57f3aea101368de2bef817">i_tx_done</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a414a4677ca57f3aea101368de2bef817"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signalisiert ein gesamtes Bootloader Paket (3 Byte) per UART uebertragen. <br /></td></tr>
+<tr class="memitem:a590aa0f753c7aca4835690282887bb5d" id="r_a590aa0f753c7aca4835690282887bb5d"><td class="memItemLeft" align="right" valign="top"><a id="a590aa0f753c7aca4835690282887bb5d" name="a590aa0f753c7aca4835690282887bb5d"></a>
+<a class="el" href="#a590aa0f753c7aca4835690282887bb5d">o_flush</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a590aa0f753c7aca4835690282887bb5d"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Bootloader Paket ist erfolgreich gelesen - Signalisiert Starten der TX Response. <br /></td></tr>
+<tr class="memitem:af647c5316e3d1e14ff9d06be07cfe885" id="r_af647c5316e3d1e14ff9d06be07cfe885"><td class="memItemLeft" align="right" valign="top"><a id="af647c5316e3d1e14ff9d06be07cfe885" name="af647c5316e3d1e14ff9d06be07cfe885"></a>
+<a class="el" href="#af647c5316e3d1e14ff9d06be07cfe885">o_data</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">c_WIDTH</span><span class="vhdlchar"> </span><span class="vhdlchar">*</span><span class="vhdlchar"> </span><span class="vhdlchar">c_DEPTH</span><span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:af647c5316e3d1e14ff9d06be07cfe885"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt direkt das zuletzt vollstaendig gelesene Bootloader RX Paket nach aussen. <br /></td></tr>
+<tr class="memitem:abce02a6b6c42231ed3492f147e784ab5" id="r_abce02a6b6c42231ed3492f147e784ab5"><td class="memItemLeft" align="right" valign="top"><a id="abce02a6b6c42231ed3492f147e784ab5" name="abce02a6b6c42231ed3492f147e784ab5"></a>
+<a class="el" href="#abce02a6b6c42231ed3492f147e784ab5">o_status</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">23</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span><span class="vhdlchar">X</span><span class="vhdlchar"> </span><span class="keyword">&quot; 000001 &quot;</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:abce02a6b6c42231ed3492f147e784ab5"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Status/Response Paket, welches von UART_tx abgegriffen und bei Statusabfrage versendet wird. <br /></td></tr>
+<tr class="memitem:a5e8a802fdacfb6e3fa505457fc5e8b4c" id="r_a5e8a802fdacfb6e3fa505457fc5e8b4c"><td class="memItemLeft" align="right" valign="top"><a id="a5e8a802fdacfb6e3fa505457fc5e8b4c" name="a5e8a802fdacfb6e3fa505457fc5e8b4c"></a>
+<a class="el" href="#a5e8a802fdacfb6e3fa505457fc5e8b4c">i_runner_done</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a5e8a802fdacfb6e3fa505457fc5e8b4c"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signalisiert Kopieren von DPRAM in den SVNR RAM erfolgreich abgeschlossen - Wenn das Signal high ist, ist die RAM Uebertragung vollstaendig abgeschlossen. <br /></td></tr>
+<tr class="memitem:a51aa3d1869e1cf1912a5fcb4390d1519" id="r_a51aa3d1869e1cf1912a5fcb4390d1519"><td class="memItemLeft" align="right" valign="top"><a id="a51aa3d1869e1cf1912a5fcb4390d1519" name="a51aa3d1869e1cf1912a5fcb4390d1519"></a>
+<a class="el" href="#a51aa3d1869e1cf1912a5fcb4390d1519">o_ram_addr</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">9</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:af817082f3b63b9ee7458eed1bcc75abc" id="r_af817082f3b63b9ee7458eed1bcc75abc"><td class="memItemLeft" align="right" valign="top"><a id="af817082f3b63b9ee7458eed1bcc75abc" name="af817082f3b63b9ee7458eed1bcc75abc"></a>
+<a class="el" href="#af817082f3b63b9ee7458eed1bcc75abc">o_ram_data</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a9f8c1c7b21f578d7a7b8608f94bae169" id="r_a9f8c1c7b21f578d7a7b8608f94bae169"><td class="memItemLeft" align="right" valign="top"><a id="a9f8c1c7b21f578d7a7b8608f94bae169" name="a9f8c1c7b21f578d7a7b8608f94bae169"></a>
+<a class="el" href="#a9f8c1c7b21f578d7a7b8608f94bae169">o_ram_wen</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a7983e196a9a38358a2cf405c12c22196" id="r_a7983e196a9a38358a2cf405c12c22196"><td class="memItemLeft" align="right" valign="top"><a id="a7983e196a9a38358a2cf405c12c22196" name="a7983e196a9a38358a2cf405c12c22196"></a>
+<a class="el" href="#a7983e196a9a38358a2cf405c12c22196">o_ram_runner_begin</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a7983e196a9a38358a2cf405c12c22196"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet das Kopieren von DPRAM in den SVNR RAM durch den Runner. <br /></td></tr>
+<tr class="memitem:a2bd8a25f9c4cbada71e5f7af76c23a87" id="r_a2bd8a25f9c4cbada71e5f7af76c23a87"><td class="memItemLeft" align="right" valign="top"><a id="a2bd8a25f9c4cbada71e5f7af76c23a87" name="a2bd8a25f9c4cbada71e5f7af76c23a87"></a>
+<a class="el" href="#a2bd8a25f9c4cbada71e5f7af76c23a87">o_ram_uploading</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span><span class="vhdlchar">&#39;</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">&#39;</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a2bd8a25f9c4cbada71e5f7af76c23a87"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signalisiert eine laufende RAM Uebertragung. <br /></td></tr>
+<tr class="memitem:a70267e82f8c6a6315633056221a749dd" id="r_a70267e82f8c6a6315633056221a749dd"><td class="memItemLeft" align="right" valign="top"><a id="a70267e82f8c6a6315633056221a749dd" name="a70267e82f8c6a6315633056221a749dd"></a>
+<a class="el" href="#a70267e82f8c6a6315633056221a749dd">o_ram_data_valid</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a70267e82f8c6a6315633056221a749dd"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Indiziert die Integritaet des DPRAMs an den Runner. <br /></td></tr>
+<tr class="memitem:a6a8a675dc5499ef7abc8407ba1148462" id="r_a6a8a675dc5499ef7abc8407ba1148462"><td class="memItemLeft" align="right" valign="top"><a id="a6a8a675dc5499ef7abc8407ba1148462" name="a6a8a675dc5499ef7abc8407ba1148462"></a>
+<a class="el" href="#a6a8a675dc5499ef7abc8407ba1148462">o_breakpoint_add</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a6a8a675dc5499ef7abc8407ba1148462"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signalisiert Hinzufuegen eines Breakpoints an den Breakpoint-Controller. <br /></td></tr>
+<tr class="memitem:a6f20149d84ad901b977ed519de0fa8e3" id="r_a6f20149d84ad901b977ed519de0fa8e3"><td class="memItemLeft" align="right" valign="top"><a id="a6f20149d84ad901b977ed519de0fa8e3" name="a6f20149d84ad901b977ed519de0fa8e3"></a>
+<a class="el" href="#a6f20149d84ad901b977ed519de0fa8e3">o_breakpoint_delete</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a6f20149d84ad901b977ed519de0fa8e3"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Signalisiert Loeschen eines Breakpoints an den Breakpoint-Controller. <br /></td></tr>
+<tr class="memitem:acb2339905381253ae04aebc5441214d8" id="r_acb2339905381253ae04aebc5441214d8"><td class="memItemLeft" align="right" valign="top"><a id="acb2339905381253ae04aebc5441214d8" name="acb2339905381253ae04aebc5441214d8"></a>
+<a class="el" href="#acb2339905381253ae04aebc5441214d8">o_breakpoint_value</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:acb2339905381253ae04aebc5441214d8"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Adresse des Hinzuzufuegenden/ zu Loeschenden Breakpoints. <br /></td></tr>
+<tr class="memitem:a92a741fa5db13dc5f77d8b7a5bfc492c" id="r_a92a741fa5db13dc5f77d8b7a5bfc492c"><td class="memItemLeft" align="right" valign="top"><a id="a92a741fa5db13dc5f77d8b7a5bfc492c" name="a92a741fa5db13dc5f77d8b7a5bfc492c"></a>
+<a class="el" href="#a92a741fa5db13dc5f77d8b7a5bfc492c">o_cpu_run</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a92a741fa5db13dc5f77d8b7a5bfc492c"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">run/continue Signal fuer Breakpoint Controller und/oder Single-Step <br /></td></tr>
+<tr class="memitem:ace3a67d091dff7486de6012a7626594b" id="r_ace3a67d091dff7486de6012a7626594b"><td class="memItemLeft" align="right" valign="top"><a id="ace3a67d091dff7486de6012a7626594b" name="ace3a67d091dff7486de6012a7626594b"></a>
+<a class="el" href="#ace3a67d091dff7486de6012a7626594b">o_svnr_reset</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ace3a67d091dff7486de6012a7626594b"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">SVNR Reset. <br /></td></tr>
+<tr class="memitem:ad8c1dff0880dadc21a7342c232aea3f8" id="r_ad8c1dff0880dadc21a7342c232aea3f8"><td class="memItemLeft" align="right" valign="top"><a id="ad8c1dff0880dadc21a7342c232aea3f8" name="ad8c1dff0880dadc21a7342c232aea3f8"></a>
+<a class="el" href="#ad8c1dff0880dadc21a7342c232aea3f8">o_tx_trig</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span><span class="vhdlchar">&#39;</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">&#39;</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ad8c1dff0880dadc21a7342c232aea3f8"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet UART TX Response Paketuebertragung. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Verarbeitet Bootloader Pakete und leitet diese an die entsprechenden Funktionalitäten des Bootloaders weiter. </p>
+<p>Bietet Signale zum Beschreiben des SVNR Rams (<code>o_ram_addr</code>, <code>o_ram_data</code>, <code>o_ram_wen</code>, <code>o_ram_runner_begin</code>, <code>o_ram_uploading</code>) , sowie das <code>cpu_en</code> Signal, welches die CPU des SVNRs steuern kann.</p>
+<p>Auf jedes empfangene Bootloader Paket gibt der Decoder eine Response über <code>o_status</code> an den UART TX weiter, welcher an die Host App zurück gesendet wird. Diese Response kann entweder als einfache Statusinformationen/Acknowledgment dienen, oder angeforderte Daten zurückgeben. <br  />
+ Die Hauptaufgabe des Decoders liegt in seiner Statemachine, in der die UART Inputs verarbeitet werden und entsprechende Aktionen in der Programmlogik des Bootloaders ausgeführt werden. Diese Logik umfasst:</p><ul>
+<li>Korrektes Kopieren des Binärimage in den SVNR RAM</li>
+<li>Prüfung der Integrität einer vollständigen Übertragung des Binärimage</li>
+<li>Erzeugen von Statusmeldungen/Fehlermeldungen, welche als Response an die Host App zurück übertragen werden werden sollen</li>
+<li>Stati zum Einhalten der Reihenfolge aller Debugger Funktionalitäten, hierzu gehört:</li>
+<li>Breakpoints hinzufügen/löschen</li>
+<li>SVNR CPU starten/stoppen </li>
+</ul>
+</div><hr/>Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>rtl/bootloader/<a class="el" href="decoder_8vhd.html">decoder.vhd</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

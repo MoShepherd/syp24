@@ -1,0 +1,5 @@
+= home
+
+== Allgemein
+Dieses Projekt ist ein Beispiel, wie man per UART und einem Counter
+ein "x" versenden kann.

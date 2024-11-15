@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>host_app: uart/src/uart.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">host_app
+   </div>
+   <div id="projectbrief">Client Applikation des SVNR-Bootloaders</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_43ad556cc113861ad71aa7c6f25342a2.html">uart</a></li><li class="navelem"><a class="el" href="dir_3ecfcfc4d261a0edf6db6e60e290bf65.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle"><div class="title">uart.c-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;termios.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;sys/select.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="uart_8h_source.html">../include/uart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="statusbar_8h_source.html">../../main/includes/statusbar.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für uart.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="uart_8c__incl.png" border="0" usemap="#auart_2src_2uart_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a8ab2a1c038465abf01576818aaa2f177" id="r_a8ab2a1c038465abf01576818aaa2f177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ab2a1c038465abf01576818aaa2f177">set_interface_attribs</a> (int fd, int speed, int parity)</td></tr>
+<tr class="memdesc:a8ab2a1c038465abf01576818aaa2f177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konfiguriert die UART Schnittstelle mit teils gesetzten, teils parametrisierten Konfigurationen.  <br /></td></tr>
+<tr class="separator:a8ab2a1c038465abf01576818aaa2f177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdfc548828d35bf9fe92ca5e0d257b8f" id="r_abdfc548828d35bf9fe92ca5e0d257b8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdfc548828d35bf9fe92ca5e0d257b8f">uart_tx_bl_packet</a> (int <a class="el" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>, uint8_t pack_type, uint16_t pack_data)</td></tr>
+<tr class="memdesc:abdfc548828d35bf9fe92ca5e0d257b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überträgt ein Bootloader Paket (3 Byte) per UART Schnittstelle.  <br /></td></tr>
+<tr class="separator:abdfc548828d35bf9fe92ca5e0d257b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949f7105b89b6f151322a3052d570259" id="r_a949f7105b89b6f151322a3052d570259"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a949f7105b89b6f151322a3052d570259">uart_rx_bl_packet</a> (int <a class="el" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>, uint8_t *data)</td></tr>
+<tr class="memdesc:a949f7105b89b6f151322a3052d570259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empfängt ein Bootloader Paket (3 Byte) per UART Schnittstelle.  <br /></td></tr>
+<tr class="separator:a949f7105b89b6f151322a3052d570259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9b15605a9b0156188bbfe415bae08f" id="r_a5b9b15605a9b0156188bbfe415bae08f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b9b15605a9b0156188bbfe415bae08f">tx_mem_image</a> (int <a class="el" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>, uint8_t *image, int size)</td></tr>
+<tr class="memdesc:a5b9b15605a9b0156188bbfe415bae08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überträgt ein gesamtes Bootloader Binärimage (3072 Byte) per UART Schnittstelle.  <br /></td></tr>
+<tr class="separator:a5b9b15605a9b0156188bbfe415bae08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99cb82a6d1dd2cc590853642a4c95db" id="r_ab99cb82a6d1dd2cc590853642a4c95db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab99cb82a6d1dd2cc590853642a4c95db">open_file</a> (char *filepath, char **<a class="el" href="bootloader_8c.html#a742cda7da9192ce964d73452a11f2825">mem_image</a>, off_t *file_size)</td></tr>
+<tr class="memdesc:ab99cb82a6d1dd2cc590853642a4c95db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest ein gesamtes Binärimage in einen Buffer.  <br /></td></tr>
+<tr class="separator:ab99cb82a6d1dd2cc590853642a4c95db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:abfbc1b73f4492c253a69da329b3e2d14" id="r_abfbc1b73f4492c253a69da329b3e2d14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfbc1b73f4492c253a69da329b3e2d14">timeout_enabled</a> = 0</td></tr>
+<tr class="separator:abfbc1b73f4492c253a69da329b3e2d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="ab99cb82a6d1dd2cc590853642a4c95db" name="ab99cb82a6d1dd2cc590853642a4c95db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99cb82a6d1dd2cc590853642a4c95db">&#9670;&#160;</a></span>open_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_file </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>filepath</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>mem_image</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t *</td>          <td class="paramname"><span class="paramname"><em>file_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liest ein gesamtes Binärimage in einen Buffer. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Pfad der zu öffnenden Datei </td></tr>
+    <tr><td class="paramname">mem_image</td><td>Pufferspeicher, in welchen die Datei eingelesen wird </td></tr>
+    <tr><td class="paramname">file_size</td><td>Größe der zu lesenden Datei in Byte </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ab2a1c038465abf01576818aaa2f177" name="a8ab2a1c038465abf01576818aaa2f177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab2a1c038465abf01576818aaa2f177">&#9670;&#160;</a></span>set_interface_attribs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_interface_attribs </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fd</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>speed</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>parity</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konfiguriert die UART Schnittstelle mit teils gesetzten, teils parametrisierten Konfigurationen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>UART Handle </td></tr>
+    <tr><td class="paramname">speed</td><td>Baudrate der UART Verbindung </td></tr>
+    <tr><td class="paramname">parity</td><td>Anzahl an Parity Bits </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b9b15605a9b0156188bbfe415bae08f" name="a5b9b15605a9b0156188bbfe415bae08f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9b15605a9b0156188bbfe415bae08f">&#9670;&#160;</a></span>tx_mem_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t tx_mem_image </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fd_uart</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>image</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überträgt ein gesamtes Bootloader Binärimage (3072 Byte) per UART Schnittstelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd_uart</td><td>UART Handle </td></tr>
+    <tr><td class="paramname">image</td><td>gesamtes Bootloader Binärimage </td></tr>
+    <tr><td class="paramname">size</td><td>Größe des Binärimage in Byte </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a949f7105b89b6f151322a3052d570259" name="a949f7105b89b6f151322a3052d570259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949f7105b89b6f151322a3052d570259">&#9670;&#160;</a></span>uart_rx_bl_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int uart_rx_bl_packet </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fd_uart</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empfängt ein Bootloader Paket (3 Byte) per UART Schnittstelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd_uart</td><td>UART Handle </td></tr>
+    <tr><td class="paramname">data</td><td>gesamtes Bootloader Paket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdfc548828d35bf9fe92ca5e0d257b8f" name="abdfc548828d35bf9fe92ca5e0d257b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdfc548828d35bf9fe92ca5e0d257b8f">&#9670;&#160;</a></span>uart_tx_bl_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uart_tx_bl_packet </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fd_uart</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>pack_type</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>pack_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überträgt ein Bootloader Paket (3 Byte) per UART Schnittstelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd_uart</td><td>UART Handle </td></tr>
+    <tr><td class="paramname">pack_type</td><td>Bootloader Pakettyp - MACROs in /host_app/uart/include/uart.h </td></tr>
+    <tr><td class="paramname">pack_data</td><td>Bootloader Paketdaten - MACROs in /host_app/uart/include/uart.h </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a id="abfbc1b73f4492c253a69da329b3e2d14" name="abfbc1b73f4492c253a69da329b3e2d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbc1b73f4492c253a69da329b3e2d14">&#9670;&#160;</a></span>timeout_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int timeout_enabled = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

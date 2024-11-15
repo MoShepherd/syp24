@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SVNR Bootloader - FPGA: UART_RX Entwurfseinheit-Referenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SVNR Bootloader - FPGA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#Bibliotheken">Bibliotheken</a> &#124;
+<a href="#Parameter">Parameter</a> &#124;
+<a href="#Schnittstellen">Schnittstellen</a> &#124;
+<a href="#Use_20Klauseln">Use Klauseln</a>  </div>
+  <div class="headertitle"><div class="title">UART_RX Entwurfseinheit-Referenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>UART rx/Receive Komponente des Bootloaders <br  />
+  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Bibliotheken" name="Bibliotheken"></a>
+Bibliotheken</h2></td></tr>
+ <tr class="memitem:aea3f4ef4b788dbe3ad75e0d1a08db350" id="r_aea3f4ef4b788dbe3ad75e0d1a08db350"><td class="memItemLeft" align="right" valign="top"><a id="aea3f4ef4b788dbe3ad75e0d1a08db350" name="aea3f4ef4b788dbe3ad75e0d1a08db350"></a>
+<a class="el" href="#aea3f4ef4b788dbe3ad75e0d1a08db350">ieee</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Use_20Klauseln" name="Use_20Klauseln"></a>
+Use Klauseln</h2></td></tr>
+ <tr class="memitem:ac064a6d53d6a27ff42125a96823d0b1a" id="r_ac064a6d53d6a27ff42125a96823d0b1a"><td class="memItemLeft" align="right" valign="top"><a id="ac064a6d53d6a27ff42125a96823d0b1a" name="ac064a6d53d6a27ff42125a96823d0b1a"></a>
+<a class="el" href="#ac064a6d53d6a27ff42125a96823d0b1a">std_logic_1164</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+<tr class="memitem:aca3236c4ad6c2c42ed405f78924fc00f" id="r_aca3236c4ad6c2c42ed405f78924fc00f"><td class="memItemLeft" align="right" valign="top"><a id="aca3236c4ad6c2c42ed405f78924fc00f" name="aca3236c4ad6c2c42ed405f78924fc00f"></a>
+<a class="el" href="#aca3236c4ad6c2c42ed405f78924fc00f">numeric_std</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Parameter" name="Parameter"></a>
+Parameter</h2></td></tr>
+ <tr class="memitem:a70ac9afcd4aa7f62e4b47a52386356eb" id="r_a70ac9afcd4aa7f62e4b47a52386356eb"><td class="memItemLeft" align="right" valign="top"><a id="a70ac9afcd4aa7f62e4b47a52386356eb" name="a70ac9afcd4aa7f62e4b47a52386356eb"></a>
+<a class="el" href="#a70ac9afcd4aa7f62e4b47a52386356eb">g_CLKS_PER_BIT</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="keywordtype">integer</span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span> <span class="vhdldigit">434</span> <span class="vhdlchar"> </span></b></b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Schnittstellen" name="Schnittstellen"></a>
+Schnittstellen</h2></td></tr>
+ <tr class="memitem:a12649ae1d8a4722fcc9e7ddd9759f4ad" id="r_a12649ae1d8a4722fcc9e7ddd9759f4ad"><td class="memItemLeft" align="right" valign="top"><a id="a12649ae1d8a4722fcc9e7ddd9759f4ad" name="a12649ae1d8a4722fcc9e7ddd9759f4ad"></a>
+<a class="el" href="#a12649ae1d8a4722fcc9e7ddd9759f4ad">i_Clk</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a87f328caddb8d2c0c36f11e184761880" id="r_a87f328caddb8d2c0c36f11e184761880"><td class="memItemLeft" align="right" valign="top"><a id="a87f328caddb8d2c0c36f11e184761880" name="a87f328caddb8d2c0c36f11e184761880"></a>
+<a class="el" href="#a87f328caddb8d2c0c36f11e184761880">i_RX_Serial</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a950dd8b70729ae053cd52778b503fcff" id="r_a950dd8b70729ae053cd52778b503fcff"><td class="memItemLeft" align="right" valign="top"><a id="a950dd8b70729ae053cd52778b503fcff" name="a950dd8b70729ae053cd52778b503fcff"></a>
+<a class="el" href="#a950dd8b70729ae053cd52778b503fcff">o_RX_DV</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a950dd8b70729ae053cd52778b503fcff"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Data Valid Pulse: Signalisiert dass RX_Byte valide Daten hat (1 Byte vollstaendig per UART empfangen worden ist) <br /></td></tr>
+<tr class="memitem:a5001da0871d80c4fe3676f3a1e2a703f" id="r_a5001da0871d80c4fe3676f3a1e2a703f"><td class="memItemLeft" align="right" valign="top"><a id="a5001da0871d80c4fe3676f3a1e2a703f" name="a5001da0871d80c4fe3676f3a1e2a703f"></a>
+<a class="el" href="#a5001da0871d80c4fe3676f3a1e2a703f">o_RX_Byte</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">7</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>UART rx/Receive Komponente des Bootloaders <br  />
+ </p>
+<p>Implementiert UART rx Protokoll. Nimmt einen Seriellen Datenstrom �ber <code>i_RX_Serial</code> entgegen, und gibt das empfangene Byte an <code>o_RX_Byte</code> aus Berechnung der Baudrate ist an 50MHz Grundtakt angepasst. </p>
+</div><hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>rtl/bootloader/<b>UART_RX.vhd</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

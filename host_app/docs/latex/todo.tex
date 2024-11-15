@@ -1,0 +1,94 @@
+\chapter{Ausstehende Aufgaben}
+\hypertarget{todo}{}\label{todo}\index{Ausstehende Aufgaben@{Ausstehende Aufgaben}}
+
+\begin{DoxyRefList}
+\item[Global \doxylink{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab}{auswahlmenu} ()]\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
+Wenn man \doxylink{allefunktionen_8h_a19c86e0d31779f284e91d4d016448264}{debugger()} schließt und \textquotesingle{}Esc\textquotesingle{} drückt, wird die Applikation nicht beendet, sondern es treten Bugs auf. 
+
+
+
+evtl. "{}\+EXIT"{}-\/Option  
+\item[Global \doxylink{main_2src_2main_8c_a4858bb3109a37110e12bd7765d6f18ee}{baud} ]\label{todo__todo000008}%
+\Hypertarget{todo__todo000008}%
+Execute wurde noch nicht implementiert.  
+\item[Global \doxylink{Compiler_8h_acfc2ab8416b01670f8bbb9da605780b4}{bin2mnem} (char \texorpdfstring{$\ast$}{*}filename)]\label{todo__todo000003}%
+\Hypertarget{todo__todo000003}%
+Im Moment gibt es zwei Mappings, wobei eins komplett ausreicht. 
+
+
+
+Funktion funktioniert noch nicht richtig. Es werden noch nicht alle Opcodes ausgelesen und die Datei wird fehlerhaft erstellt. 
+\item[Global \doxylink{Compiler_8h_a251a4c04b6f21dcb3976cb968898e65d}{binary\+Mappings} \mbox{[}\mbox{]}\mbox{[}2\mbox{]}]\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+kann weggelassen werden, wenn man \doxylink{Compiler_8c_acfc2ab8416b01670f8bbb9da605780b4}{bin2mnem(char\texorpdfstring{$\ast$}{*} filename)} zuvor bearbeitet.  
+\item[Global \doxylink{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4}{bootloader} ()]\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+Execute wurde noch nicht implementiert.  
+\item[Global \doxylink{configserial_8c_a0bea76931a7bc8758570dc3144bf8210}{configserial} ()]\label{todo__todo000009}%
+\Hypertarget{todo__todo000009}%
+-\/  
+\item[Global \doxylink{debugger_8c_ae16e3293f006339f3d6e659bed97f8e2}{count\+Lines} (const char \texorpdfstring{$\ast$}{*}filename)]\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+Funktion wird nicht verwendet! Jedoch soll sie dazu dienen die Stelle anzuzeigen an welcher das Programm stehen geblieben ist (Breakpoints, Single Steps). 
+\item[Global \doxylink{main_2src_2main_8c_ad9e267f2d30791507c2925e612a99375}{current\+\_\+file} \mbox{[}MAX\+\_\+\+BUFFER\+\_\+\+SIZE\mbox{]}]\label{todo__todo000019}%
+\Hypertarget{todo__todo000019}%
+eventuelle Auslagerug der while-\/schleifen als Steurungsfunktion für alle Fenster. Hierfür wird in erster Linie ein gutes Konzept zur Realisierung in C gebraucht.  
+\item[Global \doxylink{debugger_8c_a19c86e0d31779f284e91d4d016448264}{debugger} ()]\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+Breakpoints müssen noch an den FPGA übertragen werden. 
+
+
+
+Single Steps fehlen komplett. 
+
+
+
+Read RAM fehlt. 
+
+
+
+Continue fehlt. 
+
+
+
+Read Register öffnet ein neues Fenster jedoch fehlt der Inhalt komplett. 
+
+
+
+Write Register fehlt. 
+
+
+
+Es gibt einige Bugs die auftreten wenn zu oft \textquotesingle{}Esc\textquotesingle{} und \textquotesingle{}Q\textquotesingle{} gedrückt wird. 
+\item[Global \doxylink{debugger_8c_a19b22144694590f898d23442237aecac}{del\+Marked\+Line} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)]\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+Funktion wird nicht verwendet! 
+\item[Global \doxylink{filechooser_8c_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser} ()]\label{todo__todo000018}%
+\Hypertarget{todo__todo000018}%
+Evtl. implementieren, dass bei "{}\+Load Mnemonics"{} nur .asm-\/\+Dateien und bei "{}\+Load Binary"{} nur .bin-\/\+Dateien ausgewählt werden können.  
+\item[Global \doxylink{Compiler_8h_a374ccb28373614a55ce393e47b81acab}{format\+File} (char \texorpdfstring{$\ast$}{*}filename)]\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+Im Moment wird noch eine neue Datei erstellt, was ineffizient ist. Stattdessen könnte man den formatierten Text in einem Buffer speichern und den darin stehenden Inhalt dann kompilieren. 
+\item[Global \doxylink{debugger_8c_aabd40a78225de224f26b54c84693903d}{highlight\+Line} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)]\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+Funktion wird nicht verwendet! Jedoch soll sie dazu dienen die Stelle anzuzeigen an welcher das Programm stehen geblieben ist (Breakpoints, Single Steps). 
+\item[Global \doxylink{breakpointmanager_8c_a181c06c3f096d959fd2b3d2cf65e3b8f}{mark\+Breakpoints} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, \doxylink{structBreakpoint}{Breakpoint} \texorpdfstring{$\ast$}{*}breakpoints)]\label{todo__todo000007}%
+\Hypertarget{todo__todo000007}%
+Diese Funktion funktioniert nicht und wird auch nicht gebraucht im Moment. Kann also gelöscht werden!  
+\item[Global \doxylink{debugger_8c_a50bb1defdd5cf04ac2ed5c55c2d5344f}{mark\+Line} (WINDOW \texorpdfstring{$\ast$}{*}win, const char \texorpdfstring{$\ast$}{*}filename, int start\+\_\+line, int num\+\_\+lines, char \texorpdfstring{$\ast$}{*}adr)]\label{todo__todo000013}%
+\Hypertarget{todo__todo000013}%
+Funktion wird nicht verwendet! 
+\item[Global \doxylink{Compiler_8h_af11ec6d25a910e6938142f40348d7bd7}{mnem2bin} (char \texorpdfstring{$\ast$}{*}filename)]\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+Adressen direkt beschreiben ohne Opcode. 
+\item[Global \doxylink{debugger_8c_aa84631c803d364c3a438579a70a652eb}{print\+BPs} (\doxylink{structBreakpoint}{Breakpoint} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}top, char status\mbox{[}\mbox{]}, int breakpoint\+Num)]\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+Funktion wird nicht verwendet! 
+\item[Global \doxylink{debugger_8c_a89314e3a69768ea29b7e39a21b0979de}{print\+XY} (int x, int y)]\label{todo__todo000012}%
+\Hypertarget{todo__todo000012}%
+Funktion diente eigentlich für einen Texteditor im Debugger Fenster, welcher verworfen wurde. Methode wird nicht verwendet! 
+\item[Global \doxylink{debugger_8c_a17f4436338d69d2a944cf5920d7e5a23}{read\+Register} (int y, int x)]\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+Keine der Auswahlmöglichkeiten außer \textquotesingle{}b\textquotesingle{} funktionieren.
+\end{DoxyRefList}

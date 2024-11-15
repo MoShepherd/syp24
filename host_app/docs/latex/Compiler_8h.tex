@@ -1,0 +1,142 @@
+\doxysection{compiler/\+Compiler.h-\/\+Dateireferenz}
+\hypertarget{Compiler_8h}{}\label{Compiler_8h}\index{compiler/Compiler.h@{compiler/Compiler.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für Compiler.\+h\+:
+% FIG 0
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
+% FIG 1
+\doxysubsubsection*{Datenstrukturen}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcmd}{cmd}}
+\begin{DoxyCompactList}\small\item\em Datenstruktur, die das 3 Byte große Datenpaket abbildet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typdefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct cmd \mbox{\hyperlink{Compiler_8h_a3fd68ffbc03f028b9429b471777e2062}{cmd}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Compiler_8h_af11ec6d25a910e6938142f40348d7bd7}{mnem2bin}} (char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em \doxylink{Compiler_8c_af11ec6d25a910e6938142f40348d7bd7}{mnem2bin(char\texorpdfstring{$\ast$}{*} filename)}\+: erstellt eine neue .bin Datei aus einer Textdatei die mit Assembler Mnemonics befüllt ist. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Compiler_8h_acfc2ab8416b01670f8bbb9da605780b4}{bin2mnem}} (char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em \doxylink{Compiler_8c_acfc2ab8416b01670f8bbb9da605780b4}{bin2mnem(char\texorpdfstring{$\ast$}{*} filename)}\+: erstellt eine neue .txt Datei aus einer Binärdatei die mit Opcode und Adresse befüllt ist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Compiler_8h_a374ccb28373614a55ce393e47b81acab}{format\+File}} (char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em \doxylink{Compiler_8c_a374ccb28373614a55ce393e47b81acab}{format\+File(char\texorpdfstring{$\ast$}{*} filename)}\+: bringt eine Datei mit Assembler-\/\+Mnemonics in ein bestimmtes Format damit der Compiler benötigte Daten besser auslesen kann. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Compiler_8h_a3bd1ce3968b2efd24115727118998e94}{mnemonic\+Mappings}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Mapping um zu Mnemonic korrespondierenden Opcode zu finden und andersrum. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Compiler_8h_a251a4c04b6f21dcb3976cb968898e65d}{binary\+Mappings}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Mapping um zu Opcode korrespondierende Mnemonic zu finden und andersrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der benutzerdefinierten Typen}
+\Hypertarget{Compiler_8h_a3fd68ffbc03f028b9429b471777e2062}\label{Compiler_8h_a3fd68ffbc03f028b9429b471777e2062} 
+\index{Compiler.h@{Compiler.h}!cmd@{cmd}}
+\index{cmd@{cmd}!Compiler.h@{Compiler.h}}
+\doxysubsubsection{\texorpdfstring{cmd}{cmd}}
+{\footnotesize\ttfamily typedef struct cmd cmd}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{Compiler_8h_acfc2ab8416b01670f8bbb9da605780b4}\label{Compiler_8h_acfc2ab8416b01670f8bbb9da605780b4} 
+\index{Compiler.h@{Compiler.h}!bin2mnem@{bin2mnem}}
+\index{bin2mnem@{bin2mnem}!Compiler.h@{Compiler.h}}
+\doxysubsubsection{\texorpdfstring{bin2mnem()}{bin2mnem()}}
+{\footnotesize\ttfamily int bin2mnem (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+\doxylink{Compiler_8c_acfc2ab8416b01670f8bbb9da605780b4}{bin2mnem(char\texorpdfstring{$\ast$}{*} filename)}\+: erstellt eine neue .txt Datei aus einer Binärdatei die mit Opcode und Adresse befüllt ist. 
+
+Im Parameter wird ein Dateipfad zu einer Datei angegeben. Diese wird geöffnet und gelesen. Anhand des Inhaltes werden die Positionen in dem Array des Typen cmd, der Opcode und die Adresse ermittelt. In einem Mapping wird nach zu dem Opcode korrespondierenden Mnemonics gesucht. Sollten diese gefunden werden, werden diese in dem Array mit der Adresse gespeichert. Darauf folgt das Speichern des erstellten Arrays in eine .txt Datei.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000003}{Noch zu erledigen}}]Im Moment gibt es zwei Mappings, wobei eins komplett ausreicht. 
+
+Funktion funktioniert noch nicht richtig. Es werden noch nicht alle Opcodes ausgelesen und die Datei wird fehlerhaft erstellt.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameter}
+{\em filename} & Pfad zu einer Binäratei die Opcodes enthält und übersetzt werden soll. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Gibt durch eine Zahl 1 oder 0 an ob die übersetzte Mnemonic-\/\+Datei erstellt wurde. 
+\end{DoxyReturn}
+\Hypertarget{Compiler_8h_a374ccb28373614a55ce393e47b81acab}\label{Compiler_8h_a374ccb28373614a55ce393e47b81acab} 
+\index{Compiler.h@{Compiler.h}!formatFile@{formatFile}}
+\index{formatFile@{formatFile}!Compiler.h@{Compiler.h}}
+\doxysubsubsection{\texorpdfstring{formatFile()}{formatFile()}}
+{\footnotesize\ttfamily void format\+File (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+\doxylink{Compiler_8c_a374ccb28373614a55ce393e47b81acab}{format\+File(char\texorpdfstring{$\ast$}{*} filename)}\+: bringt eine Datei mit Assembler-\/\+Mnemonics in ein bestimmtes Format damit der Compiler benötigte Daten besser auslesen kann. 
+
+Im Parameter wird ein Dateipfad zu einer Datei angegeben. Diese wird geöffnet und gelesen. Jede Zeile der im Parameter übergebenen Datei wird in eine neue Datei geschrieben. Hierbei werden jedoch Leerzeilen, Leerzeichen sowie durch \textquotesingle{}\#\textquotesingle{} oder \textquotesingle{};\textquotesingle{} gekennzeichnete Kommentare entfernt. Die Methode bringt die Datei in ein bestimmtes Format, damit der Compiler die Daten besser auslesen kann.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000004}{Noch zu erledigen}}]Im Moment wird noch eine neue Datei erstellt, was ineffizient ist. Stattdessen könnte man den formatierten Text in einem Buffer speichern und den darin stehenden Inhalt dann kompilieren.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameter}
+{\em filename} & Pfad zu einer Datei die Assembler-\/\+Mnemonics enthält und übersetzt werden soll. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Compiler_8h_af11ec6d25a910e6938142f40348d7bd7}\label{Compiler_8h_af11ec6d25a910e6938142f40348d7bd7} 
+\index{Compiler.h@{Compiler.h}!mnem2bin@{mnem2bin}}
+\index{mnem2bin@{mnem2bin}!Compiler.h@{Compiler.h}}
+\doxysubsubsection{\texorpdfstring{mnem2bin()}{mnem2bin()}}
+{\footnotesize\ttfamily int mnem2bin (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+\doxylink{Compiler_8c_af11ec6d25a910e6938142f40348d7bd7}{mnem2bin(char\texorpdfstring{$\ast$}{*} filename)}\+: erstellt eine neue .bin Datei aus einer Textdatei die mit Assembler Mnemonics befüllt ist. 
+
+Im Parameter wird ein Dateipfad zu einer Datei angegeben. Diese wird geöffnet und gelesen. Anhand des Inhaltes werden die Positionen in dem Array des Typen cmd, der Opcode und die Adresse ermittelt. Zuvor wird das gesamte Array mit dem Pakettypen 0x02 und 0x00 0x00 gefüllt. Dann wird in einem Mapping nach zu dem Mnemonic korrespondierenden Opcodes gesucht. Sollte diese gefunden werden, werden diese in dem Array mit der Adresse gespeichert. Darauf folgt das Speichern des erstellten Arrays in eine .bin Datei.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000002}{Noch zu erledigen}}]Adressen direkt beschreiben ohne Opcode.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameter}
+{\em filename} & Pfad zu einer Datei die Assembler-\/\+Mnemonics enthält und übersetzt werden soll. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Gibt durch eine Zahl 1 oder 0 an ob die übersetzte Binärdatei erstellt wurde. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{Compiler_8h_a251a4c04b6f21dcb3976cb968898e65d}\label{Compiler_8h_a251a4c04b6f21dcb3976cb968898e65d} 
+\index{Compiler.h@{Compiler.h}!binaryMappings@{binaryMappings}}
+\index{binaryMappings@{binaryMappings}!Compiler.h@{Compiler.h}}
+\doxysubsubsection{\texorpdfstring{binaryMappings}{binaryMappings}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} binary\+Mappings\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mapping um zu Opcode korrespondierende Mnemonic zu finden und andersrum. 
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000001}{Noch zu erledigen}}]kann weggelassen werden, wenn man \doxylink{Compiler_8c_acfc2ab8416b01670f8bbb9da605780b4}{bin2mnem(char\texorpdfstring{$\ast$}{*} filename)} zuvor bearbeitet. \end{DoxyRefDesc}
+\Hypertarget{Compiler_8h_a3bd1ce3968b2efd24115727118998e94}\label{Compiler_8h_a3bd1ce3968b2efd24115727118998e94} 
+\index{Compiler.h@{Compiler.h}!mnemonicMappings@{mnemonicMappings}}
+\index{mnemonicMappings@{mnemonicMappings}!Compiler.h@{Compiler.h}}
+\doxysubsubsection{\texorpdfstring{mnemonicMappings}{mnemonicMappings}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} mnemonic\+Mappings\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mapping um zu Mnemonic korrespondierenden Opcode zu finden und andersrum. 
+

@@ -1,0 +1,50 @@
+\doxysection{top Entwurfseinheit-\/\+Referenz}
+\hypertarget{classtop}{}\label{classtop}\index{top@{top}}
+
+
+Top-\/\+Entität des gesamten Projekts -\/ Verbindet SVNR und Bootloader.  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtop_aa22e96a66b2d587072395a8a2071fead}\label{classtop_aa22e96a66b2d587072395a8a2071fead} 
+\mbox{\hyperlink{classtop_aa22e96a66b2d587072395a8a2071fead}{IEEE}} 
+\item 
+\Hypertarget{classtop_af2cf1853749d9e2b3c0ee8b85de73164}\label{classtop_af2cf1853749d9e2b3c0ee8b85de73164} 
+\mbox{\hyperlink{classtop_af2cf1853749d9e2b3c0ee8b85de73164}{work}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtop_af7d269a1102478e0c7dafd55bfe0261d}\label{classtop_af7d269a1102478e0c7dafd55bfe0261d} 
+\mbox{\hyperlink{classtop_af7d269a1102478e0c7dafd55bfe0261d}{STD\+\_\+\+LOGIC\+\_\+1164}}   
+\item 
+\Hypertarget{classtop_aadfb3f1df5aa137c828844ad2b27c184}\label{classtop_aadfb3f1df5aa137c828844ad2b27c184} 
+\mbox{\hyperlink{classtop_aadfb3f1df5aa137c828844ad2b27c184}{numeric\+\_\+std}}   
+\item 
+\Hypertarget{classtop_a20996e23ccc541056d63cdabfc153cf0}\label{classtop_a20996e23ccc541056d63cdabfc153cf0} 
+\mbox{\hyperlink{classtop_a20996e23ccc541056d63cdabfc153cf0}{mem\+\_\+buffer}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtop_a8a54684d115f0a6d09b74f953ce4d47e}\label{classtop_a8a54684d115f0a6d09b74f953ce4d47e} 
+\mbox{\hyperlink{classtop_a8a54684d115f0a6d09b74f953ce4d47e}{clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classtop_ac04d873241e2361dfc3f7c31a7ab0999}\label{classtop_ac04d873241e2361dfc3f7c31a7ab0999} 
+\mbox{\hyperlink{classtop_ac04d873241e2361dfc3f7c31a7ab0999}{rxd}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classtop_a45099fdb7f1d66bb426ebc758088dc49}\label{classtop_a45099fdb7f1d66bb426ebc758088dc49} 
+\mbox{\hyperlink{classtop_a45099fdb7f1d66bb426ebc758088dc49}{txd}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Top-\/\+Entität des gesamten Projekts -\/ Verbindet SVNR und Bootloader. 
+
+Verbindet alle nötigen Ports des Bootloder mit den neu hinzugefügten Port-\/\+Interfaces des SVNR Dient außerdem als Entrypoint für die in der .pcf angegebenen Pinbelegungen. Es müssen noch Ports für das Memory-\/\+Mapped I/O des SVNR erzeugt werden! (LEDs, Switches, Buttons, etc.)! Zugriff auf die Mempory-\/\+Mapped Hardware ist also im Moment nicht möglich! 
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/\mbox{\hyperlink{top_8vhd}{top.\+vhd}}\end{DoxyCompactItemize}

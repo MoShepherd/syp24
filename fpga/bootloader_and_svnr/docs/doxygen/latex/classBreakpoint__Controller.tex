@@ -1,0 +1,62 @@
+\doxysection{Breakpoint\+\_\+\+Controller Entwurfseinheit-\/\+Referenz}
+\hypertarget{classBreakpoint__Controller}{}\label{classBreakpoint__Controller}\index{Breakpoint\_Controller@{Breakpoint\_Controller}}
+
+
+Kontrolliert das Erzeugen/\+Löschen von Breakpoints, und überprüft ob ein Breakpoint im derzeitigen CPU Takt vorliegt.  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBreakpoint__Controller_ae4400ace365a0efae8ef33a429a0532b}\label{classBreakpoint__Controller_ae4400ace365a0efae8ef33a429a0532b} 
+\mbox{\hyperlink{classBreakpoint__Controller_ae4400ace365a0efae8ef33a429a0532b}{IEEE}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBreakpoint__Controller_a5f2cc9deb5a476e262c8ed36513a5f04}\label{classBreakpoint__Controller_a5f2cc9deb5a476e262c8ed36513a5f04} 
+\mbox{\hyperlink{classBreakpoint__Controller_a5f2cc9deb5a476e262c8ed36513a5f04}{STD\+\_\+\+LOGIC\+\_\+1164}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBreakpoint__Controller_a27910fbb94f03fc41e856affdecadbde}\label{classBreakpoint__Controller_a27910fbb94f03fc41e856affdecadbde} 
+\mbox{\hyperlink{classBreakpoint__Controller_a27910fbb94f03fc41e856affdecadbde}{i\+\_\+clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classBreakpoint__Controller_a685862bd87865378cb52512a61583d45}\label{classBreakpoint__Controller_a685862bd87865378cb52512a61583d45} 
+\mbox{\hyperlink{classBreakpoint__Controller_a685862bd87865378cb52512a61583d45}{i\+\_\+program\+\_\+counter}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Program Counter des SVNR. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_a9c985ee2ee7189374f9b43eeeb2a4296}\label{classBreakpoint__Controller_a9c985ee2ee7189374f9b43eeeb2a4296} 
+\mbox{\hyperlink{classBreakpoint__Controller_a9c985ee2ee7189374f9b43eeeb2a4296}{i\+\_\+breakpoint\+\_\+add}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Startet Hinzufuegen eines neuen Breakpoints. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_a2759d24144d3c9fb4c989983f1b88622}\label{classBreakpoint__Controller_a2759d24144d3c9fb4c989983f1b88622} 
+\mbox{\hyperlink{classBreakpoint__Controller_a2759d24144d3c9fb4c989983f1b88622}{i\+\_\+breakpoint\+\_\+delete}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Startet Loeschen eines neuen Breakpoints. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_aa0167f8e9cb6c69cd3db4f07ac274df8}\label{classBreakpoint__Controller_aa0167f8e9cb6c69cd3db4f07ac274df8} 
+\mbox{\hyperlink{classBreakpoint__Controller_aa0167f8e9cb6c69cd3db4f07ac274df8}{i\+\_\+breakpoint\+\_\+value}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Breakpointadresse des hinzuzufuegenden (\`{}i\+\_\+breakpoint\+\_\+add\`{}), oder des zu loeschenden (\`{}i\+\_\+breakpoint\+\_\+delete\`{}) Breakpoints. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_ad454ee508a0082f391b304f1dc979eed}\label{classBreakpoint__Controller_ad454ee508a0082f391b304f1dc979eed} 
+\mbox{\hyperlink{classBreakpoint__Controller_ad454ee508a0082f391b304f1dc979eed}{i\+\_\+breakpoint\+\_\+enable}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Nicht in Nutzung! Soll Breakpoints insgesamt aktivieren/deaktivieren. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_a9b3a6aa83b08c08511ed48721d21527a}\label{classBreakpoint__Controller_a9b3a6aa83b08c08511ed48721d21527a} 
+\mbox{\hyperlink{classBreakpoint__Controller_a9b3a6aa83b08c08511ed48721d21527a}{i\+\_\+run}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Verwertet das run Signal aus dem Decoder und erzeugt mit der Breakpoint Logik \`{}o\+\_\+cpu\+\_\+en\`{}. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_a04ec78abec3e05615f5d5342648e290a}\label{classBreakpoint__Controller_a04ec78abec3e05615f5d5342648e290a} 
+\mbox{\hyperlink{classBreakpoint__Controller_a04ec78abec3e05615f5d5342648e290a}{o\+\_\+cpu\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Cpu\+\_\+enable Signal fuer die SVNR CPU. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_af42615399cef31ab271c53e773849ad7}\label{classBreakpoint__Controller_af42615399cef31ab271c53e773849ad7} 
+\mbox{\hyperlink{classBreakpoint__Controller_af42615399cef31ab271c53e773849ad7}{o\+\_\+cpu\+\_\+halt}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Indiziert einen gefundenen Breakpoint. \end{DoxyCompactList}\item 
+\Hypertarget{classBreakpoint__Controller_aadd0863b6da15575dbbaf5c0d063665a}\label{classBreakpoint__Controller_aadd0863b6da15575dbbaf5c0d063665a} 
+\mbox{\hyperlink{classBreakpoint__Controller_aadd0863b6da15575dbbaf5c0d063665a}{o\+\_\+edit\+\_\+done}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Indiziert Loeschen/\+Hinzufuegen abgeschlossen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Kontrolliert das Erzeugen/\+Löschen von Breakpoints, und überprüft ob ein Breakpoint im derzeitigen CPU Takt vorliegt. 
+
+Die State-\/\+Machine dient zur Koordination von Erzeugung/\+Löschen der Breakpoints. Die Breakpoints werden in einem Array gespeichert, es können maximal 16 Breakpoints gleichzeitig bestehen. 0XFFFF beschreibt einen leeren/nicht aktivierten Breakpoint in der Liste. So kann ein Breakpoint bei bspw. Addresse {\itshape 0x0000} erzeugt werden. Die Addresse {\itshape 0x\+FFFF} spielt im SVNR keine Rolle, da dessen Addressraum nur {\itshape 1024} oder {\itshape 0x0400} Addressen umfasst. Der Index der ersten freuen Stelle des Arrays wird stets gespeichert, sodass Breakpoints an jeder Stelle des Arrays dynamisch gelöscht/hinzugefügt werden können. 
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/\mbox{\hyperlink{breakpoint__controller_8vhd}{breakpoint\+\_\+controller.\+vhd}}\end{DoxyCompactItemize}

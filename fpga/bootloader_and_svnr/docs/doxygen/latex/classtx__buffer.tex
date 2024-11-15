@@ -1,0 +1,47 @@
+\doxysection{tx\+\_\+buffer Entwurfseinheit-\/\+Referenz}
+\hypertarget{classtx__buffer}{}\label{classtx__buffer}\index{tx\_buffer@{tx\_buffer}}
+
+
+Einfaches 3 Byte Register, welches als Buffer für das Bootloader Response Paket dient.  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtx__buffer_a2e5153b0ee132f41af66e5a54a82ba4e}\label{classtx__buffer_a2e5153b0ee132f41af66e5a54a82ba4e} 
+\mbox{\hyperlink{classtx__buffer_a2e5153b0ee132f41af66e5a54a82ba4e}{IEEE}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtx__buffer_ad77b304a08f707da32ced9a7f64e855f}\label{classtx__buffer_ad77b304a08f707da32ced9a7f64e855f} 
+\mbox{\hyperlink{classtx__buffer_ad77b304a08f707da32ced9a7f64e855f}{STD\+\_\+\+LOGIC\+\_\+1164}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classtx__buffer_a47c2843aff2bb00883c66966c71075f3}\label{classtx__buffer_a47c2843aff2bb00883c66966c71075f3} 
+\mbox{\hyperlink{classtx__buffer_a47c2843aff2bb00883c66966c71075f3}{clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classtx__buffer_a7b88a6f16cb64f7e67aae35a31ae3f57}\label{classtx__buffer_a7b88a6f16cb64f7e67aae35a31ae3f57} 
+\mbox{\hyperlink{classtx__buffer_a7b88a6f16cb64f7e67aae35a31ae3f57}{wen}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classtx__buffer_a21ee48b74fb223bf3dcb2c5232e0d483}\label{classtx__buffer_a21ee48b74fb223bf3dcb2c5232e0d483} 
+\mbox{\hyperlink{classtx__buffer_a21ee48b74fb223bf3dcb2c5232e0d483}{data\+\_\+in}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC\_VECTOR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classtx__buffer_a7de48a21b2c4f31ada707e5739481d0d}\label{classtx__buffer_a7de48a21b2c4f31ada707e5739481d0d} 
+\mbox{\hyperlink{classtx__buffer_a7de48a21b2c4f31ada707e5739481d0d}{data\+\_\+out}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{STD\_LOGIC\_VECTOR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{X}\textcolor{vhdlchar}{ }\textcolor{keyword}{"{} eeeeee "{}}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classtx__buffer_aff9326c0db3690c14c40126e44a7e934}\label{classtx__buffer_aff9326c0db3690c14c40126e44a7e934} 
+\mbox{\hyperlink{classtx__buffer_aff9326c0db3690c14c40126e44a7e934}{o\+\_\+rdy\+\_\+to\+\_\+fetch}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Einfaches 3 Byte Register, welches als Buffer für das Bootloader Response Paket dient. 
+
+Hält den letzten Status und sorgt dafür, dass die UART TX Komponente das gesamte zu sendende Bootloader Response Paket versendet. Grund für die Existenz des Buffers ist, damit eine Änderung des Status während des Übertragens keine Fehlübertraguns zufolge hat. 
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/\mbox{\hyperlink{tx__buffer_8vhd}{tx\+\_\+buffer.\+vhd}}\end{DoxyCompactItemize}

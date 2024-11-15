@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SVNR Bootloader - FPGA: runner Entwurfseinheit-Referenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SVNR Bootloader - FPGA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#Bibliotheken">Bibliotheken</a> &#124;
+<a href="#Schnittstellen">Schnittstellen</a> &#124;
+<a href="#Use_20Klauseln">Use Klauseln</a>  </div>
+  <div class="headertitle"><div class="title">runner Entwurfseinheit-Referenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>State-Machine, die nach Füllen des DPRAMs den gesamten Inhalt sukzessiv in den SVNR RAM kopiert.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Bibliotheken" name="Bibliotheken"></a>
+Bibliotheken</h2></td></tr>
+ <tr class="memitem:ac5b8b48339bbb4f65cb171d155443312" id="r_ac5b8b48339bbb4f65cb171d155443312"><td class="memItemLeft" align="right" valign="top"><a id="ac5b8b48339bbb4f65cb171d155443312" name="ac5b8b48339bbb4f65cb171d155443312"></a>
+<a class="el" href="#ac5b8b48339bbb4f65cb171d155443312">IEEE</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Use_20Klauseln" name="Use_20Klauseln"></a>
+Use Klauseln</h2></td></tr>
+ <tr class="memitem:aea067e0b3c53cc97108a069d1bd52be1" id="r_aea067e0b3c53cc97108a069d1bd52be1"><td class="memItemLeft" align="right" valign="top"><a id="aea067e0b3c53cc97108a069d1bd52be1" name="aea067e0b3c53cc97108a069d1bd52be1"></a>
+<a class="el" href="#aea067e0b3c53cc97108a069d1bd52be1">STD_LOGIC_1164</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+<tr class="memitem:a9ebb75df551a4c2a1a6b76e96a341fd4" id="r_a9ebb75df551a4c2a1a6b76e96a341fd4"><td class="memItemLeft" align="right" valign="top"><a id="a9ebb75df551a4c2a1a6b76e96a341fd4" name="a9ebb75df551a4c2a1a6b76e96a341fd4"></a>
+<a class="el" href="#a9ebb75df551a4c2a1a6b76e96a341fd4">NUMERIC_STD</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Schnittstellen" name="Schnittstellen"></a>
+Schnittstellen</h2></td></tr>
+ <tr class="memitem:a5d4f3a70bdf51675a1f3df18ef47e03e" id="r_a5d4f3a70bdf51675a1f3df18ef47e03e"><td class="memItemLeft" align="right" valign="top"><a id="a5d4f3a70bdf51675a1f3df18ef47e03e" name="a5d4f3a70bdf51675a1f3df18ef47e03e"></a>
+<a class="el" href="#a5d4f3a70bdf51675a1f3df18ef47e03e">i_Clk</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a194ed59ef8ed084235d99e5d51746b97" id="r_a194ed59ef8ed084235d99e5d51746b97"><td class="memItemLeft" align="right" valign="top"><a id="a194ed59ef8ed084235d99e5d51746b97" name="a194ed59ef8ed084235d99e5d51746b97"></a>
+<a class="el" href="#a194ed59ef8ed084235d99e5d51746b97">i_Begin</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a194ed59ef8ed084235d99e5d51746b97"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Starte Kopieren von DPRAM in SVNR RAM. <br /></td></tr>
+<tr class="memitem:a328f757578b04b263d51e92af66e5fff" id="r_a328f757578b04b263d51e92af66e5fff"><td class="memItemLeft" align="right" valign="top"><a id="a328f757578b04b263d51e92af66e5fff" name="a328f757578b04b263d51e92af66e5fff"></a>
+<a class="el" href="#a328f757578b04b263d51e92af66e5fff">o_Done</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a328f757578b04b263d51e92af66e5fff"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopieren on DPRAM in SVNR RAM erfolgreich abgeschlossen. <br /></td></tr>
+<tr class="memitem:a26f5da7bb8214dc4bc647bd8416a61d3" id="r_a26f5da7bb8214dc4bc647bd8416a61d3"><td class="memItemLeft" align="right" valign="top"><a id="a26f5da7bb8214dc4bc647bd8416a61d3" name="a26f5da7bb8214dc4bc647bd8416a61d3"></a>
+<a class="el" href="#a26f5da7bb8214dc4bc647bd8416a61d3">i_dpram_data</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a26f5da7bb8214dc4bc647bd8416a61d3"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Derzeitige DPRAM Daten an Adresse `o_dpram_raddr`. <br /></td></tr>
+<tr class="memitem:a963caa7699ff49ec129ab9d5d0f83dba" id="r_a963caa7699ff49ec129ab9d5d0f83dba"><td class="memItemLeft" align="right" valign="top"><a id="a963caa7699ff49ec129ab9d5d0f83dba" name="a963caa7699ff49ec129ab9d5d0f83dba"></a>
+<a class="el" href="#a963caa7699ff49ec129ab9d5d0f83dba">o_dpram_raddr</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">9</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a963caa7699ff49ec129ab9d5d0f83dba"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Gleich wie `o_svnr_ram_address`. <br /></td></tr>
+<tr class="memitem:a64dc7f45982e6ac8529874ac59e2b09e" id="r_a64dc7f45982e6ac8529874ac59e2b09e"><td class="memItemLeft" align="right" valign="top"><a id="a64dc7f45982e6ac8529874ac59e2b09e" name="a64dc7f45982e6ac8529874ac59e2b09e"></a>
+<a class="el" href="#a64dc7f45982e6ac8529874ac59e2b09e">o_svnr_ram_address</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a64dc7f45982e6ac8529874ac59e2b09e"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Gleich wie `o_dpram_raddr`. <br /></td></tr>
+<tr class="memitem:ae17492eeb47bf01abef62b41c5a78d18" id="r_ae17492eeb47bf01abef62b41c5a78d18"><td class="memItemLeft" align="right" valign="top"><a id="ae17492eeb47bf01abef62b41c5a78d18" name="ae17492eeb47bf01abef62b41c5a78d18"></a>
+<a class="el" href="#ae17492eeb47bf01abef62b41c5a78d18">o_svnr_ram_data_in</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ae17492eeb47bf01abef62b41c5a78d18"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Gleich wie `i_dpram_data`. <br /></td></tr>
+<tr class="memitem:a66db4f8a6f476a60af9b4a02ae9abb28" id="r_a66db4f8a6f476a60af9b4a02ae9abb28"><td class="memItemLeft" align="right" valign="top"><a id="a66db4f8a6f476a60af9b4a02ae9abb28" name="a66db4f8a6f476a60af9b4a02ae9abb28"></a>
+<a class="el" href="#a66db4f8a6f476a60af9b4a02ae9abb28">o_svnr_wnr</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a66db4f8a6f476a60af9b4a02ae9abb28"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">SVNR wnr Signal zur RAM Kontrolle (Siehe SVNR Dokumentation) <br /></td></tr>
+<tr class="memitem:a0481c2aa487cda96b203b3ac4ae26890" id="r_a0481c2aa487cda96b203b3ac4ae26890"><td class="memItemLeft" align="right" valign="top"><a id="a0481c2aa487cda96b203b3ac4ae26890" name="a0481c2aa487cda96b203b3ac4ae26890"></a>
+<a class="el" href="#a0481c2aa487cda96b203b3ac4ae26890">o_svnr_addrstrb</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a0481c2aa487cda96b203b3ac4ae26890"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">SVNR addrstrb Signal zur RAM Kontrolle (Siehe SVNR Dokumentation) <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>State-Machine, die nach Füllen des DPRAMs den gesamten Inhalt sukzessiv in den SVNR RAM kopiert. </p>
+<p>Läuft iterativ über den Inhalt des gesamten DPRAMs, und schreibt den derzeitigen Inhalt in die ensprechende Addresse des SVNR Rams. Hierbei steuert der Runner das Setzen der erforderlichen Signale um auf den RAM zuzugreifen. Dabei folgt der Runner genau dem Timing des SVNR bei RAM-Zugriff. </p>
+</div><hr/>Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>rtl/bootloader/<a class="el" href="runner_8vhd.html">runner.vhd</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

@@ -1,0 +1,6 @@
+**/work/
+**/simulation
+*.swp
+**/syn/synthesis
+*.toml
+*.o

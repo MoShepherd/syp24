@@ -1,0 +1,82 @@
+#########################################################################################################
+####### Variablen ####### 
+00:JA40 # zum Anfang des Programms springen
+01:0000 # uint16_t* p_tone;                    : pointer auf Werte in ton[]                          
+02:0000 # uint16_t tone_count;                 : Index der Ersten schleife = wie viele Töne noch?    
+03:???? # const uint16_t loops_per_50ms = ?;   : Initialisierungswert für den loop_count              
+04:0000 # uint16_t loop_count;                 : Die Schleife so oft durchlaufen bis 50 ms vergangen 
+05:0000 # uint16_t half_period;                : periode / 2 = Initialisierungswert für Zähler       
+06:0000 # uint16_t half_period_counter;        : Zähler, wenn der Buzzer Pin wechseln soll           
+07:0000 # uint16_t pin;                        : Die Speicherstelle, die mit dem Buzzer-Pin verbunden ist 
+08:0030 # const uint16_t number_of_tones = 48; : Größe des Arrays ton[] in Hex: 0x30
+#########################################################################################################
+# Array tone[]: Suchen von NOE7, NOC7, NOG7, NOG6 und NONO, Ersetzen mit den ermittelten HexWerten der
+#               Schleifendurchläufe für halbe Perioden	
+# Achtelnote1
+09:NOE7    # count_NOTE_E7 
+0a:NOE7    # count_NOTE_E7
+0b:NONO    # count_NO_NOTE
+# Achtelnote2
+0c:NOE7    # count_NOTE_E7
+0d:NOE7    # count_NOTE_E7
+0e:NONO    # count_NO_NOTE 
+# Achtelpause
+0f:NONO    # count_NO_NOTE
+10:NONO    # count_NO_NOTE
+11:NONO    # count_NO_NOTE
+# Achtelnote
+12:NOE7    # count_NOTE_E7
+13:NOE7    # count_NOTE_E7
+14:NONO    # count_NO_NOTE
+# Achtelpause
+15:NONO    # count_NO_NOTE
+16:NONO    # count_NO_NOTE
+17:NONO    # count_NO_NOTE
+# Achtelnote 
+18:NOC7    # count NOTE_C7
+19:NOC7    # count NOTE_C7
+1a:NONO    # count_NO_NOTE
+# Viertelnote
+1b:NOE7    # count_NOTE_E7
+1c:NOE7    # count_NOTE_E7
+1d:NOE7    # count_NOTE_E7
+1e:NOE7    # count_NOTE_E7
+1f:NONO    # count_NO_NOTE
+20:NONO    # count_NO_NOTE
+### nächster takt
+# Viertelnote
+21:NOG7    # count NOTE_G7 
+22:NOG7    # count NOTE_G7 
+23:NOG7    # count NOTE_G7 
+24:NOG7    # count NOTE_G7 
+25:NONO    # count_NO_NOTE
+26:NONO    # count_NO_NOTE
+# Viertelpause
+27:NONO    # count_NO_NOTE
+28:NONO    # count_NO_NOTE
+29:NONO    # count_NO_NOTE
+2a:NONO    # count_NO_NOTE
+2b:NONO    # count_NO_NOTE
+2c:NONO    # count_NO_NOTE
+# Viertelnote
+2d:NOG6    # count_NOTE_G6  
+2e:NOG6    # count_NOTE_G6
+2f:NOG6    # count_NOTE_G6
+30:NOG6    # count_NOTE_G6 
+31:NOG6    # count_NOTE_G6 
+32:NONO    # count_NO_NOTE
+# Viertelpause
+33:NONO    # count_NO_NOTE
+34:NONO    # count_NO_NOTE
+35:NONO    # count_NO_NOTE
+36:NONO    # count_NO_NOTE
+37:NONO    # count_NO_NOTE
+38:NONO    # count_NO_NOTE
+########################################
+# Platz fuer weitere Variablen
+# 39 bis 3F
+#
+########################################
+# Programmbeginn
+40:JA40    # Dummycode
+	

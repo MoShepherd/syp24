@@ -1,0 +1,91 @@
+<mxfile host="Electron" modified="2023-12-01T18:31:25.635Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="0MB4zG00Zur-fsKYzKUk" version="21.2.8" type="device">
+  <diagram name="Seite-1" id="I9_DKmg3dj94EEphmdeL">
+    <mxGraphModel dx="1031" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="240" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-6" value="i_Clk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="200" y="240" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-8" value="i_TX_DV" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="200" y="270" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-9" value="i_TX_Byte" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="200" y="300" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-10" value="o_TX_Active" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="350" y="240" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-11" value="o_TX_Serial" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="350" y="270" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-12" value="&amp;nbsp; &amp;nbsp; o_TX_Done" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="300" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-13" value="UART_TX" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="270" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="40" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-15" value="i_Clk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="200" y="40" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-16" value="i_RX_Serial" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="200" y="100" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-18" value="o_RX_DV" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="360" y="40" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-19" value="o_RX_Byte" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="360" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-21" value="UART_RX" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-22" value="entity UART_RX is&#xa;  generic (&#xa;    g_CLKS_PER_BIT : integer := 434 -- 50000000 / 115200&#xa;    );&#xa;  port (&#xa;    i_Clk       : in  std_logic;&#xa;    i_RX_Serial : in  std_logic;&#xa;    o_RX_DV     : out std_logic; -- data valid pulse: indicates when RX_Byte has valid content&#xa;    o_RX_Byte   : out std_logic_vector(7 downto 0)&#xa;    );&#xa;end UART_RX;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="405" width="500" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="v8Eb_Ge8aaL3YhYPjWy0-23" value="entity UART_TX is&#xa;  generic (&#xa;  -- 50000000 / 115200 = 434.028 Clocks Per Bit.&#xa;    g_CLKS_PER_BIT : integer := 434     -- Needs to be set correctly&#xa;    );&#xa;  port (&#xa;    i_Clk       : in  std_logic;&#xa;    i_TX_DV     : in  std_logic;&#xa;    i_TX_Byte   : in  std_logic_vector(7 downto 0);&#xa;    o_TX_Active : out std_logic;&#xa;    o_TX_Serial : out std_logic;&#xa;    o_TX_Done   : out std_logic&#xa;    );&#xa;end UART_TX;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="580" width="540" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-1" value="&lt;div&gt;entity fifo_regs_no_flags is&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; generic (&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; g_WIDTH : natural := 8;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; g_DEPTH : integer := 32&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; );&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; port (&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; i_rst_sync : in std_logic;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; i_clk&amp;nbsp; &amp;nbsp; &amp;nbsp; : in std_logic;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; -- FIFO Write Interface&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; i_wr_en&amp;nbsp; &amp;nbsp;: in std_logic;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; i_wr_data : in std_logic_vector(g_WIDTH - 1 downto 0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; o_full&amp;nbsp; &amp;nbsp; : out std_logic;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; -- FIFO Read Interface&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; i_rd_en&amp;nbsp; &amp;nbsp;: in std_logic;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; o_rd_data : out std_logic_vector(g_WIDTH - 1 downto 0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; o_empty&amp;nbsp; &amp;nbsp;: out std_logic&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; );&lt;/div&gt;&lt;div&gt;end fifo_regs_no_flags;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="810" width="350" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="85" width="240" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-4" value="i_Clk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="541" y="190" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-5" value="i_rst_sync" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="541" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-6" value="i_wr_en" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="130" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-7" value="i_wr_data" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="541" y="160" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-9" value="i_rd_en" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="720" y="85" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-11" value="o_full" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="730" y="177.5" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-12" value="o_rd_data" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="700" y="115" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-13" value="o_empty" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="147.5" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Ghv9nDSHOckUsEf-DCPY-14" value="FIFO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="140" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

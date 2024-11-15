@@ -1,0 +1,40 @@
+<mxfile host="Electron" modified="2024-02-01T14:58:01.248Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="X3mbSxdZsu8KgKjgwlVA" version="21.2.8" type="device">
+  <diagram name="Seite-1" id="1DdBGCkQfgjVxy8bUu3-">
+    <mxGraphModel dx="876" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-1" value="entity dpram is&#xa;generic (&#xa;	addr_width : natural := 10; -- 2^10 = 1024 &#xa;	data_width : natural := 8);&#xa;port (&#xa;	--write interface&#xa;	write_en	: in std_logic;&#xa;	waddr		: in std_logic_vector (addr_width - 1 downto 0); -- die aktuelle adresse des gol64&#xa;	wclk		: in std_logic; -- clk von gol&#xa;	din			: in std_logic_vector (data_width - 1 downto 0); -- gol daten&#xa;	&#xa;	-- read interface&#xa;	raddr		: in std_logic_vector (addr_width - 1 downto 0); -- ram addr&#xa;	rclk		: in std_logic; -- ram clock&#xa;	dout		: out std_logic_vector (data_width - 1 downto 0)); -- to ram output&#xa;end dpram;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="327" width="500" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-3" value="write_en" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-4" value="waddr" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-5" value="wclk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="60" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-6" value="raddr" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-7" value="rclk" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="30" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-8" value="dout" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="60" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-9" value="dpram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="45" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0sbhuYDW3a4fWn7qjT0q-10" value="din" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="90" width="40" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

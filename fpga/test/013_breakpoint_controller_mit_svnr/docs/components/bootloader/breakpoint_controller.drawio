@@ -1,0 +1,49 @@
+<mxfile host="Electron" modified="2024-02-01T15:12:06.654Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="r4kOeuw6cuMP5IAt5nAh" version="21.2.8" type="device">
+  <diagram name="Seite-1" id="1DdBGCkQfgjVxy8bUu3-">
+    <mxGraphModel dx="876" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pkTo9wK07JOd147d-Ic8-1" value="entity Breakpoint_Controller is&#xa;    -- TODO: evtl breakout controller mit single step funktionalität erweitern?!&#xa;    Port ( &#xa;           i_clk                   : in STD_LOGIC;&#xa;           i_program_counter       : in std_logic_vector(15 downto 0);&#xa;           i_breakpoint_add        : in STD_LOGIC;&#xa;           i_breakpoint_delete     : in STD_LOGIC;&#xa;           i_breakpoint_value      : in std_logic_vector(15 downto 0);&#xa;           i_breakpoint_enable     : in std_logic;&#xa;           i_run                   : in std_logic;&#xa;           o_cpu_en                : out STD_LOGIC := &#39;0&#39;;&#xa;           o_cpu_halt              : out std_logic;&#xa;           o_edit_done             : out STD_LOGIC&#xa;           -- Other ports as needed&#xa;           );&#xa;end Breakpoint_Controller;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="397" width="430" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="360" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-3" value="i_clk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-4" value="i_program_couner" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="30" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-5" value="i_breakpoint_add" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="60" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-6" value="o_cpu_en" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-7" value="o_cpu_halt" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="30" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-8" value="o_edit_done" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="60" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-9" value="Breakpoint_Controller" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="117.5" y="90" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-10" value="i_breakpoint_delete" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="90" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-11" value="i_breakpoint_value" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="120" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-12" value="i_breakpoint_enable" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="150" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pkTo9wK07JOd147d-Ic8-13" value="i_run" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="180" width="50" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

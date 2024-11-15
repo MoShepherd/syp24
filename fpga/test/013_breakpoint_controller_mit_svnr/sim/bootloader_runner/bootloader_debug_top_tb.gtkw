@@ -1,0 +1,56 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Wed Jan 24 18:15:58 2024
+[*]
+[dumpfile] "/home/jonas/tin/SYP/team04/fpga/test/013_breakpoint_controller_mit_svnr/sim/bootloader_runner/simulation/bootloader_debug_top_tb.ghw"
+[dumpfile_mtime] "Wed Jan 24 17:59:14 2024"
+[dumpfile_size] 4839570
+[savefile] "/home/jonas/tin/SYP/team04/fpga/test/013_breakpoint_controller_mit_svnr/sim/bootloader_runner/bootloader_debug_top_tb.gtkw"
+[timestart] 256095300000
+[size] 1916 1003
+[pos] -967 -13
+*-24.799997 256160000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.bootloader_debug_top_tb.
+[treeopen] top.bootloader_debug_top_tb.top_inst.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.breakpoint_controller_inst.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.cpu_en_mux.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.dpram_inst.mem.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.fifo_inst.r_fifo_data.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.
+[treeopen] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.
+[sst_width] 471
+[signals_width] 285
+[sst_expanded] 1
+[sst_vpaned_height] 387
+@28
+top.bootloader_debug_top_tb.r_clk
+top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.o_tx_trig
+@420
+top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.fsm_state_decoder
+@22
+#{top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[23:0]} top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[23] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[22] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[21] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[20] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[19] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[18] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[17] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[16] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[15] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[14] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[13] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[12] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[11] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[10] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[9] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[8] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[7] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[6] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[5] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[4] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[3] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[2] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[1] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.r_fifo_data[0]
+#{top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[23:0]} top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[23] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[22] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[21] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[20] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[19] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[18] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[17] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[16] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[15] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[14] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[13] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[12] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[11] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[10] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[9] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[8] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[7] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[6] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[5] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[4] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[3] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[2] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[1] top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.status[0]
+#{top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[23:0]} top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[23] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[22] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[21] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[20] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[19] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[18] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[17] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[16] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[15] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[14] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[13] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[12] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[11] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[10] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[9] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[8] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[7] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[6] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[5] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[4] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[3] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[2] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[1] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.data_in[0]
+#{top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[23:0]} top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[23] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[22] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[21] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[20] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[19] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[18] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[17] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[16] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[15] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[14] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[13] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[12] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[11] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[10] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[9] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[8] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[7] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[6] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[5] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[4] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[3] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[2] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[1] top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.tx_buffer_reg[0]
+@28
+top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.o_tx_serial
+top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_dv
+@22
+#{top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[7:0]} top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[7] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[6] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[5] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[4] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[3] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[2] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[1] top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_byte[0]
+@28
+top.bootloader_debug_top_tb.top_inst.bootloader.breakpoint_controller_inst.o_edit_done
+@420
+top.bootloader_debug_top_tb.top_inst.bootloader.tx_packet_byte_cnt
+top.bootloader_debug_top_tb.top_inst.bootloader.fsm_state
+@28
+top.bootloader_debug_top_tb.top_inst.bootloader.w_tx_done
+top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.i_tx_dv
+top.bootloader_debug_top_tb.top_inst.bootloader.uart_tx_inst.o_tx_active
+top.bootloader_debug_top_tb.top_inst.bootloader.decoder_inst.o_flush
+@29
+top.bootloader_debug_top_tb.top_inst.bootloader.tx_buffer_inst.o_rdy_to_fetch
+[pattern_trace] 1
+[pattern_trace] 0

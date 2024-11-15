@@ -1,0 +1,67 @@
+\doxysection{uart.\+h}
+\hypertarget{uart_8h_source}{}\label{uart_8h_source}\index{uart/include/uart.h@{uart/include/uart.h}}
+\mbox{\hyperlink{uart_8h}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ defines\ for\ uart\ config}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \#define\ SERIAL\_PORT\ "{}/dev/ttyUSB2"{}\ //\ Change\ this\ to\ your\ serial\ port}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ TIMEOUT\_VAL\ 200\ }\textcolor{comment}{//\ timeout\ in\ ms}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Bootloader\ packet\ types}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BL\_TYPE\_ACK\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ \ \ }\textcolor{comment}{//\ Acknowledgement\ for\ message}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ BL\_TYPE\_CMD\_HOST\_PC\ \ \ \ \ 0x01\ \ \ }\textcolor{comment}{//\ Host\ PC\ Command}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ BL\_TYPE\_BIN\_DATA\ \ \ \ \ \ \ \ 0x02\ \ \ }\textcolor{comment}{//\ Binary\ transmit\ packet}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BL\_TYPE\_ERR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x03\ \ \ }\textcolor{comment}{//\ Error\ packet}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \#define\ BL\_TYPE\_DEBUG\ \ \ \ \ \ \ \ \ \ \ 0x04}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ BL\_TYPE\_ADDRESS\ \ \ \ \ \ \ \ \ 0x05}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Host\ PC\ Commands/Packet\ Data\ with\ CMD\_HOST\_\ prefix}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_EXECUTE\ \ \ \ \ \ \ \ 0x0001\ \ \ \ \ }\textcolor{comment}{//\ Execute,\ siehe\ LF07}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_UPLOAD\_RAM\ \ \ \ \ 0x0002\ \ \ \ \ }\textcolor{comment}{//\ Upload\ to\ RAM,\ siehe\ LF04}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_LOAD\_FLASH\ \ \ \ \ 0x0003\ \ \ \ \ }\textcolor{comment}{//\ Load\ to\ FLASH,\ siehe\ LF05}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_LOAD\_FROM\ \ \ \ \ \ 0x0004\ \ \ \ \ }\textcolor{comment}{//\ Load\ from\ FLASH,\ siehe\ LF06}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_STATUS\_QUERY\ \ \ 0x0005\ \ \ \ \ }\textcolor{comment}{//\ Statusabfrage\ -\/\ Der\ Host\ PC\ fragt\ den\ derzeitigen\ Status\ des\ FPGA\ ab}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_DEBUG\_MODE\ \ \ \ \ 0x0006\ \ \ \ \ }\textcolor{comment}{//\ Enter\ debug\ Mode,\ which\ allows\ for\ setting\ breakpoints\ etc.}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_RESET\ \ \ \ \ \ \ \ \ \ 0x0007\ \ \ \ \ }\textcolor{comment}{//\ Enter\ debug\ Mode,\ which\ allows\ for\ setting\ breakpoints\ etc.}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ CMD\_HOST\_STOP\ \ \ \ \ \ \ \ \ \ \ 0x0008\ \ \ \ \ }\textcolor{comment}{//\ Enter\ debug\ Mode,\ which\ allows\ for\ setting\ breakpoints\ etc.}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ Debug\ Packet\ Data\ (Bit\ 8-\/15\ bestimmen\ Befehlssatz,\ in\ dem\ Fall\ DEBUG\ CMD)}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ to\ send\ DEBUG\ commands,\ first\ enter\ DEBUG\ MODE\ with\ \ 0x010006\ command.}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ DEBUG\_SET\_BP\ \ \ \ \ \ \ \ \ \ \ \ 0x0102\ \ }\textcolor{comment}{//\ to\ set\ breakpoint,\ send\ "{}set\ breakpoint"{}\ command\ with\ 0x040002,\ followed\ by\ the\ 16bit\ breakpoint\ address,\ prefixed\ with\ a\ debug\ packet\ header\ e.g.\ 0x04\ 1234\ (first\ byte\ header,\ following\ 16\ bit\ address)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ DEBUG\_DEL\_BP\ \ \ \ \ \ \ \ \ \ \ \ 0x0103\ \ }\textcolor{comment}{//\ same\ with\ deleting\ breakpoints:\ }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ DEBUG\_WRITE\_RAM\ \ \ \ \ \ \ \ \ 0x0106\ \ }\textcolor{comment}{//\ to\ write\ to\ specific\ ram\ address,\ send\ "{}write\ to\ ram"{}\ command\ 0x040006,\ followed\ by\ one\ packet\ containing\ the\ address\ (e.g.\ 0x04\ 1234),\ followed\ by\ a\ packet\ of\ ram\ data\ on\ this\ address\ (0x04\ 1111)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ DEBUG\_READ\_RAM\ \ \ \ \ \ \ \ \ \ 0x0107}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ Error\ \ Codes}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ ERR\_BUSY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0010}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ ERR\_TRANS\_INCOMPLETE\ \ \ \ 0x0011\ \ \ }}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ ERR\_TRANS\_OVERFLOW\ \ \ \ \ \ 0x0012}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ ERR\_TRANS\_NOT\_STARTED\ \ \ 0x0013}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ ERR\_NOT\_VALID\_PACKET\ \ \ \ 0x0014}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Status\ Codes\ (states\ of\ Decoder\ state-\/machine)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ STAT\_INIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0001}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ STAT\_UPL\_IN\_PROG\ \ \ \ \ \ \ \ 0x0002}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ STAT\_TRANS\_COMPLETE\ \ \ \ \ 0x0003}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ STAT\_RUNNING\ \ \ \ \ \ \ \ \ \ \ \ 0x0006}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ STAT\_RESETING\ \ \ \ \ \ \ \ \ \ \ 0x0007}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ STAT\_ADD\_BP\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0008}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ STAT\_DEL\_BP\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0009}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ STAT\_DEBUG\_INIT\ \ \ \ \ \ \ \ \ 0x0005}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Function\ prototypes}}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{uart_8h_abdfc548828d35bf9fe92ca5e0d257b8f}{uart\_tx\_bl\_packet}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\_uart}},\ uint8\_t\ pack\_type,\ uint16\_t\ pack\_data);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{uart_8h_a4f51e31e9f6b08d2093f2ffff95b3f66}{uart\_rx\_wait\_for\_byte}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\_uart}},\ uint8\_t\ *received\_char);}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{uart_8h_a949f7105b89b6f151322a3052d570259}{uart\_rx\_bl\_packet}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\_uart}},\ uint8\_t\ *data);}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{uart_8h_a8ab2a1c038465abf01576818aaa2f177}{set\_interface\_attribs}}(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keywordtype}{int}\ speed,\ \textcolor{keywordtype}{int}\ parity);}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{uart_8h_a1872b72ddc38058719f085dd0529b963}{uart\_tx\_data}}(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *data,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{uart_8h_a2aeaac61f27ed2856765d3b0c3236b71}{uart\_tx\_byte}}(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *data,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00059\ uint8\_t\ \mbox{\hyperlink{uart_8h_ad7f0214f21df5ce2b93f03ade21ca358}{tx\_mem\_image}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\_uart}},\ \_\_uint8\_t\ *image,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{uart_8h_ab99cb82a6d1dd2cc590853642a4c95db}{open\_file}}(\textcolor{keywordtype}{char}\ *filepath,\ \textcolor{keywordtype}{char}\ **\mbox{\hyperlink{bootloader_8c_a742cda7da9192ce964d73452a11f2825}{mem\_image}},\ off\_t\ *file\_size);}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{uart_8h_a6955d53ea330c0628341fc6f5bebfd92}{get\_fpga\_status}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\_uart}});}
+
+\end{DoxyCode}

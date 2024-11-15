@@ -1,0 +1,124 @@
+\doxysection{main/src/bootloader.c-\/\+Dateireferenz}
+\hypertarget{bootloader_8c}{}\label{bootloader_8c}\index{main/src/bootloader.c@{main/src/bootloader.c}}
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}../../uart/include/uart.\+h"{}}\newline
+{\ttfamily \#include "{}../includes/allefunktionen.\+h"{}}\newline
+{\ttfamily \#include "{}../includes/statusbar.\+h"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für bootloader.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4}{bootloader}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4}{bootloader()}\+: Seite vom Menüpunkt "{}\+Bootloader"{} wird geöffnet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bootloader_8c_a4584b2762b7bb51655594ed0854b3969}{current\+\_\+binary}}
+\begin{DoxyCompactList}\small\item\em speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bootloader_8c_a1ea53ae199e75f00244cb09d11e7b24d}{modus\+Filechooser}}
+\begin{DoxyCompactList}\small\item\em für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bootloader_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}}
+\begin{DoxyCompactList}\small\item\em für switch-\/cases \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{bootloader_8c_a742cda7da9192ce964d73452a11f2825}{mem\+\_\+image}}
+\item 
+off\+\_\+t \mbox{\hyperlink{bootloader_8c_a6b90bca2cfd3bea203413de232648d48}{mem\+\_\+size}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{bootloader_8c_a25a3f3db6df856bbab69448f00500d78}{packet\+\_\+header}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{bootloader_8c_a8f0da593ef89beeb87e3d57eb14a2a1e}{packet\+\_\+data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{bootloader_8c_ac830316ab0474d713720bfd02c6205e3}{packet\+\_\+buf}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4}\label{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4} 
+\index{bootloader.c@{bootloader.c}!bootloader@{bootloader}}
+\index{bootloader@{bootloader}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{bootloader()}{bootloader()}}
+{\footnotesize\ttfamily void bootloader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{bootloader_8c_a8a25febfe7fa1335d3fa12a052d4c7c4}{bootloader()}\+: Seite vom Menüpunkt "{}\+Bootloader"{} wird geöffnet. 
+
+Nach Aufruf werden im Terminal drei neue Optionen angezeigt, sowie eine ähnliche Anzeige, die wie "{}\+Current File\+: "{} im Auswahlmenü den Dateipfad der Binärdatei anzeigt, die man über "{}\+Load Binary"{} auswählt.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000006}{Noch zu erledigen}}]Execute wurde noch nicht implementiert. \end{DoxyRefDesc}
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{bootloader_8c_a4e1e0e72dd773439e333c84dd762a9c3}\label{bootloader_8c_a4e1e0e72dd773439e333c84dd762a9c3} 
+\index{bootloader.c@{bootloader.c}!c@{c}}
+\index{c@{c}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int c\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für switch-\/cases 
+
+\Hypertarget{bootloader_8c_a4584b2762b7bb51655594ed0854b3969}\label{bootloader_8c_a4584b2762b7bb51655594ed0854b3969} 
+\index{bootloader.c@{bootloader.c}!current\_binary@{current\_binary}}
+\index{current\_binary@{current\_binary}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{current\_binary}{current\_binary}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} current\+\_\+binary\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) 
+
+\Hypertarget{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}\label{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6} 
+\index{bootloader.c@{bootloader.c}!fd\_uart@{fd\_uart}}
+\index{fd\_uart@{fd\_uart}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{fd\_uart}{fd\_uart}}
+{\footnotesize\ttfamily int fd\+\_\+uart\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bootloader_8c_a742cda7da9192ce964d73452a11f2825}\label{bootloader_8c_a742cda7da9192ce964d73452a11f2825} 
+\index{bootloader.c@{bootloader.c}!mem\_image@{mem\_image}}
+\index{mem\_image@{mem\_image}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{mem\_image}{mem\_image}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} mem\+\_\+image\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bootloader_8c_a6b90bca2cfd3bea203413de232648d48}\label{bootloader_8c_a6b90bca2cfd3bea203413de232648d48} 
+\index{bootloader.c@{bootloader.c}!mem\_size@{mem\_size}}
+\index{mem\_size@{mem\_size}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{mem\_size}{mem\_size}}
+{\footnotesize\ttfamily off\+\_\+t mem\+\_\+size\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bootloader_8c_a1ea53ae199e75f00244cb09d11e7b24d}\label{bootloader_8c_a1ea53ae199e75f00244cb09d11e7b24d} 
+\index{bootloader.c@{bootloader.c}!modusFilechooser@{modusFilechooser}}
+\index{modusFilechooser@{modusFilechooser}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{modusFilechooser}{modusFilechooser}}
+{\footnotesize\ttfamily int modus\+Filechooser\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird 
+
+\Hypertarget{bootloader_8c_ac830316ab0474d713720bfd02c6205e3}\label{bootloader_8c_ac830316ab0474d713720bfd02c6205e3} 
+\index{bootloader.c@{bootloader.c}!packet\_buf@{packet\_buf}}
+\index{packet\_buf@{packet\_buf}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{packet\_buf}{packet\_buf}}
+{\footnotesize\ttfamily uint8\+\_\+t packet\+\_\+buf\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bootloader_8c_a8f0da593ef89beeb87e3d57eb14a2a1e}\label{bootloader_8c_a8f0da593ef89beeb87e3d57eb14a2a1e} 
+\index{bootloader.c@{bootloader.c}!packet\_data@{packet\_data}}
+\index{packet\_data@{packet\_data}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{packet\_data}{packet\_data}}
+{\footnotesize\ttfamily uint16\+\_\+t packet\+\_\+data\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{bootloader_8c_a25a3f3db6df856bbab69448f00500d78}\label{bootloader_8c_a25a3f3db6df856bbab69448f00500d78} 
+\index{bootloader.c@{bootloader.c}!packet\_header@{packet\_header}}
+\index{packet\_header@{packet\_header}!bootloader.c@{bootloader.c}}
+\doxysubsubsection{\texorpdfstring{packet\_header}{packet\_header}}
+{\footnotesize\ttfamily uint8\+\_\+t packet\+\_\+header\hspace{0.3cm}{\ttfamily [extern]}}
+

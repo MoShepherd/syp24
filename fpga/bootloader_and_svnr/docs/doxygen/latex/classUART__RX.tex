@@ -1,0 +1,55 @@
+\doxysection{UART\+\_\+\+RX Entwurfseinheit-\/\+Referenz}
+\hypertarget{classUART__RX}{}\label{classUART__RX}\index{UART\_RX@{UART\_RX}}
+
+
+UART rx/\+Receive Komponente des Bootloaders ~\newline
+  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__RX_aea3f4ef4b788dbe3ad75e0d1a08db350}\label{classUART__RX_aea3f4ef4b788dbe3ad75e0d1a08db350} 
+\mbox{\hyperlink{classUART__RX_aea3f4ef4b788dbe3ad75e0d1a08db350}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__RX_ac064a6d53d6a27ff42125a96823d0b1a}\label{classUART__RX_ac064a6d53d6a27ff42125a96823d0b1a} 
+\mbox{\hyperlink{classUART__RX_ac064a6d53d6a27ff42125a96823d0b1a}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\Hypertarget{classUART__RX_aca3236c4ad6c2c42ed405f78924fc00f}\label{classUART__RX_aca3236c4ad6c2c42ed405f78924fc00f} 
+\mbox{\hyperlink{classUART__RX_aca3236c4ad6c2c42ed405f78924fc00f}{numeric\+\_\+std}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Parameter}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__RX_a70ac9afcd4aa7f62e4b47a52386356eb}\label{classUART__RX_a70ac9afcd4aa7f62e4b47a52386356eb} 
+\mbox{\hyperlink{classUART__RX_a70ac9afcd4aa7f62e4b47a52386356eb}{g\+\_\+\+CLKS\+\_\+\+PER\+\_\+\+BIT}} {\bfseries {\bfseries \textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{434} \textcolor{vhdlchar}{ }}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__RX_a12649ae1d8a4722fcc9e7ddd9759f4ad}\label{classUART__RX_a12649ae1d8a4722fcc9e7ddd9759f4ad} 
+\mbox{\hyperlink{classUART__RX_a12649ae1d8a4722fcc9e7ddd9759f4ad}{i\+\_\+\+Clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classUART__RX_a87f328caddb8d2c0c36f11e184761880}\label{classUART__RX_a87f328caddb8d2c0c36f11e184761880} 
+\mbox{\hyperlink{classUART__RX_a87f328caddb8d2c0c36f11e184761880}{i\+\_\+\+RX\+\_\+\+Serial}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classUART__RX_a950dd8b70729ae053cd52778b503fcff}\label{classUART__RX_a950dd8b70729ae053cd52778b503fcff} 
+\mbox{\hyperlink{classUART__RX_a950dd8b70729ae053cd52778b503fcff}{o\+\_\+\+RX\+\_\+\+DV}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data Valid Pulse\+: Signalisiert dass RX\+\_\+\+Byte valide Daten hat (1 Byte vollstaendig per UART empfangen worden ist) \end{DoxyCompactList}\item 
+\Hypertarget{classUART__RX_a5001da0871d80c4fe3676f3a1e2a703f}\label{classUART__RX_a5001da0871d80c4fe3676f3a1e2a703f} 
+\mbox{\hyperlink{classUART__RX_a5001da0871d80c4fe3676f3a1e2a703f}{o\+\_\+\+RX\+\_\+\+Byte}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+UART rx/\+Receive Komponente des Bootloaders ~\newline
+ 
+
+Implementiert UART rx Protokoll. Nimmt einen Seriellen Datenstrom �ber {\ttfamily i\+\_\+\+RX\+\_\+\+Serial} entgegen, und gibt das empfangene Byte an {\ttfamily o\+\_\+\+RX\+\_\+\+Byte} aus Berechnung der Baudrate ist an 50MHz Grundtakt angepasst. 
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/UART\+\_\+\+RX.\+vhd\end{DoxyCompactItemize}

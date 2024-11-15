@@ -1,0 +1,204 @@
+\doxysection{main/src/main.c-\/\+Dateireferenz}
+\hypertarget{main_2src_2main_8c}{}\label{main_2src_2main_8c}\index{main/src/main.c@{main/src/main.c}}
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}../includes/allefunktionen.\+h"{}}\newline
+{\ttfamily \#include "{}../includes/config.\+h"{}}\newline
+{\ttfamily \#include "{}../../compiler/\+Compiler.\+h"{}}\newline
+{\ttfamily \#include "{}../../uart/include/uart.\+h"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für main.\+c\+:
+% FIG 0
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_2src_2main_8c_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}~1024
+\begin{DoxyCompactList}\small\item\em 1024 Buffer \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_2src_2main_8c_a5ffebe4076a44b3db27985c319e06ffe}{COLOR\+\_\+\+MATRIX\+\_\+\+GREEN}}~8
+\begin{DoxyCompactList}\small\item\em Farbe Matrix Grün fürs Highlighting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_2src_2main_8c_a2f0a6417e12aa122e287fe313c03a399}{TIMEOUT\+\_\+\+VAL}}~200
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{main_2src_2main_8c_ad9e267f2d30791507c2925e612a99375}{current\+\_\+file}} \mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em \doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{main_2src_2main_8c_aa657103002d30bc9b82995d1ab1563d8}{current\+\_\+binary}} \mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_2src_2main_8c_a1ea53ae199e75f00244cb09d11e7b24d}{modus\+Filechooser}}
+\begin{DoxyCompactList}\small\item\em für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_2src_2main_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}}
+\begin{DoxyCompactList}\small\item\em für switch-\/cases \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_2src_2main_8c_a4858bb3109a37110e12bd7765d6f18ee}{baud}}
+\begin{DoxyCompactList}\small\item\em speichert Baudrate (Config Serial) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{main_2src_2main_8c_abbfffc6003d78ece1c271ec64e5a6759}{comport\+\_\+path}} \mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]} ="{}"{}
+\begin{DoxyCompactList}\small\item\em speichert COMPort (Config Serial) \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_2src_2main_8c_ae470f89750d29fcf5ee65ee9cc8401b3}{config\+\_\+file}} = "{}config.\+cfg"{}
+\item 
+int \mbox{\hyperlink{main_2src_2main_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_2src_2main_8c_a25a3f3db6df856bbab69448f00500d78}{packet\+\_\+header}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_2src_2main_8c_a8f0da593ef89beeb87e3d57eb14a2a1e}{packet\+\_\+data}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_2src_2main_8c_ac830316ab0474d713720bfd02c6205e3}{packet\+\_\+buf}} \mbox{[}3\mbox{]}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_2src_2main_8c_a742cda7da9192ce964d73452a11f2825}{mem\+\_\+image}}
+\item 
+off\+\_\+t \mbox{\hyperlink{main_2src_2main_8c_a6b90bca2cfd3bea203413de232648d48}{mem\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{main_2src_2main_8c_a5ffebe4076a44b3db27985c319e06ffe}\label{main_2src_2main_8c_a5ffebe4076a44b3db27985c319e06ffe} 
+\index{main.c@{main.c}!COLOR\_MATRIX\_GREEN@{COLOR\_MATRIX\_GREEN}}
+\index{COLOR\_MATRIX\_GREEN@{COLOR\_MATRIX\_GREEN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{COLOR\_MATRIX\_GREEN}{COLOR\_MATRIX\_GREEN}}
+{\footnotesize\ttfamily \#define COLOR\+\_\+\+MATRIX\+\_\+\+GREEN~8}
+
+
+
+Farbe Matrix Grün fürs Highlighting. 
+
+\Hypertarget{main_2src_2main_8c_ad4d796b98c583d49e83adabd74a63bf6}\label{main_2src_2main_8c_ad4d796b98c583d49e83adabd74a63bf6} 
+\index{main.c@{main.c}!MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}}
+\index{MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_BUFFER\_SIZE}{MAX\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+BUFFER\+\_\+\+SIZE~1024}
+
+
+
+1024 Buffer 
+
+\Hypertarget{main_2src_2main_8c_a2f0a6417e12aa122e287fe313c03a399}\label{main_2src_2main_8c_a2f0a6417e12aa122e287fe313c03a399} 
+\index{main.c@{main.c}!TIMEOUT\_VAL@{TIMEOUT\_VAL}}
+\index{TIMEOUT\_VAL@{TIMEOUT\_VAL}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_VAL}{TIMEOUT\_VAL}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+VAL~200}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Main der Host Applikation 
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{main_2src_2main_8c_a4858bb3109a37110e12bd7765d6f18ee}\label{main_2src_2main_8c_a4858bb3109a37110e12bd7765d6f18ee} 
+\index{main.c@{main.c}!baud@{baud}}
+\index{baud@{baud}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{baud}{baud}}
+{\footnotesize\ttfamily int baud}
+
+
+
+speichert Baudrate (Config Serial) 
+
+cpnfig()\+: öffnet das Fenster für Dateibrowser des Betriebsystems um eine Datai auszuwählen; es speichert den Pfad der ausgewählten datei als Char\texorpdfstring{$\ast$}{*} und zeigt diese an. \Hypertarget{main_2src_2main_8c_a4e1e0e72dd773439e333c84dd762a9c3}\label{main_2src_2main_8c_a4e1e0e72dd773439e333c84dd762a9c3} 
+\index{main.c@{main.c}!c@{c}}
+\index{c@{c}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int c}
+
+
+
+für switch-\/cases 
+
+\Hypertarget{main_2src_2main_8c_abbfffc6003d78ece1c271ec64e5a6759}\label{main_2src_2main_8c_abbfffc6003d78ece1c271ec64e5a6759} 
+\index{main.c@{main.c}!comport\_path@{comport\_path}}
+\index{comport\_path@{comport\_path}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{comport\_path}{comport\_path}}
+{\footnotesize\ttfamily char comport\+\_\+path\mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]} ="{}"{}}
+
+
+
+speichert COMPort (Config Serial) 
+
+\Hypertarget{main_2src_2main_8c_ae470f89750d29fcf5ee65ee9cc8401b3}\label{main_2src_2main_8c_ae470f89750d29fcf5ee65ee9cc8401b3} 
+\index{main.c@{main.c}!config\_file@{config\_file}}
+\index{config\_file@{config\_file}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{config\_file}{config\_file}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} config\+\_\+file = "{}config.\+cfg"{}}
+
+\Hypertarget{main_2src_2main_8c_aa657103002d30bc9b82995d1ab1563d8}\label{main_2src_2main_8c_aa657103002d30bc9b82995d1ab1563d8} 
+\index{main.c@{main.c}!current\_binary@{current\_binary}}
+\index{current\_binary@{current\_binary}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{current\_binary}{current\_binary}}
+{\footnotesize\ttfamily char current\+\_\+binary\mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}}
+
+
+
+speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) 
+
+\Hypertarget{main_2src_2main_8c_ad9e267f2d30791507c2925e612a99375}\label{main_2src_2main_8c_ad9e267f2d30791507c2925e612a99375} 
+\index{main.c@{main.c}!current\_file@{current\_file}}
+\index{current\_file@{current\_file}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{current\_file}{current\_file}}
+{\footnotesize\ttfamily char current\+\_\+file\mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}}
+
+
+
+\doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. 
+
+die Main beinhaltet alle gloalen Variablen, die in den einhzelnen Fenstern festgelegt werden und als Wert für andere Programmfunktionen verwendet. die Auswahlmenu Funktion wird als Hauptfenster bei der Ausführung aufgerufen \begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000019}{Noch zu erledigen}}]eventuelle Auslagerug der while-\/schleifen als Steurungsfunktion für alle Fenster. Hierfür wird in erster Linie ein gutes Konzept zur Realisierung in C gebraucht. \end{DoxyRefDesc}
+speichert Dateipfad hinter "{}\+Current File\+: "{} (Load Mnemonics) \Hypertarget{main_2src_2main_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}\label{main_2src_2main_8c_ad19654fc7adf235ce5ee3a8c1ec69be6} 
+\index{main.c@{main.c}!fd\_uart@{fd\_uart}}
+\index{fd\_uart@{fd\_uart}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{fd\_uart}{fd\_uart}}
+{\footnotesize\ttfamily int fd\+\_\+uart}
+
+\Hypertarget{main_2src_2main_8c_a742cda7da9192ce964d73452a11f2825}\label{main_2src_2main_8c_a742cda7da9192ce964d73452a11f2825} 
+\index{main.c@{main.c}!mem\_image@{mem\_image}}
+\index{mem\_image@{mem\_image}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{mem\_image}{mem\_image}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} mem\+\_\+image}
+
+\Hypertarget{main_2src_2main_8c_a6b90bca2cfd3bea203413de232648d48}\label{main_2src_2main_8c_a6b90bca2cfd3bea203413de232648d48} 
+\index{main.c@{main.c}!mem\_size@{mem\_size}}
+\index{mem\_size@{mem\_size}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{mem\_size}{mem\_size}}
+{\footnotesize\ttfamily off\+\_\+t mem\+\_\+size}
+
+\Hypertarget{main_2src_2main_8c_a1ea53ae199e75f00244cb09d11e7b24d}\label{main_2src_2main_8c_a1ea53ae199e75f00244cb09d11e7b24d} 
+\index{main.c@{main.c}!modusFilechooser@{modusFilechooser}}
+\index{modusFilechooser@{modusFilechooser}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{modusFilechooser}{modusFilechooser}}
+{\footnotesize\ttfamily int modus\+Filechooser}
+
+
+
+für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird 
+
+\Hypertarget{main_2src_2main_8c_ac830316ab0474d713720bfd02c6205e3}\label{main_2src_2main_8c_ac830316ab0474d713720bfd02c6205e3} 
+\index{main.c@{main.c}!packet\_buf@{packet\_buf}}
+\index{packet\_buf@{packet\_buf}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{packet\_buf}{packet\_buf}}
+{\footnotesize\ttfamily uint8\+\_\+t packet\+\_\+buf\mbox{[}3\mbox{]}}
+
+\Hypertarget{main_2src_2main_8c_a8f0da593ef89beeb87e3d57eb14a2a1e}\label{main_2src_2main_8c_a8f0da593ef89beeb87e3d57eb14a2a1e} 
+\index{main.c@{main.c}!packet\_data@{packet\_data}}
+\index{packet\_data@{packet\_data}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{packet\_data}{packet\_data}}
+{\footnotesize\ttfamily uint16\+\_\+t packet\+\_\+data}
+
+\Hypertarget{main_2src_2main_8c_a25a3f3db6df856bbab69448f00500d78}\label{main_2src_2main_8c_a25a3f3db6df856bbab69448f00500d78} 
+\index{main.c@{main.c}!packet\_header@{packet\_header}}
+\index{packet\_header@{packet\_header}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{packet\_header}{packet\_header}}
+{\footnotesize\ttfamily uint8\+\_\+t packet\+\_\+header}
+

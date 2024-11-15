@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.114 (w)1999-2023 BSI
+[*] Fri Dec  8 13:51:19 2023
+[*]
+[dumpfile] "/home/ismail/Dokumente/0_ismail/0_uni/Semester/5/SYP/gitlab/team04/fpga/test/005_decoder_01/sim/simulation/top_tb.ghw"
+[dumpfile_mtime] "Fri Dec  8 13:50:48 2023"
+[dumpfile_size] 4572959
+[savefile] "/home/ismail/Dokumente/0_ismail/0_uni/Semester/5/SYP/gitlab/team04/fpga/test/005_decoder_01/sim/top_tb.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-40.715179 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.top_tb.
+[sst_width] 276
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 157
+@28
+top.top_tb.r_clk
+@23
+#{top.top_tb.w_output[23:0]} top.top_tb.w_output[23] top.top_tb.w_output[22] top.top_tb.w_output[21] top.top_tb.w_output[20] top.top_tb.w_output[19] top.top_tb.w_output[18] top.top_tb.w_output[17] top.top_tb.w_output[16] top.top_tb.w_output[15] top.top_tb.w_output[14] top.top_tb.w_output[13] top.top_tb.w_output[12] top.top_tb.w_output[11] top.top_tb.w_output[10] top.top_tb.w_output[9] top.top_tb.w_output[8] top.top_tb.w_output[7] top.top_tb.w_output[6] top.top_tb.w_output[5] top.top_tb.w_output[4] top.top_tb.w_output[3] top.top_tb.w_output[2] top.top_tb.w_output[1] top.top_tb.w_output[0]
+[pattern_trace] 1
+[pattern_trace] 0

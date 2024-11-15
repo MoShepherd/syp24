@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2024-02-01T14:52:01.393Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="ztdm_lwBILfihYDqO-S5" version="21.2.8" type="device">
+  <diagram name="Seite-1" id="1DdBGCkQfgjVxy8bUu3-">
+    <mxGraphModel dx="876" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-1" value="entity mux_4_1 is&#xa;    port (&#xa;        a, b, c, d : in  std_logic;&#xa;        sel        : in  std_logic_vector(1 downto 0);&#xa;        y          : out std_logic&#xa;    );" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="547" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-3" value="a" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-4" value="b" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="30" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-5" value="c" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="60" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-6" value="y" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-9" value="mux_4_1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="45" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-10" value="d" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="90" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qi9rXhb3OTnVeXtXvW-11" value="sel" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="135" y="90" width="40" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

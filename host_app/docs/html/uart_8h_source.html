@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>host_app: uart/include/uart.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">host_app
+   </div>
+   <div id="projectbrief">Client Applikation des SVNR-Bootloaders</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_43ad556cc113861ad71aa7c6f25342a2.html">uart</a></li><li class="navelem"><a class="el" href="dir_4b89f7852c8e94e98e70f48e5f207310.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">uart.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="uart_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// defines for uart config</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// #define SERIAL_PORT &quot;/dev/ttyUSB2&quot; // Change this to your serial port</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="uart_8h.html#a2f0a6417e12aa122e287fe313c03a399">    6</a></span><span class="preprocessor">#define TIMEOUT_VAL 200 </span><span class="comment">// timeout in ms</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Bootloader packet types</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="uart_8h.html#a0d94bc120f7a64b547371c44028aea19">    9</a></span><span class="preprocessor">#define BL_TYPE_ACK             0x00   </span><span class="comment">// Acknowledgement for message</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="uart_8h.html#ab041f3c8cc9146e3f994f56bf5bc87b9">   10</a></span><span class="preprocessor">#define BL_TYPE_CMD_HOST_PC     0x01   </span><span class="comment">// Host PC Command</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="uart_8h.html#a9f7ac49a123bd826f11737b505852e6b">   11</a></span><span class="preprocessor">#define BL_TYPE_BIN_DATA        0x02   </span><span class="comment">// Binary transmit packet</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="uart_8h.html#a48c078f769316335fbb530579d4ddba9">   12</a></span><span class="preprocessor">#define BL_TYPE_ERR             0x03   </span><span class="comment">// Error packet</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// #define BL_TYPE_DEBUG           0x04</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="uart_8h.html#a5d7ac231433f6e9d4c355fa44c727c8a">   14</a></span><span class="preprocessor">#define BL_TYPE_ADDRESS         0x05</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// Host PC Commands/Packet Data with CMD_HOST_ prefix</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="uart_8h.html#a0b53b7cbc14d2e8e1d671756248c5e81">   17</a></span><span class="preprocessor">#define CMD_HOST_EXECUTE        0x0001     </span><span class="comment">// Execute, siehe LF07</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="uart_8h.html#a887624f0bcf8d97b2c66c4933f985a71">   18</a></span><span class="preprocessor">#define CMD_HOST_UPLOAD_RAM     0x0002     </span><span class="comment">// Upload to RAM, siehe LF04</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="uart_8h.html#a44413f2d853be283159dfc2927530854">   19</a></span><span class="preprocessor">#define CMD_HOST_LOAD_FLASH     0x0003     </span><span class="comment">// Load to FLASH, siehe LF05</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="uart_8h.html#af9ca33e65f27461911afb8b2badc80ef">   20</a></span><span class="preprocessor">#define CMD_HOST_LOAD_FROM      0x0004     </span><span class="comment">// Load from FLASH, siehe LF06</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="uart_8h.html#a04b81a96e66299634e462c64487e6865">   21</a></span><span class="preprocessor">#define CMD_HOST_STATUS_QUERY   0x0005     </span><span class="comment">// Statusabfrage - Der Host PC fragt den derzeitigen Status des FPGA ab</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="uart_8h.html#add64c8e9e1b239cb621edc08df72ef69">   22</a></span><span class="preprocessor">#define CMD_HOST_DEBUG_MODE     0x0006     </span><span class="comment">// Enter debug Mode, which allows for setting breakpoints etc.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="uart_8h.html#a2697431c7b22eb80e7383e5debcce792">   23</a></span><span class="preprocessor">#define CMD_HOST_RESET          0x0007     </span><span class="comment">// Enter debug Mode, which allows for setting breakpoints etc.</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="uart_8h.html#adf63d332ed78ba9752ae9010c4c0fd22">   24</a></span><span class="preprocessor">#define CMD_HOST_STOP           0x0008     </span><span class="comment">// Enter debug Mode, which allows for setting breakpoints etc.</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// Debug Packet Data (Bit 8-15 bestimmen Befehlssatz, in dem Fall DEBUG CMD)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// to send DEBUG commands, first enter DEBUG MODE with  0x010006 command.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="uart_8h.html#a23e071b0b334751376b1833719b2b31e">   28</a></span><span class="preprocessor">#define DEBUG_SET_BP            0x0102  </span><span class="comment">// to set breakpoint, send &quot;set breakpoint&quot; command with 0x040002, followed by the 16bit breakpoint address, prefixed with a debug packet header e.g. 0x04 1234 (first byte header, following 16 bit address)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="uart_8h.html#a6f170be2d072b4823c789dd02e96502a">   29</a></span><span class="preprocessor">#define DEBUG_DEL_BP            0x0103  </span><span class="comment">// same with deleting breakpoints: </span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="uart_8h.html#adcbecad897cf21f6ad0a97d8f0fbc515">   30</a></span><span class="preprocessor">#define DEBUG_WRITE_RAM         0x0106  </span><span class="comment">// to write to specific ram address, send &quot;write to ram&quot; command 0x040006, followed by one packet containing the address (e.g. 0x04 1234), followed by a packet of ram data on this address (0x04 1111)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="uart_8h.html#ac5963c4f656afea633a5331e7a496318">   31</a></span><span class="preprocessor">#define DEBUG_READ_RAM          0x0107</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// Error  Codes</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="uart_8h.html#a48edef7887642685c09cf2ed00456a3d">   34</a></span><span class="preprocessor">#define ERR_BUSY                0x0010</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="uart_8h.html#a254cb0da018dbfee848b40a4c60bcd9e">   35</a></span><span class="preprocessor">#define ERR_TRANS_INCOMPLETE    0x0011   </span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="uart_8h.html#a5a47051a4b20eacf15bff957154dffaa">   36</a></span><span class="preprocessor">#define ERR_TRANS_OVERFLOW      0x0012</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="uart_8h.html#ac5fab9ba12bccf7a0db038eee884c0b0">   37</a></span><span class="preprocessor">#define ERR_TRANS_NOT_STARTED   0x0013</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="uart_8h.html#a506d495a72292eaea1f419920a221d69">   38</a></span><span class="preprocessor">#define ERR_NOT_VALID_PACKET    0x0014</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// Status Codes (states of Decoder state-machine)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="uart_8h.html#a9935e0057081d93c0fd6ec14c2255e73">   41</a></span><span class="preprocessor">#define STAT_INIT               0x0001</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="uart_8h.html#a440e12b9f73a1b1d9c0f509351e1a1be">   42</a></span><span class="preprocessor">#define STAT_UPL_IN_PROG        0x0002</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="uart_8h.html#ad9f48bc084d9af839ceb5dbb3ee45fbe">   43</a></span><span class="preprocessor">#define STAT_TRANS_COMPLETE     0x0003</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="uart_8h.html#aa58c0f4c8228475ba216796e5848bcaf">   45</a></span><span class="preprocessor">#define STAT_RUNNING            0x0006</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="uart_8h.html#ab4054b636faf7fdd14432d1d0234a923">   46</a></span><span class="preprocessor">#define STAT_RESETING           0x0007</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="uart_8h.html#aab439990abb16c1032ffc54a00d9078c">   47</a></span><span class="preprocessor">#define STAT_ADD_BP             0x0008</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="uart_8h.html#a6db078813767640cc40c465f1fc3e731">   48</a></span><span class="preprocessor">#define STAT_DEL_BP             0x0009</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="uart_8h.html#a9eabc9bb2c89e725678f5cedad30a7a0">   49</a></span><span class="preprocessor">#define STAT_DEBUG_INIT         0x0005</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">// Function prototypes</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="uart_8h.html#abdfc548828d35bf9fe92ca5e0d257b8f">uart_tx_bl_packet</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>, uint8_t pack_type, uint16_t pack_data);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="uart_8h.html#a4f51e31e9f6b08d2093f2ffff95b3f66">   54</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="uart_8h.html#a4f51e31e9f6b08d2093f2ffff95b3f66">uart_rx_wait_for_byte</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>, uint8_t *received_char);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">int</span> <a class="code hl_function" href="uart_8h.html#a949f7105b89b6f151322a3052d570259">uart_rx_bl_packet</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>, uint8_t *data);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="uart_8h.html#a8ab2a1c038465abf01576818aaa2f177">set_interface_attribs</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> speed, <span class="keywordtype">int</span> parity);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="uart_8h.html#a1872b72ddc38058719f085dd0529b963">   57</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="uart_8h.html#a1872b72ddc38058719f085dd0529b963">uart_tx_data</a>(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="uart_8h.html#a2aeaac61f27ed2856765d3b0c3236b71">   58</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="uart_8h.html#a2aeaac61f27ed2856765d3b0c3236b71">uart_tx_byte</a>(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="uart_8h.html#ad7f0214f21df5ce2b93f03ade21ca358">   59</a></span>uint8_t <a class="code hl_function" href="uart_8h.html#ad7f0214f21df5ce2b93f03ade21ca358">tx_mem_image</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>, __uint8_t *image, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">int</span> <a class="code hl_function" href="uart_8h.html#ab99cb82a6d1dd2cc590853642a4c95db">open_file</a>(<span class="keywordtype">char</span> *filepath, <span class="keywordtype">char</span> **<a class="code hl_variable" href="bootloader_8c.html#a742cda7da9192ce964d73452a11f2825">mem_image</a>, off_t *file_size);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="uart_8h.html#a6955d53ea330c0628341fc6f5bebfd92">   61</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="uart_8h.html#a6955d53ea330c0628341fc6f5bebfd92">get_fpga_status</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a>);</div>
+<div class="ttc" id="abootloader_8c_html_a742cda7da9192ce964d73452a11f2825"><div class="ttname"><a href="bootloader_8c.html#a742cda7da9192ce964d73452a11f2825">mem_image</a></div><div class="ttdeci">char * mem_image</div><div class="ttdef"><b>Definition</b> main.c:53</div></div>
+<div class="ttc" id="abootloader_8c_html_ad19654fc7adf235ce5ee3a8c1ec69be6"><div class="ttname"><a href="bootloader_8c.html#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a></div><div class="ttdeci">int fd_uart</div><div class="ttdef"><b>Definition</b> main.c:46</div></div>
+<div class="ttc" id="auart_8h_html_a1872b72ddc38058719f085dd0529b963"><div class="ttname"><a href="uart_8h.html#a1872b72ddc38058719f085dd0529b963">uart_tx_data</a></div><div class="ttdeci">void uart_tx_data(int fd, const char *data, size_t size)</div></div>
+<div class="ttc" id="auart_8h_html_a2aeaac61f27ed2856765d3b0c3236b71"><div class="ttname"><a href="uart_8h.html#a2aeaac61f27ed2856765d3b0c3236b71">uart_tx_byte</a></div><div class="ttdeci">void uart_tx_byte(int fd, const char *data, int index)</div></div>
+<div class="ttc" id="auart_8h_html_a4f51e31e9f6b08d2093f2ffff95b3f66"><div class="ttname"><a href="uart_8h.html#a4f51e31e9f6b08d2093f2ffff95b3f66">uart_rx_wait_for_byte</a></div><div class="ttdeci">int uart_rx_wait_for_byte(int fd_uart, uint8_t *received_char)</div></div>
+<div class="ttc" id="auart_8h_html_a6955d53ea330c0628341fc6f5bebfd92"><div class="ttname"><a href="uart_8h.html#a6955d53ea330c0628341fc6f5bebfd92">get_fpga_status</a></div><div class="ttdeci">int get_fpga_status(int fd_uart)</div></div>
+<div class="ttc" id="auart_8h_html_a8ab2a1c038465abf01576818aaa2f177"><div class="ttname"><a href="uart_8h.html#a8ab2a1c038465abf01576818aaa2f177">set_interface_attribs</a></div><div class="ttdeci">void set_interface_attribs(int fd, int speed, int parity)</div><div class="ttdoc">Konfiguriert die UART Schnittstelle mit teils gesetzten, teils parametrisierten Konfigurationen.</div><div class="ttdef"><b>Definition</b> uart.c:23</div></div>
+<div class="ttc" id="auart_8h_html_a949f7105b89b6f151322a3052d570259"><div class="ttname"><a href="uart_8h.html#a949f7105b89b6f151322a3052d570259">uart_rx_bl_packet</a></div><div class="ttdeci">int uart_rx_bl_packet(int fd_uart, uint8_t *data)</div><div class="ttdoc">Empfängt ein Bootloader Paket (3 Byte) per UART Schnittstelle.</div><div class="ttdef"><b>Definition</b> uart.c:83</div></div>
+<div class="ttc" id="auart_8h_html_ab99cb82a6d1dd2cc590853642a4c95db"><div class="ttname"><a href="uart_8h.html#ab99cb82a6d1dd2cc590853642a4c95db">open_file</a></div><div class="ttdeci">int open_file(char *filepath, char **mem_image, off_t *file_size)</div><div class="ttdoc">Liest ein gesamtes Binärimage in einen Buffer.</div><div class="ttdef"><b>Definition</b> uart.c:124</div></div>
+<div class="ttc" id="auart_8h_html_abdfc548828d35bf9fe92ca5e0d257b8f"><div class="ttname"><a href="uart_8h.html#abdfc548828d35bf9fe92ca5e0d257b8f">uart_tx_bl_packet</a></div><div class="ttdeci">void uart_tx_bl_packet(int fd_uart, uint8_t pack_type, uint16_t pack_data)</div><div class="ttdoc">Überträgt ein Bootloader Paket (3 Byte) per UART Schnittstelle.</div><div class="ttdef"><b>Definition</b> uart.c:69</div></div>
+<div class="ttc" id="auart_8h_html_ad7f0214f21df5ce2b93f03ade21ca358"><div class="ttname"><a href="uart_8h.html#ad7f0214f21df5ce2b93f03ade21ca358">tx_mem_image</a></div><div class="ttdeci">uint8_t tx_mem_image(int fd_uart, __uint8_t *image, int size)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

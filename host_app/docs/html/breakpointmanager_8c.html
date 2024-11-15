@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>host_app: main/src/breakpointmanager.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">host_app
+   </div>
+   <div id="projectbrief">Client Applikation des SVNR-Bootloaders</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_2101cd0b22112584ff59816a4bc911f7.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle"><div class="title">breakpointmanager.c-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="breakpointmanager_8h_source.html">../includes/breakpointmanager.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für breakpointmanager.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="breakpointmanager_8c__incl.png" border="0" usemap="#amain_2src_2breakpointmanager_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a47cc35b4beb25fa032190cd6b67d0b29" id="r_a47cc35b4beb25fa032190cd6b67d0b29"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47cc35b4beb25fa032190cd6b67d0b29">addBreakpoint</a> (<a class="el" href="structBreakpoint.html">Breakpoint</a> **top, unsigned long long address)</td></tr>
+<tr class="memdesc:a47cc35b4beb25fa032190cd6b67d0b29"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a47cc35b4beb25fa032190cd6b67d0b29" title="addBreakpoint(Breakpoint** top, unsigned long long address): fügt einen neuen Breakpoint an die verke...">addBreakpoint(Breakpoint** top, unsigned long long address)</a>: fügt einen neuen <a class="el" href="structBreakpoint.html">Breakpoint</a> an die verkettete Liste.  <br /></td></tr>
+<tr class="separator:a47cc35b4beb25fa032190cd6b67d0b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa019ace866c1b96a5c4aca7aea574c" id="r_aefa019ace866c1b96a5c4aca7aea574c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefa019ace866c1b96a5c4aca7aea574c">removeBreakpoint</a> (<a class="el" href="structBreakpoint.html">Breakpoint</a> **top, unsigned long long address)</td></tr>
+<tr class="memdesc:aefa019ace866c1b96a5c4aca7aea574c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#aefa019ace866c1b96a5c4aca7aea574c" title="removeBreakpoint(Breakpoint** top, unsigned long long address): löscht einen Breakpoint aus der verke...">removeBreakpoint(Breakpoint** top, unsigned long long address)</a>: löscht einen <a class="el" href="structBreakpoint.html">Breakpoint</a> aus der verketteten Liste.  <br /></td></tr>
+<tr class="separator:aefa019ace866c1b96a5c4aca7aea574c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a516015143536836120d3e62b1c3d4" id="r_a91a516015143536836120d3e62b1c3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91a516015143536836120d3e62b1c3d4">getBreakpoints</a> (<a class="el" href="structBreakpoint.html">Breakpoint</a> **top, char *ret, size_t retSize)</td></tr>
+<tr class="memdesc:a91a516015143536836120d3e62b1c3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a91a516015143536836120d3e62b1c3d4" title="getBreakpoints(Breakpoint** top, char* ret, size_t retSize): schreibt die Breakpoints in die übergebe...">getBreakpoints(Breakpoint** top, char* ret, size_t retSize)</a>: schreibt die Breakpoints in die übergebene ret Variable.  <br /></td></tr>
+<tr class="separator:a91a516015143536836120d3e62b1c3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1c80819d541e96984437450de8f742" id="r_a6d1c80819d541e96984437450de8f742"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBreakpoint.html">Breakpoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d1c80819d541e96984437450de8f742">getBreakpoint</a> (<a class="el" href="structBreakpoint.html">Breakpoint</a> **top, int index)</td></tr>
+<tr class="memdesc:a6d1c80819d541e96984437450de8f742"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a6d1c80819d541e96984437450de8f742" title="getBreakpoint(Breakpoint** top, int index): gibt einen bestimmten Breakpoint in der Liste zurück.">getBreakpoint(Breakpoint** top, int index)</a>: gibt einen bestimmten <a class="el" href="structBreakpoint.html">Breakpoint</a> in der Liste zurück.  <br /></td></tr>
+<tr class="separator:a6d1c80819d541e96984437450de8f742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181c06c3f096d959fd2b3d2cf65e3b8f" id="r_a181c06c3f096d959fd2b3d2cf65e3b8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a181c06c3f096d959fd2b3d2cf65e3b8f">markBreakpoints</a> (WINDOW *win, const char *filename, int start_line, int num_lines, <a class="el" href="structBreakpoint.html">Breakpoint</a> *breakpoints)</td></tr>
+<tr class="memdesc:a181c06c3f096d959fd2b3d2cf65e3b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a181c06c3f096d959fd2b3d2cf65e3b8f" title="markBreakpoints(WINDOW *win, const char *filename, int start_line, int num_lines, Breakpoint *breakpo...">markBreakpoints(WINDOW *win, const char *filename, int start_line, int num_lines, Breakpoint *breakpoints)</a>: markiert die Breakpoints  <br /></td></tr>
+<tr class="separator:a181c06c3f096d959fd2b3d2cf65e3b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9076f30af1c18c2fc0b255b5206b0dd" id="r_af9076f30af1c18c2fc0b255b5206b0dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9076f30af1c18c2fc0b255b5206b0dd">delList</a> (<a class="el" href="structBreakpoint.html">Breakpoint</a> **top)</td></tr>
+<tr class="memdesc:af9076f30af1c18c2fc0b255b5206b0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#af9076f30af1c18c2fc0b255b5206b0dd" title="delList(Breakpoint** top): löscht die verketteten Liste.">delList(Breakpoint** top)</a>: löscht die verketteten Liste.  <br /></td></tr>
+<tr class="separator:af9076f30af1c18c2fc0b255b5206b0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a47cc35b4beb25fa032190cd6b67d0b29" name="a47cc35b4beb25fa032190cd6b67d0b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47cc35b4beb25fa032190cd6b67d0b29">&#9670;&#160;</a></span>addBreakpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int addBreakpoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBreakpoint.html">Breakpoint</a> **</td>          <td class="paramname"><span class="paramname"><em>top</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long long</td>          <td class="paramname"><span class="paramname"><em>address</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a47cc35b4beb25fa032190cd6b67d0b29" title="addBreakpoint(Breakpoint** top, unsigned long long address): fügt einen neuen Breakpoint an die verke...">addBreakpoint(Breakpoint** top, unsigned long long address)</a>: fügt einen neuen <a class="el" href="structBreakpoint.html">Breakpoint</a> an die verkettete Liste. </p>
+<p>Im Parameter wird der Kopf der verketteten Liste und die Adresse an welcher der neue <a class="el" href="structBreakpoint.html">Breakpoint</a> gesetzt wurde übergeben. Es wird dann bis zum letztem Objekt der verketteten Liste iteriert und an daran ein neuer <a class="el" href="structBreakpoint.html">Breakpoint</a> gesetzt, welcher als Adresse den im Parameter übergebenen Wert erhält.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">top</td><td>Das Kopfelement der verketteten Liste. </td></tr>
+    <tr><td class="paramname">address</td><td>Adresse an der ein <a class="el" href="structBreakpoint.html">Breakpoint</a> gesetzt werden soll. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Gibt durch eine Zahl 1, 2 oder 0 an ob der <a class="el" href="structBreakpoint.html">Breakpoint</a> an die verkettete Liste gehangen wurde oder nicht. </dd></dl>
+
+</div>
+</div>
+<a id="af9076f30af1c18c2fc0b255b5206b0dd" name="af9076f30af1c18c2fc0b255b5206b0dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9076f30af1c18c2fc0b255b5206b0dd">&#9670;&#160;</a></span>delList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBreakpoint.html">Breakpoint</a> **</td>          <td class="paramname"><span class="paramname"><em>top</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#af9076f30af1c18c2fc0b255b5206b0dd" title="delList(Breakpoint** top): löscht die verketteten Liste.">delList(Breakpoint** top)</a>: löscht die verketteten Liste. </p>
+<p>Im Parameter wird der Kopf der verketteten Liste, welche gelöscht werden soll übergeben.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">top</td><td>Das Kopfelement der verketteten Liste. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6d1c80819d541e96984437450de8f742" name="a6d1c80819d541e96984437450de8f742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1c80819d541e96984437450de8f742">&#9670;&#160;</a></span>getBreakpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBreakpoint.html">Breakpoint</a> * getBreakpoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBreakpoint.html">Breakpoint</a> **</td>          <td class="paramname"><span class="paramname"><em>top</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a6d1c80819d541e96984437450de8f742" title="getBreakpoint(Breakpoint** top, int index): gibt einen bestimmten Breakpoint in der Liste zurück.">getBreakpoint(Breakpoint** top, int index)</a>: gibt einen bestimmten <a class="el" href="structBreakpoint.html">Breakpoint</a> in der Liste zurück. </p>
+<p>Im Parameter wird der Kopf der verketteten Liste und der Index übergeben. Es wird dann bis zum Index durch die Liste iteriert und der <a class="el" href="structBreakpoint.html">Breakpoint</a> an der Stelle von Index zurückgegeben.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">top</td><td>Das Kopfelement der verketteten Liste. </td></tr>
+    <tr><td class="paramname">index</td><td>Das wie vielte Objekt in der verketteten Liste ausgegeben werden soll. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>gibt einen Pointer auf den <a class="el" href="structBreakpoint.html">Breakpoint</a> zurück. </dd></dl>
+
+</div>
+</div>
+<a id="a91a516015143536836120d3e62b1c3d4" name="a91a516015143536836120d3e62b1c3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a516015143536836120d3e62b1c3d4">&#9670;&#160;</a></span>getBreakpoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getBreakpoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBreakpoint.html">Breakpoint</a> **</td>          <td class="paramname"><span class="paramname"><em>top</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ret</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>retSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a91a516015143536836120d3e62b1c3d4" title="getBreakpoints(Breakpoint** top, char* ret, size_t retSize): schreibt die Breakpoints in die übergebe...">getBreakpoints(Breakpoint** top, char* ret, size_t retSize)</a>: schreibt die Breakpoints in die übergebene ret Variable. </p>
+<p>Im Parameter wird der Kopf der verketteten Liste und das String an welches die <a class="el" href="structBreakpoint.html">Breakpoint</a> Adressen angehangen werden sollen übergeben.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">top</td><td>Das Kopfelement der verketteten Liste. </td></tr>
+    <tr><td class="paramname">ret</td><td>String an welches die Adressen der Breakpoints in der verketteten Liste angehangen werden sollen. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a181c06c3f096d959fd2b3d2cf65e3b8f" name="a181c06c3f096d959fd2b3d2cf65e3b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181c06c3f096d959fd2b3d2cf65e3b8f">&#9670;&#160;</a></span>markBreakpoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void markBreakpoints </td>
+          <td>(</td>
+          <td class="paramtype">WINDOW *</td>          <td class="paramname"><span class="paramname"><em>win</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start_line</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_lines</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBreakpoint.html">Breakpoint</a> *</td>          <td class="paramname"><span class="paramname"><em>breakpoints</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a181c06c3f096d959fd2b3d2cf65e3b8f" title="markBreakpoints(WINDOW *win, const char *filename, int start_line, int num_lines, Breakpoint *breakpo...">markBreakpoints(WINDOW *win, const char *filename, int start_line, int num_lines, Breakpoint *breakpoints)</a>: markiert die Breakpoints </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Noch zu erledigen</a></b></dt><dd>Diese Funktion funktioniert nicht und wird auch nicht gebraucht im Moment. Kann also gelöscht werden! </dd></dl>
+
+</div>
+</div>
+<a id="aefa019ace866c1b96a5c4aca7aea574c" name="aefa019ace866c1b96a5c4aca7aea574c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa019ace866c1b96a5c4aca7aea574c">&#9670;&#160;</a></span>removeBreakpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int removeBreakpoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBreakpoint.html">Breakpoint</a> **</td>          <td class="paramname"><span class="paramname"><em>top</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long long</td>          <td class="paramname"><span class="paramname"><em>address</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#aefa019ace866c1b96a5c4aca7aea574c" title="removeBreakpoint(Breakpoint** top, unsigned long long address): löscht einen Breakpoint aus der verke...">removeBreakpoint(Breakpoint** top, unsigned long long address)</a>: löscht einen <a class="el" href="structBreakpoint.html">Breakpoint</a> aus der verketteten Liste. </p>
+<p>Im Parameter wird der Kopf der verketteten Liste und die Adresse welche aus der verketteten Liste gelöscht werden soll übergeben. Es wird dann bis zum letztem Objekt der verketteten Liste iteriert und die übergebene Adresse aus der verketteten Liste gelöscht.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">top</td><td>Das Kopfelement der verketteten Liste. </td></tr>
+    <tr><td class="paramname">address</td><td>Adresse von welcher ein <a class="el" href="structBreakpoint.html">Breakpoint</a> gelöscht werden soll. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Gibt durch eine Zahl 1, 2 oder 0 an ob der <a class="el" href="structBreakpoint.html">Breakpoint</a> aus der verkettete Liste gelöscht wurde oder nicht. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

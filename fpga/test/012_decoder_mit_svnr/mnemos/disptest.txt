@@ -1,0 +1,51 @@
+#########################################################################################################
+####### Variablen ####### 
+00:JA40 # zum Anfang des Programms springen
+01:0000 # uint16_t* p_tone;                    : 
+02:0000 # uint16_t   count;                 : Index der Ersten schleife = wie viele Töne noch?    
+03:ffff # const uint16_t maxcnt 
+04:00ff #  um soviel den delay pro durchlauf schneller machen
+05:0055 # uint16_t half_period;                : Ausgan g Display
+06:0000 # uint16_t half_period_counter;        : Zähler, wenn der Buzzer Pin wechseln soll           
+07:0000 # uint16_t pin;                        : Die Speicherstelle, die mit dem Buzzer-Pin verbunden ist 
+08:0030 # const uint16_t number_of_tones = 48; : Größe des Arrays ton[] in Hex: 0x30
+#########################################################################################################
+# Platz fuer weitere Variablen
+# 39 bis 3F
+#
+39:0000 # const uint16_t c_null = 0; // Konstante 0
+3a:0001 # const uint16_t c_one = 1; // Konstante 0
+########################################
+	# Programmbeginn
+40:LDM02	# hole count
+41:STM05	# speicher in display
+42:JA60	# delay loop
+43:LDM02
+44:INC00	# inc count
+45:STM02
+46:JA40
+
+   # Delay äussere Schleife
+60:LDM03   # Zählerkonstante
+61:STM01   # Zählvariable initialisieren delcnt = maxcnt
+62:JA70    # inneres delay (falls nötig)
+63:NoOp01  # SPrungziel fuer
+64:LDM01	#
+65:DEC00   # delcnt--
+66:STM01   #
+67:JNA62	# weitere
+68:LDM03 	# hole delayzeit
+69:SUB04
+6a:STM03
+6b:JA43	   # zurück in Hauptschleife
+#8:	1234
+	
+70:NoOp00
+71:NoOp00
+72:JA63
+
+7f:aa
+80:bb
+
+C0:0f00
+C1:0ff0

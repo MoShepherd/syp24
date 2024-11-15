@@ -1,0 +1,390 @@
+\doxysection{uart/include/uart.h-\/\+Dateireferenz}
+\hypertarget{uart_8h}{}\label{uart_8h}\index{uart/include/uart.h@{uart/include/uart.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für uart.\+h\+:
+% FIG 0
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:
+% FIG 1
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uart_8h_a2f0a6417e12aa122e287fe313c03a399}{TIMEOUT\+\_\+\+VAL}}~200
+\item 
+\#define \mbox{\hyperlink{uart_8h_a0d94bc120f7a64b547371c44028aea19}{BL\+\_\+\+TYPE\+\_\+\+ACK}}~0x00
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab041f3c8cc9146e3f994f56bf5bc87b9}{BL\+\_\+\+TYPE\+\_\+\+CMD\+\_\+\+HOST\+\_\+\+PC}}~0x01
+\item 
+\#define \mbox{\hyperlink{uart_8h_a9f7ac49a123bd826f11737b505852e6b}{BL\+\_\+\+TYPE\+\_\+\+BIN\+\_\+\+DATA}}~0x02
+\item 
+\#define \mbox{\hyperlink{uart_8h_a48c078f769316335fbb530579d4ddba9}{BL\+\_\+\+TYPE\+\_\+\+ERR}}~0x03
+\item 
+\#define \mbox{\hyperlink{uart_8h_a5d7ac231433f6e9d4c355fa44c727c8a}{BL\+\_\+\+TYPE\+\_\+\+ADDRESS}}~0x05
+\item 
+\#define \mbox{\hyperlink{uart_8h_a0b53b7cbc14d2e8e1d671756248c5e81}{CMD\+\_\+\+HOST\+\_\+\+EXECUTE}}~0x0001
+\item 
+\#define \mbox{\hyperlink{uart_8h_a887624f0bcf8d97b2c66c4933f985a71}{CMD\+\_\+\+HOST\+\_\+\+UPLOAD\+\_\+\+RAM}}~0x0002
+\item 
+\#define \mbox{\hyperlink{uart_8h_a44413f2d853be283159dfc2927530854}{CMD\+\_\+\+HOST\+\_\+\+LOAD\+\_\+\+FLASH}}~0x0003
+\item 
+\#define \mbox{\hyperlink{uart_8h_af9ca33e65f27461911afb8b2badc80ef}{CMD\+\_\+\+HOST\+\_\+\+LOAD\+\_\+\+FROM}}~0x0004
+\item 
+\#define \mbox{\hyperlink{uart_8h_a04b81a96e66299634e462c64487e6865}{CMD\+\_\+\+HOST\+\_\+\+STATUS\+\_\+\+QUERY}}~0x0005
+\item 
+\#define \mbox{\hyperlink{uart_8h_add64c8e9e1b239cb621edc08df72ef69}{CMD\+\_\+\+HOST\+\_\+\+DEBUG\+\_\+\+MODE}}~0x0006
+\item 
+\#define \mbox{\hyperlink{uart_8h_a2697431c7b22eb80e7383e5debcce792}{CMD\+\_\+\+HOST\+\_\+\+RESET}}~0x0007
+\item 
+\#define \mbox{\hyperlink{uart_8h_adf63d332ed78ba9752ae9010c4c0fd22}{CMD\+\_\+\+HOST\+\_\+\+STOP}}~0x0008
+\item 
+\#define \mbox{\hyperlink{uart_8h_a23e071b0b334751376b1833719b2b31e}{DEBUG\+\_\+\+SET\+\_\+\+BP}}~0x0102
+\item 
+\#define \mbox{\hyperlink{uart_8h_a6f170be2d072b4823c789dd02e96502a}{DEBUG\+\_\+\+DEL\+\_\+\+BP}}~0x0103
+\item 
+\#define \mbox{\hyperlink{uart_8h_adcbecad897cf21f6ad0a97d8f0fbc515}{DEBUG\+\_\+\+WRITE\+\_\+\+RAM}}~0x0106
+\item 
+\#define \mbox{\hyperlink{uart_8h_ac5963c4f656afea633a5331e7a496318}{DEBUG\+\_\+\+READ\+\_\+\+RAM}}~0x0107
+\item 
+\#define \mbox{\hyperlink{uart_8h_a48edef7887642685c09cf2ed00456a3d}{ERR\+\_\+\+BUSY}}~0x0010
+\item 
+\#define \mbox{\hyperlink{uart_8h_a254cb0da018dbfee848b40a4c60bcd9e}{ERR\+\_\+\+TRANS\+\_\+\+INCOMPLETE}}~0x0011
+\item 
+\#define \mbox{\hyperlink{uart_8h_a5a47051a4b20eacf15bff957154dffaa}{ERR\+\_\+\+TRANS\+\_\+\+OVERFLOW}}~0x0012
+\item 
+\#define \mbox{\hyperlink{uart_8h_ac5fab9ba12bccf7a0db038eee884c0b0}{ERR\+\_\+\+TRANS\+\_\+\+NOT\+\_\+\+STARTED}}~0x0013
+\item 
+\#define \mbox{\hyperlink{uart_8h_a506d495a72292eaea1f419920a221d69}{ERR\+\_\+\+NOT\+\_\+\+VALID\+\_\+\+PACKET}}~0x0014
+\item 
+\#define \mbox{\hyperlink{uart_8h_a9935e0057081d93c0fd6ec14c2255e73}{STAT\+\_\+\+INIT}}~0x0001
+\item 
+\#define \mbox{\hyperlink{uart_8h_a440e12b9f73a1b1d9c0f509351e1a1be}{STAT\+\_\+\+UPL\+\_\+\+IN\+\_\+\+PROG}}~0x0002
+\item 
+\#define \mbox{\hyperlink{uart_8h_ad9f48bc084d9af839ceb5dbb3ee45fbe}{STAT\+\_\+\+TRANS\+\_\+\+COMPLETE}}~0x0003
+\item 
+\#define \mbox{\hyperlink{uart_8h_aa58c0f4c8228475ba216796e5848bcaf}{STAT\+\_\+\+RUNNING}}~0x0006
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab4054b636faf7fdd14432d1d0234a923}{STAT\+\_\+\+RESETING}}~0x0007
+\item 
+\#define \mbox{\hyperlink{uart_8h_aab439990abb16c1032ffc54a00d9078c}{STAT\+\_\+\+ADD\+\_\+\+BP}}~0x0008
+\item 
+\#define \mbox{\hyperlink{uart_8h_a6db078813767640cc40c465f1fc3e731}{STAT\+\_\+\+DEL\+\_\+\+BP}}~0x0009
+\item 
+\#define \mbox{\hyperlink{uart_8h_a9eabc9bb2c89e725678f5cedad30a7a0}{STAT\+\_\+\+DEBUG\+\_\+\+INIT}}~0x0005
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8h_abdfc548828d35bf9fe92ca5e0d257b8f}{uart\+\_\+tx\+\_\+bl\+\_\+packet}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}, uint8\+\_\+t pack\+\_\+type, uint16\+\_\+t pack\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Überträgt ein Bootloader Paket (3 Byte) per UART Schnittstelle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a4f51e31e9f6b08d2093f2ffff95b3f66}{uart\+\_\+rx\+\_\+wait\+\_\+for\+\_\+byte}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}, uint8\+\_\+t \texorpdfstring{$\ast$}{*}received\+\_\+char)
+\item 
+int \mbox{\hyperlink{uart_8h_a949f7105b89b6f151322a3052d570259}{uart\+\_\+rx\+\_\+bl\+\_\+packet}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Empfängt ein Bootloader Paket (3 Byte) per UART Schnittstelle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a8ab2a1c038465abf01576818aaa2f177}{set\+\_\+interface\+\_\+attribs}} (int fd, int speed, int parity)
+\begin{DoxyCompactList}\small\item\em Konfiguriert die UART Schnittstelle mit teils gesetzten, teils parametrisierten Konfigurationen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a1872b72ddc38058719f085dd0529b963}{uart\+\_\+tx\+\_\+data}} (int fd, const char \texorpdfstring{$\ast$}{*}data, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{uart_8h_a2aeaac61f27ed2856765d3b0c3236b71}{uart\+\_\+tx\+\_\+byte}} (int fd, const char \texorpdfstring{$\ast$}{*}data, int index)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{uart_8h_ad7f0214f21df5ce2b93f03ade21ca358}{tx\+\_\+mem\+\_\+image}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}, \+\_\+\+\_\+uint8\+\_\+t \texorpdfstring{$\ast$}{*}image, int size)
+\item 
+int \mbox{\hyperlink{uart_8h_ab99cb82a6d1dd2cc590853642a4c95db}{open\+\_\+file}} (char \texorpdfstring{$\ast$}{*}filepath, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{bootloader_8c_a742cda7da9192ce964d73452a11f2825}{mem\+\_\+image}}, off\+\_\+t \texorpdfstring{$\ast$}{*}file\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Liest ein gesamtes Binärimage in einen Buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{uart_8h_a6955d53ea330c0628341fc6f5bebfd92}{get\+\_\+fpga\+\_\+status}} (int \mbox{\hyperlink{bootloader_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{uart_8h_a0d94bc120f7a64b547371c44028aea19}\label{uart_8h_a0d94bc120f7a64b547371c44028aea19} 
+\index{uart.h@{uart.h}!BL\_TYPE\_ACK@{BL\_TYPE\_ACK}}
+\index{BL\_TYPE\_ACK@{BL\_TYPE\_ACK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{BL\_TYPE\_ACK}{BL\_TYPE\_ACK}}
+{\footnotesize\ttfamily \#define BL\+\_\+\+TYPE\+\_\+\+ACK~0x00}
+
+\Hypertarget{uart_8h_a5d7ac231433f6e9d4c355fa44c727c8a}\label{uart_8h_a5d7ac231433f6e9d4c355fa44c727c8a} 
+\index{uart.h@{uart.h}!BL\_TYPE\_ADDRESS@{BL\_TYPE\_ADDRESS}}
+\index{BL\_TYPE\_ADDRESS@{BL\_TYPE\_ADDRESS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{BL\_TYPE\_ADDRESS}{BL\_TYPE\_ADDRESS}}
+{\footnotesize\ttfamily \#define BL\+\_\+\+TYPE\+\_\+\+ADDRESS~0x05}
+
+\Hypertarget{uart_8h_a9f7ac49a123bd826f11737b505852e6b}\label{uart_8h_a9f7ac49a123bd826f11737b505852e6b} 
+\index{uart.h@{uart.h}!BL\_TYPE\_BIN\_DATA@{BL\_TYPE\_BIN\_DATA}}
+\index{BL\_TYPE\_BIN\_DATA@{BL\_TYPE\_BIN\_DATA}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{BL\_TYPE\_BIN\_DATA}{BL\_TYPE\_BIN\_DATA}}
+{\footnotesize\ttfamily \#define BL\+\_\+\+TYPE\+\_\+\+BIN\+\_\+\+DATA~0x02}
+
+\Hypertarget{uart_8h_ab041f3c8cc9146e3f994f56bf5bc87b9}\label{uart_8h_ab041f3c8cc9146e3f994f56bf5bc87b9} 
+\index{uart.h@{uart.h}!BL\_TYPE\_CMD\_HOST\_PC@{BL\_TYPE\_CMD\_HOST\_PC}}
+\index{BL\_TYPE\_CMD\_HOST\_PC@{BL\_TYPE\_CMD\_HOST\_PC}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{BL\_TYPE\_CMD\_HOST\_PC}{BL\_TYPE\_CMD\_HOST\_PC}}
+{\footnotesize\ttfamily \#define BL\+\_\+\+TYPE\+\_\+\+CMD\+\_\+\+HOST\+\_\+\+PC~0x01}
+
+\Hypertarget{uart_8h_a48c078f769316335fbb530579d4ddba9}\label{uart_8h_a48c078f769316335fbb530579d4ddba9} 
+\index{uart.h@{uart.h}!BL\_TYPE\_ERR@{BL\_TYPE\_ERR}}
+\index{BL\_TYPE\_ERR@{BL\_TYPE\_ERR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{BL\_TYPE\_ERR}{BL\_TYPE\_ERR}}
+{\footnotesize\ttfamily \#define BL\+\_\+\+TYPE\+\_\+\+ERR~0x03}
+
+\Hypertarget{uart_8h_add64c8e9e1b239cb621edc08df72ef69}\label{uart_8h_add64c8e9e1b239cb621edc08df72ef69} 
+\index{uart.h@{uart.h}!CMD\_HOST\_DEBUG\_MODE@{CMD\_HOST\_DEBUG\_MODE}}
+\index{CMD\_HOST\_DEBUG\_MODE@{CMD\_HOST\_DEBUG\_MODE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_DEBUG\_MODE}{CMD\_HOST\_DEBUG\_MODE}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+DEBUG\+\_\+\+MODE~0x0006}
+
+\Hypertarget{uart_8h_a0b53b7cbc14d2e8e1d671756248c5e81}\label{uart_8h_a0b53b7cbc14d2e8e1d671756248c5e81} 
+\index{uart.h@{uart.h}!CMD\_HOST\_EXECUTE@{CMD\_HOST\_EXECUTE}}
+\index{CMD\_HOST\_EXECUTE@{CMD\_HOST\_EXECUTE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_EXECUTE}{CMD\_HOST\_EXECUTE}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+EXECUTE~0x0001}
+
+\Hypertarget{uart_8h_a44413f2d853be283159dfc2927530854}\label{uart_8h_a44413f2d853be283159dfc2927530854} 
+\index{uart.h@{uart.h}!CMD\_HOST\_LOAD\_FLASH@{CMD\_HOST\_LOAD\_FLASH}}
+\index{CMD\_HOST\_LOAD\_FLASH@{CMD\_HOST\_LOAD\_FLASH}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_LOAD\_FLASH}{CMD\_HOST\_LOAD\_FLASH}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+LOAD\+\_\+\+FLASH~0x0003}
+
+\Hypertarget{uart_8h_af9ca33e65f27461911afb8b2badc80ef}\label{uart_8h_af9ca33e65f27461911afb8b2badc80ef} 
+\index{uart.h@{uart.h}!CMD\_HOST\_LOAD\_FROM@{CMD\_HOST\_LOAD\_FROM}}
+\index{CMD\_HOST\_LOAD\_FROM@{CMD\_HOST\_LOAD\_FROM}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_LOAD\_FROM}{CMD\_HOST\_LOAD\_FROM}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+LOAD\+\_\+\+FROM~0x0004}
+
+\Hypertarget{uart_8h_a2697431c7b22eb80e7383e5debcce792}\label{uart_8h_a2697431c7b22eb80e7383e5debcce792} 
+\index{uart.h@{uart.h}!CMD\_HOST\_RESET@{CMD\_HOST\_RESET}}
+\index{CMD\_HOST\_RESET@{CMD\_HOST\_RESET}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_RESET}{CMD\_HOST\_RESET}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+RESET~0x0007}
+
+\Hypertarget{uart_8h_a04b81a96e66299634e462c64487e6865}\label{uart_8h_a04b81a96e66299634e462c64487e6865} 
+\index{uart.h@{uart.h}!CMD\_HOST\_STATUS\_QUERY@{CMD\_HOST\_STATUS\_QUERY}}
+\index{CMD\_HOST\_STATUS\_QUERY@{CMD\_HOST\_STATUS\_QUERY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_STATUS\_QUERY}{CMD\_HOST\_STATUS\_QUERY}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+STATUS\+\_\+\+QUERY~0x0005}
+
+\Hypertarget{uart_8h_adf63d332ed78ba9752ae9010c4c0fd22}\label{uart_8h_adf63d332ed78ba9752ae9010c4c0fd22} 
+\index{uart.h@{uart.h}!CMD\_HOST\_STOP@{CMD\_HOST\_STOP}}
+\index{CMD\_HOST\_STOP@{CMD\_HOST\_STOP}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_STOP}{CMD\_HOST\_STOP}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+STOP~0x0008}
+
+\Hypertarget{uart_8h_a887624f0bcf8d97b2c66c4933f985a71}\label{uart_8h_a887624f0bcf8d97b2c66c4933f985a71} 
+\index{uart.h@{uart.h}!CMD\_HOST\_UPLOAD\_RAM@{CMD\_HOST\_UPLOAD\_RAM}}
+\index{CMD\_HOST\_UPLOAD\_RAM@{CMD\_HOST\_UPLOAD\_RAM}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{CMD\_HOST\_UPLOAD\_RAM}{CMD\_HOST\_UPLOAD\_RAM}}
+{\footnotesize\ttfamily \#define CMD\+\_\+\+HOST\+\_\+\+UPLOAD\+\_\+\+RAM~0x0002}
+
+\Hypertarget{uart_8h_a6f170be2d072b4823c789dd02e96502a}\label{uart_8h_a6f170be2d072b4823c789dd02e96502a} 
+\index{uart.h@{uart.h}!DEBUG\_DEL\_BP@{DEBUG\_DEL\_BP}}
+\index{DEBUG\_DEL\_BP@{DEBUG\_DEL\_BP}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_DEL\_BP}{DEBUG\_DEL\_BP}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+DEL\+\_\+\+BP~0x0103}
+
+\Hypertarget{uart_8h_ac5963c4f656afea633a5331e7a496318}\label{uart_8h_ac5963c4f656afea633a5331e7a496318} 
+\index{uart.h@{uart.h}!DEBUG\_READ\_RAM@{DEBUG\_READ\_RAM}}
+\index{DEBUG\_READ\_RAM@{DEBUG\_READ\_RAM}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_READ\_RAM}{DEBUG\_READ\_RAM}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+READ\+\_\+\+RAM~0x0107}
+
+\Hypertarget{uart_8h_a23e071b0b334751376b1833719b2b31e}\label{uart_8h_a23e071b0b334751376b1833719b2b31e} 
+\index{uart.h@{uart.h}!DEBUG\_SET\_BP@{DEBUG\_SET\_BP}}
+\index{DEBUG\_SET\_BP@{DEBUG\_SET\_BP}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_SET\_BP}{DEBUG\_SET\_BP}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+SET\+\_\+\+BP~0x0102}
+
+\Hypertarget{uart_8h_adcbecad897cf21f6ad0a97d8f0fbc515}\label{uart_8h_adcbecad897cf21f6ad0a97d8f0fbc515} 
+\index{uart.h@{uart.h}!DEBUG\_WRITE\_RAM@{DEBUG\_WRITE\_RAM}}
+\index{DEBUG\_WRITE\_RAM@{DEBUG\_WRITE\_RAM}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_WRITE\_RAM}{DEBUG\_WRITE\_RAM}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+WRITE\+\_\+\+RAM~0x0106}
+
+\Hypertarget{uart_8h_a48edef7887642685c09cf2ed00456a3d}\label{uart_8h_a48edef7887642685c09cf2ed00456a3d} 
+\index{uart.h@{uart.h}!ERR\_BUSY@{ERR\_BUSY}}
+\index{ERR\_BUSY@{ERR\_BUSY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_BUSY}{ERR\_BUSY}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+BUSY~0x0010}
+
+\Hypertarget{uart_8h_a506d495a72292eaea1f419920a221d69}\label{uart_8h_a506d495a72292eaea1f419920a221d69} 
+\index{uart.h@{uart.h}!ERR\_NOT\_VALID\_PACKET@{ERR\_NOT\_VALID\_PACKET}}
+\index{ERR\_NOT\_VALID\_PACKET@{ERR\_NOT\_VALID\_PACKET}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_NOT\_VALID\_PACKET}{ERR\_NOT\_VALID\_PACKET}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+NOT\+\_\+\+VALID\+\_\+\+PACKET~0x0014}
+
+\Hypertarget{uart_8h_a254cb0da018dbfee848b40a4c60bcd9e}\label{uart_8h_a254cb0da018dbfee848b40a4c60bcd9e} 
+\index{uart.h@{uart.h}!ERR\_TRANS\_INCOMPLETE@{ERR\_TRANS\_INCOMPLETE}}
+\index{ERR\_TRANS\_INCOMPLETE@{ERR\_TRANS\_INCOMPLETE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_TRANS\_INCOMPLETE}{ERR\_TRANS\_INCOMPLETE}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+TRANS\+\_\+\+INCOMPLETE~0x0011}
+
+\Hypertarget{uart_8h_ac5fab9ba12bccf7a0db038eee884c0b0}\label{uart_8h_ac5fab9ba12bccf7a0db038eee884c0b0} 
+\index{uart.h@{uart.h}!ERR\_TRANS\_NOT\_STARTED@{ERR\_TRANS\_NOT\_STARTED}}
+\index{ERR\_TRANS\_NOT\_STARTED@{ERR\_TRANS\_NOT\_STARTED}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_TRANS\_NOT\_STARTED}{ERR\_TRANS\_NOT\_STARTED}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+TRANS\+\_\+\+NOT\+\_\+\+STARTED~0x0013}
+
+\Hypertarget{uart_8h_a5a47051a4b20eacf15bff957154dffaa}\label{uart_8h_a5a47051a4b20eacf15bff957154dffaa} 
+\index{uart.h@{uart.h}!ERR\_TRANS\_OVERFLOW@{ERR\_TRANS\_OVERFLOW}}
+\index{ERR\_TRANS\_OVERFLOW@{ERR\_TRANS\_OVERFLOW}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{ERR\_TRANS\_OVERFLOW}{ERR\_TRANS\_OVERFLOW}}
+{\footnotesize\ttfamily \#define ERR\+\_\+\+TRANS\+\_\+\+OVERFLOW~0x0012}
+
+\Hypertarget{uart_8h_aab439990abb16c1032ffc54a00d9078c}\label{uart_8h_aab439990abb16c1032ffc54a00d9078c} 
+\index{uart.h@{uart.h}!STAT\_ADD\_BP@{STAT\_ADD\_BP}}
+\index{STAT\_ADD\_BP@{STAT\_ADD\_BP}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_ADD\_BP}{STAT\_ADD\_BP}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+ADD\+\_\+\+BP~0x0008}
+
+\Hypertarget{uart_8h_a9eabc9bb2c89e725678f5cedad30a7a0}\label{uart_8h_a9eabc9bb2c89e725678f5cedad30a7a0} 
+\index{uart.h@{uart.h}!STAT\_DEBUG\_INIT@{STAT\_DEBUG\_INIT}}
+\index{STAT\_DEBUG\_INIT@{STAT\_DEBUG\_INIT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_DEBUG\_INIT}{STAT\_DEBUG\_INIT}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+DEBUG\+\_\+\+INIT~0x0005}
+
+\Hypertarget{uart_8h_a6db078813767640cc40c465f1fc3e731}\label{uart_8h_a6db078813767640cc40c465f1fc3e731} 
+\index{uart.h@{uart.h}!STAT\_DEL\_BP@{STAT\_DEL\_BP}}
+\index{STAT\_DEL\_BP@{STAT\_DEL\_BP}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_DEL\_BP}{STAT\_DEL\_BP}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+DEL\+\_\+\+BP~0x0009}
+
+\Hypertarget{uart_8h_a9935e0057081d93c0fd6ec14c2255e73}\label{uart_8h_a9935e0057081d93c0fd6ec14c2255e73} 
+\index{uart.h@{uart.h}!STAT\_INIT@{STAT\_INIT}}
+\index{STAT\_INIT@{STAT\_INIT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_INIT}{STAT\_INIT}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+INIT~0x0001}
+
+\Hypertarget{uart_8h_ab4054b636faf7fdd14432d1d0234a923}\label{uart_8h_ab4054b636faf7fdd14432d1d0234a923} 
+\index{uart.h@{uart.h}!STAT\_RESETING@{STAT\_RESETING}}
+\index{STAT\_RESETING@{STAT\_RESETING}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_RESETING}{STAT\_RESETING}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+RESETING~0x0007}
+
+\Hypertarget{uart_8h_aa58c0f4c8228475ba216796e5848bcaf}\label{uart_8h_aa58c0f4c8228475ba216796e5848bcaf} 
+\index{uart.h@{uart.h}!STAT\_RUNNING@{STAT\_RUNNING}}
+\index{STAT\_RUNNING@{STAT\_RUNNING}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_RUNNING}{STAT\_RUNNING}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+RUNNING~0x0006}
+
+\Hypertarget{uart_8h_ad9f48bc084d9af839ceb5dbb3ee45fbe}\label{uart_8h_ad9f48bc084d9af839ceb5dbb3ee45fbe} 
+\index{uart.h@{uart.h}!STAT\_TRANS\_COMPLETE@{STAT\_TRANS\_COMPLETE}}
+\index{STAT\_TRANS\_COMPLETE@{STAT\_TRANS\_COMPLETE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_TRANS\_COMPLETE}{STAT\_TRANS\_COMPLETE}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+TRANS\+\_\+\+COMPLETE~0x0003}
+
+\Hypertarget{uart_8h_a440e12b9f73a1b1d9c0f509351e1a1be}\label{uart_8h_a440e12b9f73a1b1d9c0f509351e1a1be} 
+\index{uart.h@{uart.h}!STAT\_UPL\_IN\_PROG@{STAT\_UPL\_IN\_PROG}}
+\index{STAT\_UPL\_IN\_PROG@{STAT\_UPL\_IN\_PROG}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{STAT\_UPL\_IN\_PROG}{STAT\_UPL\_IN\_PROG}}
+{\footnotesize\ttfamily \#define STAT\+\_\+\+UPL\+\_\+\+IN\+\_\+\+PROG~0x0002}
+
+\Hypertarget{uart_8h_a2f0a6417e12aa122e287fe313c03a399}\label{uart_8h_a2f0a6417e12aa122e287fe313c03a399} 
+\index{uart.h@{uart.h}!TIMEOUT\_VAL@{TIMEOUT\_VAL}}
+\index{TIMEOUT\_VAL@{TIMEOUT\_VAL}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_VAL}{TIMEOUT\_VAL}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+VAL~200}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{uart_8h_a6955d53ea330c0628341fc6f5bebfd92}\label{uart_8h_a6955d53ea330c0628341fc6f5bebfd92} 
+\index{uart.h@{uart.h}!get\_fpga\_status@{get\_fpga\_status}}
+\index{get\_fpga\_status@{get\_fpga\_status}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{get\_fpga\_status()}{get\_fpga\_status()}}
+{\footnotesize\ttfamily int get\+\_\+fpga\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart }\end{DoxyParamCaption})}
+
+\Hypertarget{uart_8h_ab99cb82a6d1dd2cc590853642a4c95db}\label{uart_8h_ab99cb82a6d1dd2cc590853642a4c95db} 
+\index{uart.h@{uart.h}!open\_file@{open\_file}}
+\index{open\_file@{open\_file}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{open\_file()}{open\_file()}}
+{\footnotesize\ttfamily int open\+\_\+file (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filepath,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{mem\+\_\+image,  }\item[{off\+\_\+t \texorpdfstring{$\ast$}{*}}]{file\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Liest ein gesamtes Binärimage in einen Buffer. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em filepath} & Pfad der zu öffnenden Datei \\
+\hline
+{\em mem\+\_\+image} & Pufferspeicher, in welchen die Datei eingelesen wird \\
+\hline
+{\em file\+\_\+size} & Größe der zu lesenden Datei in Byte \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8h_a8ab2a1c038465abf01576818aaa2f177}\label{uart_8h_a8ab2a1c038465abf01576818aaa2f177} 
+\index{uart.h@{uart.h}!set\_interface\_attribs@{set\_interface\_attribs}}
+\index{set\_interface\_attribs@{set\_interface\_attribs}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{set\_interface\_attribs()}{set\_interface\_attribs()}}
+{\footnotesize\ttfamily void set\+\_\+interface\+\_\+attribs (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{speed,  }\item[{int}]{parity }\end{DoxyParamCaption})}
+
+
+
+Konfiguriert die UART Schnittstelle mit teils gesetzten, teils parametrisierten Konfigurationen. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fd} & UART Handle \\
+\hline
+{\em speed} & Baudrate der UART Verbindung \\
+\hline
+{\em parity} & Anzahl an Parity Bits \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8h_ad7f0214f21df5ce2b93f03ade21ca358}\label{uart_8h_ad7f0214f21df5ce2b93f03ade21ca358} 
+\index{uart.h@{uart.h}!tx\_mem\_image@{tx\_mem\_image}}
+\index{tx\_mem\_image@{tx\_mem\_image}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{tx\_mem\_image()}{tx\_mem\_image()}}
+{\footnotesize\ttfamily uint8\+\_\+t tx\+\_\+mem\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart,  }\item[{\+\_\+\+\_\+uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{image,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{uart_8h_a949f7105b89b6f151322a3052d570259}\label{uart_8h_a949f7105b89b6f151322a3052d570259} 
+\index{uart.h@{uart.h}!uart\_rx\_bl\_packet@{uart\_rx\_bl\_packet}}
+\index{uart\_rx\_bl\_packet@{uart\_rx\_bl\_packet}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_rx\_bl\_packet()}{uart\_rx\_bl\_packet()}}
+{\footnotesize\ttfamily int uart\+\_\+rx\+\_\+bl\+\_\+packet (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Empfängt ein Bootloader Paket (3 Byte) per UART Schnittstelle. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fd\+\_\+uart} & UART Handle \\
+\hline
+{\em data} & gesamtes Bootloader Paket \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8h_a4f51e31e9f6b08d2093f2ffff95b3f66}\label{uart_8h_a4f51e31e9f6b08d2093f2ffff95b3f66} 
+\index{uart.h@{uart.h}!uart\_rx\_wait\_for\_byte@{uart\_rx\_wait\_for\_byte}}
+\index{uart\_rx\_wait\_for\_byte@{uart\_rx\_wait\_for\_byte}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_rx\_wait\_for\_byte()}{uart\_rx\_wait\_for\_byte()}}
+{\footnotesize\ttfamily int uart\+\_\+rx\+\_\+wait\+\_\+for\+\_\+byte (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{received\+\_\+char }\end{DoxyParamCaption})}
+
+\Hypertarget{uart_8h_abdfc548828d35bf9fe92ca5e0d257b8f}\label{uart_8h_abdfc548828d35bf9fe92ca5e0d257b8f} 
+\index{uart.h@{uart.h}!uart\_tx\_bl\_packet@{uart\_tx\_bl\_packet}}
+\index{uart\_tx\_bl\_packet@{uart\_tx\_bl\_packet}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_tx\_bl\_packet()}{uart\_tx\_bl\_packet()}}
+{\footnotesize\ttfamily void uart\+\_\+tx\+\_\+bl\+\_\+packet (\begin{DoxyParamCaption}\item[{int}]{fd\+\_\+uart,  }\item[{uint8\+\_\+t}]{pack\+\_\+type,  }\item[{uint16\+\_\+t}]{pack\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Überträgt ein Bootloader Paket (3 Byte) per UART Schnittstelle. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em fd\+\_\+uart} & UART Handle \\
+\hline
+{\em pack\+\_\+type} & Bootloader Pakettyp -\/ MACROs in /host\+\_\+app/uart/include/uart.h \\
+\hline
+{\em pack\+\_\+data} & Bootloader Paketdaten -\/ MACROs in /host\+\_\+app/uart/include/uart.h \\
+\hline
+\end{DoxyParams}
+\Hypertarget{uart_8h_a2aeaac61f27ed2856765d3b0c3236b71}\label{uart_8h_a2aeaac61f27ed2856765d3b0c3236b71} 
+\index{uart.h@{uart.h}!uart\_tx\_byte@{uart\_tx\_byte}}
+\index{uart\_tx\_byte@{uart\_tx\_byte}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_tx\_byte()}{uart\_tx\_byte()}}
+{\footnotesize\ttfamily void uart\+\_\+tx\+\_\+byte (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+\Hypertarget{uart_8h_a1872b72ddc38058719f085dd0529b963}\label{uart_8h_a1872b72ddc38058719f085dd0529b963} 
+\index{uart.h@{uart.h}!uart\_tx\_data@{uart\_tx\_data}}
+\index{uart\_tx\_data@{uart\_tx\_data}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{uart\_tx\_data()}{uart\_tx\_data()}}
+{\footnotesize\ttfamily void uart\+\_\+tx\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+

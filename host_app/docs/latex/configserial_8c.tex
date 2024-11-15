@@ -1,0 +1,118 @@
+\doxysection{main/src/configserial.c-\/\+Dateireferenz}
+\hypertarget{configserial_8c}{}\label{configserial_8c}\index{main/src/configserial.c@{main/src/configserial.c}}
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}../includes/statusbar.\+h"{}}\newline
+{\ttfamily \#include "{}../includes/config.\+h"{}}\newline
+{\ttfamily \#include "{}../../uart/include/uart.\+h"{}}\newline
+{\ttfamily \#include "{}../includes/allefunktionen.\+h"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für configserial.\+c\+:
+% FIG 0
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{configserial_8c_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}~1024
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{configserial_8c_a0bea76931a7bc8758570dc3144bf8210}{configserial}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{configserial_8c_a0bea76931a7bc8758570dc3144bf8210}{configserial()}\+: Seite vom Menüpunkt "{}config serial"{} wird geöffnet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{configserial_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}}
+\begin{DoxyCompactList}\small\item\em für switch-\/cases \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{configserial_8c_abbfffc6003d78ece1c271ec64e5a6759}{comport\+\_\+path}} \mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em speichert COMPort (Config Serial) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{configserial_8c_a4858bb3109a37110e12bd7765d6f18ee}{baud}}
+\begin{DoxyCompactList}\small\item\em speichert Baudrate (Config Serial) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{configserial_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}{fd\+\_\+uart}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{configserial_8c_ae470f89750d29fcf5ee65ee9cc8401b3}{config\+\_\+file}}
+\item 
+struct Config \mbox{\hyperlink{configserial_8c_ae8d0de2c2e317f2b9164e5a2a93d3b76}{config}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{configserial_8c_ad4d796b98c583d49e83adabd74a63bf6}\label{configserial_8c_ad4d796b98c583d49e83adabd74a63bf6} 
+\index{configserial.c@{configserial.c}!MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}}
+\index{MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_BUFFER\_SIZE}{MAX\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+BUFFER\+\_\+\+SIZE~1024}
+
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{configserial_8c_a0bea76931a7bc8758570dc3144bf8210}\label{configserial_8c_a0bea76931a7bc8758570dc3144bf8210} 
+\index{configserial.c@{configserial.c}!configserial@{configserial}}
+\index{configserial@{configserial}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{configserial()}{configserial()}}
+{\footnotesize\ttfamily void configserial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{configserial_8c_a0bea76931a7bc8758570dc3144bf8210}{configserial()}\+: Seite vom Menüpunkt "{}config serial"{} wird geöffnet. 
+
+Nach Aufruf werden im Terminal zwei neue Optionen angezeigt,
+\begin{DoxyItemize}
+\item die erste zeigt die baudrate bzw. gibt die Möglich eine serielle Konfiguration vorzunehmen um mit dem FPGA dei Verbindung zu erstellen.
+\item die zweite Option gibt die Möglichkeit eine USB Schnittstelle zu definieren für die Verbindung mit dem FPGA \begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000009}{Noch zu erledigen}}]\end{DoxyRefDesc}
+
+\end{DoxyItemize}
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{configserial_8c_a4858bb3109a37110e12bd7765d6f18ee}\label{configserial_8c_a4858bb3109a37110e12bd7765d6f18ee} 
+\index{configserial.c@{configserial.c}!baud@{baud}}
+\index{baud@{baud}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{baud}{baud}}
+{\footnotesize\ttfamily int baud\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+speichert Baudrate (Config Serial) 
+
+cpnfig()\+: öffnet das Fenster für Dateibrowser des Betriebsystems um eine Datai auszuwählen; es speichert den Pfad der ausgewählten datei als Char\texorpdfstring{$\ast$}{*} und zeigt diese an. \Hypertarget{configserial_8c_a4e1e0e72dd773439e333c84dd762a9c3}\label{configserial_8c_a4e1e0e72dd773439e333c84dd762a9c3} 
+\index{configserial.c@{configserial.c}!c@{c}}
+\index{c@{c}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int c\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für switch-\/cases 
+
+\Hypertarget{configserial_8c_abbfffc6003d78ece1c271ec64e5a6759}\label{configserial_8c_abbfffc6003d78ece1c271ec64e5a6759} 
+\index{configserial.c@{configserial.c}!comport\_path@{comport\_path}}
+\index{comport\_path@{comport\_path}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{comport\_path}{comport\_path}}
+{\footnotesize\ttfamily char comport\+\_\+path\mbox{[}\mbox{\hyperlink{allefunktionen_8h_ad4d796b98c583d49e83adabd74a63bf6}{MAX\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+speichert COMPort (Config Serial) 
+
+\Hypertarget{configserial_8c_ae8d0de2c2e317f2b9164e5a2a93d3b76}\label{configserial_8c_ae8d0de2c2e317f2b9164e5a2a93d3b76} 
+\index{configserial.c@{configserial.c}!config@{config}}
+\index{config@{config}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily struct Config config\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{configserial_8c_ae470f89750d29fcf5ee65ee9cc8401b3}\label{configserial_8c_ae470f89750d29fcf5ee65ee9cc8401b3} 
+\index{configserial.c@{configserial.c}!config\_file@{config\_file}}
+\index{config\_file@{config\_file}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{config\_file}{config\_file}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} config\+\_\+file\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{configserial_8c_ad19654fc7adf235ce5ee3a8c1ec69be6}\label{configserial_8c_ad19654fc7adf235ce5ee3a8c1ec69be6} 
+\index{configserial.c@{configserial.c}!fd\_uart@{fd\_uart}}
+\index{fd\_uart@{fd\_uart}!configserial.c@{configserial.c}}
+\doxysubsubsection{\texorpdfstring{fd\_uart}{fd\_uart}}
+{\footnotesize\ttfamily int fd\+\_\+uart\hspace{0.3cm}{\ttfamily [extern]}}
+

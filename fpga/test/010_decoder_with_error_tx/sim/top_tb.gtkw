@@ -1,0 +1,55 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Mon Dec 11 13:56:42 2023
+[*]
+[dumpfile] "/home/jonas/tin/SYP/team04/fpga/test/010_decoder_with_error_tx/sim/simulation/top_tb.ghw"
+[dumpfile_mtime] "Mon Dec 11 13:56:03 2023"
+[dumpfile_size] 2194028
+[savefile] "/home/jonas/tin/SYP/team04/fpga/test/010_decoder_with_error_tx/sim/top_tb.gtkw"
+[timestart] 1297724600000
+[size] 938 979
+[pos] -1 -1
+*-25.815180 1297790400000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.top_tb.
+[treeopen] top.top_tb.top_inst.
+[treeopen] top.top_tb.top_inst.tx_buffer_inst.
+[sst_width] 298
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 438
+@28
+top.top_tb.r_clk
+@22
+#{top.top_tb.top_inst.decoder_inst.o_data[23:0]} top.top_tb.top_inst.decoder_inst.o_data[23] top.top_tb.top_inst.decoder_inst.o_data[22] top.top_tb.top_inst.decoder_inst.o_data[21] top.top_tb.top_inst.decoder_inst.o_data[20] top.top_tb.top_inst.decoder_inst.o_data[19] top.top_tb.top_inst.decoder_inst.o_data[18] top.top_tb.top_inst.decoder_inst.o_data[17] top.top_tb.top_inst.decoder_inst.o_data[16] top.top_tb.top_inst.decoder_inst.o_data[15] top.top_tb.top_inst.decoder_inst.o_data[14] top.top_tb.top_inst.decoder_inst.o_data[13] top.top_tb.top_inst.decoder_inst.o_data[12] top.top_tb.top_inst.decoder_inst.o_data[11] top.top_tb.top_inst.decoder_inst.o_data[10] top.top_tb.top_inst.decoder_inst.o_data[9] top.top_tb.top_inst.decoder_inst.o_data[8] top.top_tb.top_inst.decoder_inst.o_data[7] top.top_tb.top_inst.decoder_inst.o_data[6] top.top_tb.top_inst.decoder_inst.o_data[5] top.top_tb.top_inst.decoder_inst.o_data[4] top.top_tb.top_inst.decoder_inst.o_data[3] top.top_tb.top_inst.decoder_inst.o_data[2] top.top_tb.top_inst.decoder_inst.o_data[1] top.top_tb.top_inst.decoder_inst.o_data[0]
+@420
+top.top_tb.top_inst.decoder_inst.fsm_state
+@28
+top.top_tb.top_inst.decoder_inst.i_read
+@22
+#{top.top_tb.top_inst.decoder_inst.ram_output_data[15:0]} top.top_tb.top_inst.decoder_inst.ram_output_data[15] top.top_tb.top_inst.decoder_inst.ram_output_data[14] top.top_tb.top_inst.decoder_inst.ram_output_data[13] top.top_tb.top_inst.decoder_inst.ram_output_data[12] top.top_tb.top_inst.decoder_inst.ram_output_data[11] top.top_tb.top_inst.decoder_inst.ram_output_data[10] top.top_tb.top_inst.decoder_inst.ram_output_data[9] top.top_tb.top_inst.decoder_inst.ram_output_data[8] top.top_tb.top_inst.decoder_inst.ram_output_data[7] top.top_tb.top_inst.decoder_inst.ram_output_data[6] top.top_tb.top_inst.decoder_inst.ram_output_data[5] top.top_tb.top_inst.decoder_inst.ram_output_data[4] top.top_tb.top_inst.decoder_inst.ram_output_data[3] top.top_tb.top_inst.decoder_inst.ram_output_data[2] top.top_tb.top_inst.decoder_inst.ram_output_data[1] top.top_tb.top_inst.decoder_inst.ram_output_data[0]
+#{top.top_tb.top_inst.decoder_inst.i_rd_data_burst[23:0]} top.top_tb.top_inst.decoder_inst.i_rd_data_burst[23] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[22] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[21] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[20] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[19] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[18] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[17] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[16] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[15] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[14] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[13] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[12] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[11] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[10] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[9] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[8] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[7] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[6] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[5] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[4] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[3] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[2] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[1] top.top_tb.top_inst.decoder_inst.i_rd_data_burst[0]
+@420
+top.top_tb.top_inst.decoder_inst.ram_cnt
+@22
+#{top.top_tb.top_inst.decoder_inst.status[23:0]} top.top_tb.top_inst.decoder_inst.status[23] top.top_tb.top_inst.decoder_inst.status[22] top.top_tb.top_inst.decoder_inst.status[21] top.top_tb.top_inst.decoder_inst.status[20] top.top_tb.top_inst.decoder_inst.status[19] top.top_tb.top_inst.decoder_inst.status[18] top.top_tb.top_inst.decoder_inst.status[17] top.top_tb.top_inst.decoder_inst.status[16] top.top_tb.top_inst.decoder_inst.status[15] top.top_tb.top_inst.decoder_inst.status[14] top.top_tb.top_inst.decoder_inst.status[13] top.top_tb.top_inst.decoder_inst.status[12] top.top_tb.top_inst.decoder_inst.status[11] top.top_tb.top_inst.decoder_inst.status[10] top.top_tb.top_inst.decoder_inst.status[9] top.top_tb.top_inst.decoder_inst.status[8] top.top_tb.top_inst.decoder_inst.status[7] top.top_tb.top_inst.decoder_inst.status[6] top.top_tb.top_inst.decoder_inst.status[5] top.top_tb.top_inst.decoder_inst.status[4] top.top_tb.top_inst.decoder_inst.status[3] top.top_tb.top_inst.decoder_inst.status[2] top.top_tb.top_inst.decoder_inst.status[1] top.top_tb.top_inst.decoder_inst.status[0]
+@28
+top.top_tb.top_inst.uart_tx_inst.i_tx_dv
+@420
+top.top_tb.top_inst.fsm_state
+@28
+top.top_tb.top_inst.w_flush
+@420
+top.top_tb.top_inst.tx_packet_byte_cnt
+@28
+top.top_tb.top_inst.r_wen
+@22
+#{top.top_tb.top_inst.tx_buffer_inst.data_in[23:0]} top.top_tb.top_inst.tx_buffer_inst.data_in[23] top.top_tb.top_inst.tx_buffer_inst.data_in[22] top.top_tb.top_inst.tx_buffer_inst.data_in[21] top.top_tb.top_inst.tx_buffer_inst.data_in[20] top.top_tb.top_inst.tx_buffer_inst.data_in[19] top.top_tb.top_inst.tx_buffer_inst.data_in[18] top.top_tb.top_inst.tx_buffer_inst.data_in[17] top.top_tb.top_inst.tx_buffer_inst.data_in[16] top.top_tb.top_inst.tx_buffer_inst.data_in[15] top.top_tb.top_inst.tx_buffer_inst.data_in[14] top.top_tb.top_inst.tx_buffer_inst.data_in[13] top.top_tb.top_inst.tx_buffer_inst.data_in[12] top.top_tb.top_inst.tx_buffer_inst.data_in[11] top.top_tb.top_inst.tx_buffer_inst.data_in[10] top.top_tb.top_inst.tx_buffer_inst.data_in[9] top.top_tb.top_inst.tx_buffer_inst.data_in[8] top.top_tb.top_inst.tx_buffer_inst.data_in[7] top.top_tb.top_inst.tx_buffer_inst.data_in[6] top.top_tb.top_inst.tx_buffer_inst.data_in[5] top.top_tb.top_inst.tx_buffer_inst.data_in[4] top.top_tb.top_inst.tx_buffer_inst.data_in[3] top.top_tb.top_inst.tx_buffer_inst.data_in[2] top.top_tb.top_inst.tx_buffer_inst.data_in[1] top.top_tb.top_inst.tx_buffer_inst.data_in[0]
+@23
+#{top.top_tb.top_inst.tx_buffer_inst.data_out[23:0]} top.top_tb.top_inst.tx_buffer_inst.data_out[23] top.top_tb.top_inst.tx_buffer_inst.data_out[22] top.top_tb.top_inst.tx_buffer_inst.data_out[21] top.top_tb.top_inst.tx_buffer_inst.data_out[20] top.top_tb.top_inst.tx_buffer_inst.data_out[19] top.top_tb.top_inst.tx_buffer_inst.data_out[18] top.top_tb.top_inst.tx_buffer_inst.data_out[17] top.top_tb.top_inst.tx_buffer_inst.data_out[16] top.top_tb.top_inst.tx_buffer_inst.data_out[15] top.top_tb.top_inst.tx_buffer_inst.data_out[14] top.top_tb.top_inst.tx_buffer_inst.data_out[13] top.top_tb.top_inst.tx_buffer_inst.data_out[12] top.top_tb.top_inst.tx_buffer_inst.data_out[11] top.top_tb.top_inst.tx_buffer_inst.data_out[10] top.top_tb.top_inst.tx_buffer_inst.data_out[9] top.top_tb.top_inst.tx_buffer_inst.data_out[8] top.top_tb.top_inst.tx_buffer_inst.data_out[7] top.top_tb.top_inst.tx_buffer_inst.data_out[6] top.top_tb.top_inst.tx_buffer_inst.data_out[5] top.top_tb.top_inst.tx_buffer_inst.data_out[4] top.top_tb.top_inst.tx_buffer_inst.data_out[3] top.top_tb.top_inst.tx_buffer_inst.data_out[2] top.top_tb.top_inst.tx_buffer_inst.data_out[1] top.top_tb.top_inst.tx_buffer_inst.data_out[0]
+@28
+top.top_tb.top_inst.w_tx_done
+@22
+#{top.top_tb.top_inst.r_tx_byte[7:0]} top.top_tb.top_inst.r_tx_byte[7] top.top_tb.top_inst.r_tx_byte[6] top.top_tb.top_inst.r_tx_byte[5] top.top_tb.top_inst.r_tx_byte[4] top.top_tb.top_inst.r_tx_byte[3] top.top_tb.top_inst.r_tx_byte[2] top.top_tb.top_inst.r_tx_byte[1] top.top_tb.top_inst.r_tx_byte[0]
+[pattern_trace] 1
+[pattern_trace] 0

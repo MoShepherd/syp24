@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "curses.h": "c",
+        "ncurses.h": "c",
+        "compiler.h": "c",
+        "allefunktionen.h": "c",
+        "uart.h": "c",
+        "statusbar.h": "c"
+    }
+}

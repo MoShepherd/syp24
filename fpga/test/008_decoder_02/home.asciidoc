@@ -1,0 +1,5 @@
+= home
+
+== Allgemein
+Dieses Projekt zeigt wie man nach allen 3 gesendeten UART packeten
+ein Paket "0x00" zurück sendet und am decoder es dann weiter auswerten kann.

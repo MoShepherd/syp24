@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>host_app: main/src/filechooser.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">host_app
+   </div>
+   <div id="projectbrief">Client Applikation des SVNR-Bootloaders</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_2101cd0b22112584ff59816a4bc911f7.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle"><div class="title">filechooser.c-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;ncurses.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="allefunktionen_8h_source.html">../includes/allefunktionen.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für filechooser.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="filechooser_8c__incl.png" border="0" usemap="#amain_2src_2filechooser_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a48924acb10cfd3bf3cb170d134f05f8f" id="r_a48924acb10cfd3bf3cb170d134f05f8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48924acb10cfd3bf3cb170d134f05f8f">filechooser</a> ()</td></tr>
+<tr class="memdesc:a48924acb10cfd3bf3cb170d134f05f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a48924acb10cfd3bf3cb170d134f05f8f" title="filechooser(): Öffnet bei Aufruf den Dateimanager des Host PCs">filechooser()</a>: Öffnet bei Aufruf den Dateimanager des Host PCs  <br /></td></tr>
+<tr class="separator:a48924acb10cfd3bf3cb170d134f05f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:af6dfd479b7e5d3e23f4813dd488fe43b" id="r_af6dfd479b7e5d3e23f4813dd488fe43b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6dfd479b7e5d3e23f4813dd488fe43b">current_file</a></td></tr>
+<tr class="memdesc:af6dfd479b7e5d3e23f4813dd488fe43b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="main_2src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>: Ausführung.  <br /></td></tr>
+<tr class="separator:af6dfd479b7e5d3e23f4813dd488fe43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4584b2762b7bb51655594ed0854b3969" id="r_a4584b2762b7bb51655594ed0854b3969"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4584b2762b7bb51655594ed0854b3969">current_binary</a></td></tr>
+<tr class="memdesc:a4584b2762b7bb51655594ed0854b3969"><td class="mdescLeft">&#160;</td><td class="mdescRight">speichert Dateipfad hinter "Current Binary: " (Bootloader)  <br /></td></tr>
+<tr class="separator:a4584b2762b7bb51655594ed0854b3969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea53ae199e75f00244cb09d11e7b24d" id="r_a1ea53ae199e75f00244cb09d11e7b24d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ea53ae199e75f00244cb09d11e7b24d">modusFilechooser</a></td></tr>
+<tr class="memdesc:a1ea53ae199e75f00244cb09d11e7b24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">für <a class="el" href="allefunktionen_8h.html#a48924acb10cfd3bf3cb170d134f05f8f" title="filechooser(): Öffnet bei Aufruf den Dateimanager des Host PCs">filechooser()</a>, bestimmt in welche Variable der Dateipfad gespeichert wird  <br /></td></tr>
+<tr class="separator:a1ea53ae199e75f00244cb09d11e7b24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1e0e72dd773439e333c84dd762a9c3" id="r_a4e1e0e72dd773439e333c84dd762a9c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e1e0e72dd773439e333c84dd762a9c3">c</a></td></tr>
+<tr class="memdesc:a4e1e0e72dd773439e333c84dd762a9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">für switch-cases  <br /></td></tr>
+<tr class="separator:a4e1e0e72dd773439e333c84dd762a9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a48924acb10cfd3bf3cb170d134f05f8f" name="a48924acb10cfd3bf3cb170d134f05f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48924acb10cfd3bf3cb170d134f05f8f">&#9670;&#160;</a></span>filechooser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void filechooser </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a48924acb10cfd3bf3cb170d134f05f8f" title="filechooser(): Öffnet bei Aufruf den Dateimanager des Host PCs">filechooser()</a>: Öffnet bei Aufruf den Dateimanager des Host PCs </p>
+<p>Der Dateimanager des Host-PCs öffnet sich im Home-Verzeichnis und man kann eine beliebige Datei auswählen, dessen Pfad dann dementsprechend (abhängig von der gewählten Option in der Applikation) anzeigt.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Noch zu erledigen</a></b></dt><dd>Evtl. implementieren, dass bei "Load Mnemonics" nur .asm-Dateien und bei "Load Binary" nur .bin-Dateien ausgewählt werden können. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a id="a4e1e0e72dd773439e333c84dd762a9c3" name="a4e1e0e72dd773439e333c84dd762a9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1e0e72dd773439e333c84dd762a9c3">&#9670;&#160;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>für switch-cases </p>
+
+</div>
+</div>
+<a id="a4584b2762b7bb51655594ed0854b3969" name="a4584b2762b7bb51655594ed0854b3969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4584b2762b7bb51655594ed0854b3969">&#9670;&#160;</a></span>current_binary</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* current_binary</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>speichert Dateipfad hinter "Current Binary: " (Bootloader) </p>
+
+</div>
+</div>
+<a id="af6dfd479b7e5d3e23f4813dd488fe43b" name="af6dfd479b7e5d3e23f4813dd488fe43b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6dfd479b7e5d3e23f4813dd488fe43b">&#9670;&#160;</a></span>current_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* current_file</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="main_2src_2main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>: Ausführung. </p>
+<p>die Main beinhaltet alle gloalen Variablen, die in den einhzelnen Fenstern festgelegt werden und als Wert für andere Programmfunktionen verwendet. die Auswahlmenu Funktion wird als Hauptfenster bei der Ausführung aufgerufen </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Noch zu erledigen</a></b></dt><dd>eventuelle Auslagerug der while-schleifen als Steurungsfunktion für alle Fenster. Hierfür wird in erster Linie ein gutes Konzept zur Realisierung in C gebraucht. </dd></dl>
+<p>speichert Dateipfad hinter "Current File: " (Load Mnemonics) </p>
+
+</div>
+</div>
+<a id="a1ea53ae199e75f00244cb09d11e7b24d" name="a1ea53ae199e75f00244cb09d11e7b24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea53ae199e75f00244cb09d11e7b24d">&#9670;&#160;</a></span>modusFilechooser</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int modusFilechooser</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>für <a class="el" href="allefunktionen_8h.html#a48924acb10cfd3bf3cb170d134f05f8f" title="filechooser(): Öffnet bei Aufruf den Dateimanager des Host PCs">filechooser()</a>, bestimmt in welche Variable der Dateipfad gespeichert wird </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

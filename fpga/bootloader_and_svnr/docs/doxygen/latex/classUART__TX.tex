@@ -1,0 +1,61 @@
+\doxysection{UART\+\_\+\+TX Entwurfseinheit-\/\+Referenz}
+\hypertarget{classUART__TX}{}\label{classUART__TX}\index{UART\_TX@{UART\_TX}}
+
+
+UART tx/transmit Komponente des Bootloaders ~\newline
+  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__TX_a7795ebebd1527ac41565a358f55dc8b7}\label{classUART__TX_a7795ebebd1527ac41565a358f55dc8b7} 
+\mbox{\hyperlink{classUART__TX_a7795ebebd1527ac41565a358f55dc8b7}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__TX_a6aeb34991f1fac3a7a81b2d69337d490}\label{classUART__TX_a6aeb34991f1fac3a7a81b2d69337d490} 
+\mbox{\hyperlink{classUART__TX_a6aeb34991f1fac3a7a81b2d69337d490}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\Hypertarget{classUART__TX_a23d4ee7c43668a423381f82415b2a358}\label{classUART__TX_a23d4ee7c43668a423381f82415b2a358} 
+\mbox{\hyperlink{classUART__TX_a23d4ee7c43668a423381f82415b2a358}{numeric\+\_\+std}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Parameter}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__TX_aa2dcb8e19013d0ae6a7ac4a25ac6124e}\label{classUART__TX_aa2dcb8e19013d0ae6a7ac4a25ac6124e} 
+\mbox{\hyperlink{classUART__TX_aa2dcb8e19013d0ae6a7ac4a25ac6124e}{g\+\_\+\+CLKS\+\_\+\+PER\+\_\+\+BIT}} {\bfseries {\bfseries \textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{434} \textcolor{vhdlchar}{ }}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classUART__TX_a64b3b8dff1b85d19ac301f9404d32fa5}\label{classUART__TX_a64b3b8dff1b85d19ac301f9404d32fa5} 
+\mbox{\hyperlink{classUART__TX_a64b3b8dff1b85d19ac301f9404d32fa5}{i\+\_\+\+Clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classUART__TX_a31285abec3eae1e5092cb1f35ee548e6}\label{classUART__TX_a31285abec3eae1e5092cb1f35ee548e6} 
+\mbox{\hyperlink{classUART__TX_a31285abec3eae1e5092cb1f35ee548e6}{i\+\_\+\+TX\+\_\+\+DV}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data Valid Pulse\+: Signalisiert valide Daten an \`{}i\+\_\+\+TX\+\_\+\+Byte\`{} -\/ Startet die Uebertragung des anliegenden Bytes uber UART. \end{DoxyCompactList}\item 
+\Hypertarget{classUART__TX_ae0dd843c9c2a1b5be3cbc4c173e80a5c}\label{classUART__TX_ae0dd843c9c2a1b5be3cbc4c173e80a5c} 
+\mbox{\hyperlink{classUART__TX_ae0dd843c9c2a1b5be3cbc4c173e80a5c}{i\+\_\+\+TX\+\_\+\+Byte}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Zu sendende Daten (1 Byte) \end{DoxyCompactList}\item 
+\Hypertarget{classUART__TX_a678d168e46a3d8667dbac4bbfe0c3585}\label{classUART__TX_a678d168e46a3d8667dbac4bbfe0c3585} 
+\mbox{\hyperlink{classUART__TX_a678d168e46a3d8667dbac4bbfe0c3585}{o\+\_\+\+TX\+\_\+\+Active}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Transmission in Progress. \end{DoxyCompactList}\item 
+\Hypertarget{classUART__TX_a4ddec31583746dc0954419934fad19c3}\label{classUART__TX_a4ddec31583746dc0954419934fad19c3} 
+\mbox{\hyperlink{classUART__TX_a4ddec31583746dc0954419934fad19c3}{o\+\_\+\+TX\+\_\+\+Serial}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Serieller Datenstrom, welcher an den UART Pingeht. \end{DoxyCompactList}\item 
+\Hypertarget{classUART__TX_aaf743aa44331884f3401199436401dad}\label{classUART__TX_aaf743aa44331884f3401199436401dad} 
+\mbox{\hyperlink{classUART__TX_aaf743aa44331884f3401199436401dad}{o\+\_\+\+TX\+\_\+\+Done}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert Byte wurde erfolgreich uebertragen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+UART tx/transmit Komponente des Bootloaders ~\newline
+ 
+
+Implementiert UART tx Protokoll. Nimmt einen Byte zu sendender Daten über {\ttfamily i\+\_\+\+RX\+\_\+\+Byte} entgegen, und gibt dieses als seriellen Datenstrom über {\ttfamily i\+\_\+\+RX\+\_\+\+Serial} aus Berechnung der Baudrate ist an 50MHz Grundtakt angepasst. 
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/UART\+\_\+\+TX.\+vhd\end{DoxyCompactItemize}

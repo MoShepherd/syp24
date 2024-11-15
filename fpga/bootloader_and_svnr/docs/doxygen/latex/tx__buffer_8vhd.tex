@@ -1,0 +1,18 @@
+\doxysection{rtl/bootloader/tx\+\_\+buffer.vhd-\/\+Dateireferenz}
+\hypertarget{tx__buffer_8vhd}{}\label{tx__buffer_8vhd}\index{rtl/bootloader/tx\_buffer.vhd@{rtl/bootloader/tx\_buffer.vhd}}
+
+
+Einfaches 3 Byte Register, welches als Buffer für das Bootloader Response Paket dient.  
+
+
+\doxysubsubsection*{Entwurfseinheiten}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtx__buffer}{tx\+\_\+buffer}} entity
+\begin{DoxyCompactList}\small\item\em Einfaches 3 Byte Register, welches als Buffer für das Bootloader Response Paket dient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Einfaches 3 Byte Register, welches als Buffer für das Bootloader Response Paket dient. 
+
+Hält den letzten Status und sorgt dafür, dass die UART TX Komponente das gesamte zu sendende Bootloader Response Paket versendet. Grund für die Existenz des Buffers ist, damit eine Änderung des Status während des Übertragens keine Fehlübertraguns zufolge hat. 

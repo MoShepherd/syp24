@@ -1,0 +1,55 @@
+<mxfile host="Electron" modified="2024-02-01T15:18:22.023Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="Mjc3d0PiNVb4su-uWWLD" version="21.2.8" type="device">
+  <diagram name="Seite-1" id="1DdBGCkQfgjVxy8bUu3-">
+    <mxGraphModel dx="876" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n0XynNMwgZ88w3417hK9-1" value="entity bootloader_top is&#xa;	port (&#xa;		i_Clk             : in std_logic;&#xa;		i_rxd             : in std_logic;&#xa;		i_program_counter : in std_logic_vector(15 downto 0);&#xa;		i_cpu_step_fin    : in std_logic;&#xa;		--o_output 	: out std_logic_vector(24 - 1 downto 0 );&#xa;		o_txd              : out std_logic;&#xa;		o_svnr_cpu_en      : out std_logic;&#xa;		o_svnr_ram_address : out std_logic_vector(15 downto 0);&#xa;		o_svnr_ram_data_in : out std_logic_vector(15 downto 0);&#xa;		o_svnr_wnr         : out std_logic;&#xa;		o_svnr_addrstrb    : out std_logic;&#xa;		o_svnr_run         : out std_logic;&#xa;		o_svnr_reset	   : out std_logic&#xa;	);&#xa;end bootloader_top;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="487" width="340" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="340" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-3" value="i_Clk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-4" value="i_rxd" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="30" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-5" value="i_program_counter" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="60" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-6" value="o_txd" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="290" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-7" value="o_svnr_cpu_en" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="30" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-8" value="o_svnr_ram_address" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-9" value="bootloader_top" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="105" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-10" value="o_svnr_data_in" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="90" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-11" value="o_svnr_wnr" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-12" value="o_svnr_addrstrb" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="150" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-13" value="o_svnr_run" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="180" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-14" value="i_cpu_step_fin" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="90" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="n0XynNMwgZ88w3417hK9-15" value="o_scnr_reset" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="210" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

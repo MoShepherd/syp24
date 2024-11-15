@@ -1,0 +1,48 @@
+\doxysection{single\+\_\+step Entwurfseinheit-\/\+Referenz}
+\hypertarget{classsingle__step}{}\label{classsingle__step}\index{single\_step@{single\_step}}
+
+
+Koordiniert das Einzelschrittverfahren der SVNR CPU ~\newline
+  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsingle__step_adb3ffd54f8a65cadca6bb2fb73e7244b}\label{classsingle__step_adb3ffd54f8a65cadca6bb2fb73e7244b} 
+\mbox{\hyperlink{classsingle__step_adb3ffd54f8a65cadca6bb2fb73e7244b}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsingle__step_afc2f9c06fcac6549c1614d5364154f82}\label{classsingle__step_afc2f9c06fcac6549c1614d5364154f82} 
+\mbox{\hyperlink{classsingle__step_afc2f9c06fcac6549c1614d5364154f82}{std\+\_\+logic\+\_\+1164}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classsingle__step_a8c67d3567ac8e9e635e974734ebb6e11}\label{classsingle__step_a8c67d3567ac8e9e635e974734ebb6e11} 
+\mbox{\hyperlink{classsingle__step_a8c67d3567ac8e9e635e974734ebb6e11}{i\+\_\+run}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classsingle__step_a67a1f2a2c4e1973422aa55375e43f55c}\label{classsingle__step_a67a1f2a2c4e1973422aa55375e43f55c} 
+\mbox{\hyperlink{classsingle__step_a67a1f2a2c4e1973422aa55375e43f55c}{i\+\_\+cpu\+\_\+step\+\_\+fin}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classsingle__step_a899f799e0d3fd68322fbc092a10f3fa2}\label{classsingle__step_a899f799e0d3fd68322fbc092a10f3fa2} 
+\mbox{\hyperlink{classsingle__step_a899f799e0d3fd68322fbc092a10f3fa2}{o\+\_\+cpu\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Koordiniert das Einzelschrittverfahren der SVNR CPU ~\newline
+ 
+
+Diese Komponente ist nicht getestet, und somit auch sicher nicht korrekt implementiert! Das Konzept ist aber recht simpel\+: Die Komponente erzeugt im Single-\/\+Step Modus das cpu\+\_\+en Signal, welches die CPU des SVNR aktiviert.
+\begin{DoxyEnumerate}
+\item Mit {\ttfamily i\+\_\+run} wird die CPU gestartet und {\ttfamily o\+\_\+cpu\+\_\+en} wird auf `\textquotesingle{}1'{\ttfamily gesetzt.}
+\item {\ttfamily Sobald die CPU einen Schritt ausgeführt hat/ der Program Counter sich um 1 inkrementiert (angezeigt durch das Signal}i\+\_\+cpu\+\_\+step\+\_\+fin{\ttfamily ), wird}o\+\_\+cpu\+\_\+en{\ttfamily auf}\textquotesingle{}0\textquotesingle{}{\ttfamily gesetzt.}
+\item {\ttfamily Jetzt wartet der Single Step wieder auf ein}i\+\_\+run\`{} um den nächsten Step auszuführen. 
+\end{DoxyEnumerate}
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/\mbox{\hyperlink{single__step_8vhd}{single\+\_\+step.\+vhd}}\end{DoxyCompactItemize}

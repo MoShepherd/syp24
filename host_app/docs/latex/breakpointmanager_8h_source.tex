@@ -1,0 +1,26 @@
+\doxysection{breakpointmanager.\+h}
+\hypertarget{breakpointmanager_8h_source}{}\label{breakpointmanager_8h_source}\index{main/includes/breakpointmanager.h@{main/includes/breakpointmanager.h}}
+\mbox{\hyperlink{breakpointmanager_8h}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BREAKPOINTMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BREAKPOINTMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <ncurses.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ verkettete\ Liste\ f{\ucr}r\ Adressen\ (Breakpoints)}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structBreakpoint}{Breakpoint}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structBreakpoint_a28e208258e6d5cb5773d6a7fa9280d72}{hexAddress}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structBreakpoint}{Breakpoint}}*\ \mbox{\hyperlink{structBreakpoint_af298df1ae0fa8ec01446963cb563e2ef}{next}};}
+\DoxyCodeLine{00012\ \}\ \mbox{\hyperlink{breakpointmanager_8h_ad6108a10d9155c04a7577b4a13dbb751}{Breakpoint}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{breakpointmanager_8h_a4dc30faf2731132dabc0cbe9b11c2ef2}{addBreakpoint}}(\mbox{\hyperlink{structBreakpoint}{Breakpoint}}**\ breakpoint,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{breakpointmanager_8h_a9c801a575f9b0d87bc860f1f6a07a92a}{removeBreakpoint}}(\mbox{\hyperlink{structBreakpoint}{Breakpoint}}**\ breakpoint,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address);}
+\DoxyCodeLine{00016\ \mbox{\hyperlink{structBreakpoint}{Breakpoint}}*\ \mbox{\hyperlink{breakpointmanager_8h_a6d1c80819d541e96984437450de8f742}{getBreakpoint}}(\mbox{\hyperlink{structBreakpoint}{Breakpoint}}**\ top,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{breakpointmanager_8h_a5507b0380bcac3817336dc973f7b324f}{printBreakpoints}}(\mbox{\hyperlink{structBreakpoint}{Breakpoint}}*\ breakpoint,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{breakpointmanager_8h_af9076f30af1c18c2fc0b255b5206b0dd}{delList}}(\mbox{\hyperlink{structBreakpoint}{Breakpoint}}**\ top);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BREAKPOINTMANAGER\_H}}
+
+\end{DoxyCode}

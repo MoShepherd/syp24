@@ -1,0 +1,67 @@
+\doxysection{dpram Entwurfseinheit-\/\+Referenz}
+\hypertarget{classdpram}{}\label{classdpram}\index{dpram@{dpram}}
+
+
+Hält das vollständig übertragene RAM Binärimage ~\newline
+  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdpram_a57197384dc0bffb569c0275cb15017b7}\label{classdpram_a57197384dc0bffb569c0275cb15017b7} 
+\mbox{\hyperlink{classdpram_a57197384dc0bffb569c0275cb15017b7}{IEEE}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdpram_aac526ca5d1dc2d04b6cabcf5225ae102}\label{classdpram_aac526ca5d1dc2d04b6cabcf5225ae102} 
+\mbox{\hyperlink{classdpram_aac526ca5d1dc2d04b6cabcf5225ae102}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\Hypertarget{classdpram_ab00afb9e6bab01977d71958cf245d063}\label{classdpram_ab00afb9e6bab01977d71958cf245d063} 
+\mbox{\hyperlink{classdpram_ab00afb9e6bab01977d71958cf245d063}{numeric\+\_\+std}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Parameter}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdpram_afa6e6766ee5d342481883fd9ccda78f2}\label{classdpram_afa6e6766ee5d342481883fd9ccda78f2} 
+\mbox{\hyperlink{classdpram_afa6e6766ee5d342481883fd9ccda78f2}{addr\+\_\+width}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }}}
+\item 
+\Hypertarget{classdpram_a44a183179de1ec0e83eddbf7f32fca48}\label{classdpram_a44a183179de1ec0e83eddbf7f32fca48} 
+\mbox{\hyperlink{classdpram_a44a183179de1ec0e83eddbf7f32fca48}{data\+\_\+width}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdpram_aad27e33576cbc6ded00a33203f93653f}\label{classdpram_aad27e33576cbc6ded00a33203f93653f} 
+\mbox{\hyperlink{classdpram_aad27e33576cbc6ded00a33203f93653f}{write\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Schreibe Daten. \end{DoxyCompactList}\item 
+\Hypertarget{classdpram_ab4c836d3a258128c64b56f0f483ce6c1}\label{classdpram_ab4c836d3a258128c64b56f0f483ce6c1} 
+\mbox{\hyperlink{classdpram_ab4c836d3a258128c64b56f0f483ce6c1}{waddr}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{addr\_width}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Write Adresse. \end{DoxyCompactList}\item 
+\Hypertarget{classdpram_a7be8b9bc61bea5e26b7f0365a0022bf4}\label{classdpram_a7be8b9bc61bea5e26b7f0365a0022bf4} 
+\mbox{\hyperlink{classdpram_a7be8b9bc61bea5e26b7f0365a0022bf4}{wclk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Write Clock. \end{DoxyCompactList}\item 
+\Hypertarget{classdpram_a519aa74db75d3c74ca5f8450c76d6e8d}\label{classdpram_a519aa74db75d3c74ca5f8450c76d6e8d} 
+\mbox{\hyperlink{classdpram_a519aa74db75d3c74ca5f8450c76d6e8d}{din}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{data\_width}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em gol daten \end{DoxyCompactList}\item 
+\Hypertarget{classdpram_a80b101b96ee5b42e977d048b32eb4e47}\label{classdpram_a80b101b96ee5b42e977d048b32eb4e47} 
+\mbox{\hyperlink{classdpram_a80b101b96ee5b42e977d048b32eb4e47}{raddr}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{addr\_width}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Read Adresse. \end{DoxyCompactList}\item 
+\Hypertarget{classdpram_a2fc5d9b2cbf5a7fa31570ea6a78387e2}\label{classdpram_a2fc5d9b2cbf5a7fa31570ea6a78387e2} 
+\mbox{\hyperlink{classdpram_a2fc5d9b2cbf5a7fa31570ea6a78387e2}{rclk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classdpram_a4ec990dbc4d98f58f2129f92badd13f2}\label{classdpram_a4ec990dbc4d98f58f2129f92badd13f2} 
+\mbox{\hyperlink{classdpram_a4ec990dbc4d98f58f2129f92badd13f2}{dout}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{data\_width}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Read Daten. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Hält das vollständig übertragene RAM Binärimage ~\newline
+ 
+
+Dient als Buffer für das vollständig übertragene Binärimage, damit ein fehlerhaft übertragenes Image nicht direkt in den SVNR RAM übertragen werden kann. 
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/\mbox{\hyperlink{dpram_8vhd}{dpram.\+vhd}}\end{DoxyCompactItemize}

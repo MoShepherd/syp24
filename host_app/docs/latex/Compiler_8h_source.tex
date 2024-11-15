@@ -1,0 +1,27 @@
+\doxysection{Compiler.\+h}
+\hypertarget{Compiler_8h_source}{}\label{Compiler_8h_source}\index{compiler/Compiler.h@{compiler/Compiler.h}}
+\mbox{\hyperlink{Compiler_8h}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ Compiler\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ Compiler\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcmd}{cmd}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structcmd_a1fec44657bb5e83167a976d9b0988b39}{pakettyp}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structcmd_a893358abd6368a4f879548edb59dcff2}{opCode}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structcmd_a9cc38ebdae7c4e15cc495983d8b8d0cf}{adr}};}
+\DoxyCodeLine{00011\ \}\ \mbox{\hyperlink{Compiler_8h_a3fd68ffbc03f028b9429b471777e2062}{cmd}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{Compiler_8h_a3bd1ce3968b2efd24115727118998e94}{mnemonicMappings}}[][2];}
+\DoxyCodeLine{00014\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{Compiler_8h_a251a4c04b6f21dcb3976cb968898e65d}{binaryMappings}}[][2];}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//int\ main(int\ argc,\ char\ *argv[]);}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Compiler_8h_af11ec6d25a910e6938142f40348d7bd7}{mnem2bin}}(\textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{Compiler_8h_acfc2ab8416b01670f8bbb9da605780b4}{bin2mnem}}(\textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Compiler_8h_a374ccb28373614a55ce393e47b81acab}{formatFile}}(\textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ Compiler\_H}}
+
+\end{DoxyCode}

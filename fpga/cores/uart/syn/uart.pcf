@@ -1,0 +1,24 @@
+#set_io clk 21    # 12 MHz: Pin 21
+set_io clk 52    # 50MHz: Pin 52
+set_io reset  134 # button sw[6]
+#uart txd rxd
+set_io rxd    62
+set_io txd    60
+
+# LED0 - 7
+set_io d[0]   112 
+set_io d[1]   113
+set_io d[2]   114
+set_io d[3]   115
+set_io d[4]   116
+set_io d[5]   117
+set_io d[6]   118
+set_io d[7]   119
+#switches sw 1-7
+set_io sw[0]  122 
+set_io sw[1]  124
+set_io sw[2]  125
+set_io sw[3]  128
+set_io sw[4]  129
+set_io sw[5]  130
+#set_io sw[6]  134

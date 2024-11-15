@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "allefunktionen.h": "c",
+        "uart.h": "c",
+        "*.tcc": "c",
+        "complex": "c",
+        "fstream": "c",
+        "system_error": "c",
+        "__config": "c",
+        "locale": "c",
+        "config.h": "c",
+        "statusbar.h": "c"
+    }
+}

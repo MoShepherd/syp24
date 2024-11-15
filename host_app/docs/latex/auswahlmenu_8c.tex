@@ -1,0 +1,91 @@
+\doxysection{main/src/auswahlmenu.c-\/\+Dateireferenz}
+\hypertarget{auswahlmenu_8c}{}\label{auswahlmenu_8c}\index{main/src/auswahlmenu.c@{main/src/auswahlmenu.c}}
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}../includes/allefunktionen.\+h"{}}\newline
+{\ttfamily \#include "{}../../compiler/\+Compiler.\+h"{}}\newline
+Include-\/\+Abhängigkeitsdiagramm für auswahlmenu.\+c\+:
+% FIG 0
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab}{auswahlmenu}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab}{auswahlmenu()}\+: Auswahlmenü wird geöffnet; Startseite \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variablen}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{auswahlmenu_8c_af6dfd479b7e5d3e23f4813dd488fe43b}{current\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em \doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{auswahlmenu_8c_a4584b2762b7bb51655594ed0854b3969}{current\+\_\+binary}}
+\begin{DoxyCompactList}\small\item\em speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{auswahlmenu_8c_a1ea53ae199e75f00244cb09d11e7b24d}{modus\+Filechooser}}
+\begin{DoxyCompactList}\small\item\em für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{auswahlmenu_8c_a4e1e0e72dd773439e333c84dd762a9c3}{c}}
+\begin{DoxyCompactList}\small\item\em für switch-\/cases \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab}\label{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab} 
+\index{auswahlmenu.c@{auswahlmenu.c}!auswahlmenu@{auswahlmenu}}
+\index{auswahlmenu@{auswahlmenu}!auswahlmenu.c@{auswahlmenu.c}}
+\doxysubsubsection{\texorpdfstring{auswahlmenu()}{auswahlmenu()}}
+{\footnotesize\ttfamily void auswahlmenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{auswahlmenu_8c_a8bf31ec161cc3926862b94331c7a7aab}{auswahlmenu()}\+: Auswahlmenü wird geöffnet; Startseite 
+
+Das Auswahlmenü dient als Startseite und dort wird dem User ein Überblick der Optionen angezeigt, sowie der Pfad der Datei, die man unter "{}\+Load Mnemonics"{} auswählt
+
+Die Applikation beendet man durch Drücken von \textquotesingle{}Esc\textquotesingle{}.
+
+\begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000005}{Noch zu erledigen}}]Wenn man \doxylink{allefunktionen_8h_a19c86e0d31779f284e91d4d016448264}{debugger()} schließt und \textquotesingle{}Esc\textquotesingle{} drückt, wird die Applikation nicht beendet, sondern es treten Bugs auf. 
+
+evtl. "{}\+EXIT"{}-\/Option \end{DoxyRefDesc}
+
+
+\doxysubsection{Variablen-\/\+Dokumentation}
+\Hypertarget{auswahlmenu_8c_a4e1e0e72dd773439e333c84dd762a9c3}\label{auswahlmenu_8c_a4e1e0e72dd773439e333c84dd762a9c3} 
+\index{auswahlmenu.c@{auswahlmenu.c}!c@{c}}
+\index{c@{c}!auswahlmenu.c@{auswahlmenu.c}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily int c\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für switch-\/cases 
+
+\Hypertarget{auswahlmenu_8c_a4584b2762b7bb51655594ed0854b3969}\label{auswahlmenu_8c_a4584b2762b7bb51655594ed0854b3969} 
+\index{auswahlmenu.c@{auswahlmenu.c}!current\_binary@{current\_binary}}
+\index{current\_binary@{current\_binary}!auswahlmenu.c@{auswahlmenu.c}}
+\doxysubsubsection{\texorpdfstring{current\_binary}{current\_binary}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} current\+\_\+binary\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+speichert Dateipfad hinter "{}\+Current Binary\+: "{} (Bootloader) 
+
+\Hypertarget{auswahlmenu_8c_af6dfd479b7e5d3e23f4813dd488fe43b}\label{auswahlmenu_8c_af6dfd479b7e5d3e23f4813dd488fe43b} 
+\index{auswahlmenu.c@{auswahlmenu.c}!current\_file@{current\_file}}
+\index{current\_file@{current\_file}!auswahlmenu.c@{auswahlmenu.c}}
+\doxysubsubsection{\texorpdfstring{current\_file}{current\_file}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} current\+\_\+file\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+\doxylink{main_2src_2main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}\+: Ausführung. 
+
+die Main beinhaltet alle gloalen Variablen, die in den einhzelnen Fenstern festgelegt werden und als Wert für andere Programmfunktionen verwendet. die Auswahlmenu Funktion wird als Hauptfenster bei der Ausführung aufgerufen \begin{DoxyRefDesc}{Noch zu erledigen}
+\item[\mbox{\hyperlink{todo__todo000019}{Noch zu erledigen}}]eventuelle Auslagerug der while-\/schleifen als Steurungsfunktion für alle Fenster. Hierfür wird in erster Linie ein gutes Konzept zur Realisierung in C gebraucht. \end{DoxyRefDesc}
+speichert Dateipfad hinter "{}\+Current File\+: "{} (Load Mnemonics) \Hypertarget{auswahlmenu_8c_a1ea53ae199e75f00244cb09d11e7b24d}\label{auswahlmenu_8c_a1ea53ae199e75f00244cb09d11e7b24d} 
+\index{auswahlmenu.c@{auswahlmenu.c}!modusFilechooser@{modusFilechooser}}
+\index{modusFilechooser@{modusFilechooser}!auswahlmenu.c@{auswahlmenu.c}}
+\doxysubsubsection{\texorpdfstring{modusFilechooser}{modusFilechooser}}
+{\footnotesize\ttfamily int modus\+Filechooser\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+für \doxylink{allefunktionen_8h_a48924acb10cfd3bf3cb170d134f05f8f}{filechooser()}, bestimmt in welche Variable der Dateipfad gespeichert wird 
+

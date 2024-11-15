@@ -1,0 +1,65 @@
+\doxysection{fifo\+\_\+3 Entwurfseinheit-\/\+Referenz}
+\hypertarget{classfifo__3}{}\label{classfifo__3}\index{fifo\_3@{fifo\_3}}
+
+
+UART RX Buffer für ein Bootloader Paket.  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classfifo__3_a0084fe4d82c2bb696e8b248b2e1212f8}\label{classfifo__3_a0084fe4d82c2bb696e8b248b2e1212f8} 
+\mbox{\hyperlink{classfifo__3_a0084fe4d82c2bb696e8b248b2e1212f8}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classfifo__3_a78102623d64b4d242a7b39588227b693}\label{classfifo__3_a78102623d64b4d242a7b39588227b693} 
+\mbox{\hyperlink{classfifo__3_a78102623d64b4d242a7b39588227b693}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\Hypertarget{classfifo__3_ac94c0f2a3f2291f8058b33976a2cc3ae}\label{classfifo__3_ac94c0f2a3f2291f8058b33976a2cc3ae} 
+\mbox{\hyperlink{classfifo__3_ac94c0f2a3f2291f8058b33976a2cc3ae}{numeric\+\_\+std}}   
+\item 
+\Hypertarget{classfifo__3_a629e53c5f6fa574736037a0adb346f1d}\label{classfifo__3_a629e53c5f6fa574736037a0adb346f1d} 
+\mbox{\hyperlink{classfifo__3_a629e53c5f6fa574736037a0adb346f1d}{fifo\+\_\+3\+\_\+type}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classfifo__3_a8eca68c372980cc99499e682806343f2}\label{classfifo__3_a8eca68c372980cc99499e682806343f2} 
+\mbox{\hyperlink{classfifo__3_a8eca68c372980cc99499e682806343f2}{i\+\_\+rst\+\_\+sync}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_a60e6809f5e4ae7b15eeb3ee529ba3ac0}\label{classfifo__3_a60e6809f5e4ae7b15eeb3ee529ba3ac0} 
+\mbox{\hyperlink{classfifo__3_a60e6809f5e4ae7b15eeb3ee529ba3ac0}{i\+\_\+clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_ac3e414bc6899279dfffaa8227b049ff1}\label{classfifo__3_ac3e414bc6899279dfffaa8227b049ff1} 
+\mbox{\hyperlink{classfifo__3_ac3e414bc6899279dfffaa8227b049ff1}{i\+\_\+wr\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_ae35287078e24f7c34f12af1090645fb0}\label{classfifo__3_ae35287078e24f7c34f12af1090645fb0} 
+\mbox{\hyperlink{classfifo__3_ae35287078e24f7c34f12af1090645fb0}{i\+\_\+wr\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_WIDTH}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_a6d9bc6e9a972d8bc732c353ce58e8f96}\label{classfifo__3_a6d9bc6e9a972d8bc732c353ce58e8f96} 
+\mbox{\hyperlink{classfifo__3_a6d9bc6e9a972d8bc732c353ce58e8f96}{o\+\_\+full}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_adffc94944981a8164b3f858694140f00}\label{classfifo__3_adffc94944981a8164b3f858694140f00} 
+\mbox{\hyperlink{classfifo__3_adffc94944981a8164b3f858694140f00}{i\+\_\+rd\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_a494463dacee8834b96f942cb18def5d9}\label{classfifo__3_a494463dacee8834b96f942cb18def5d9} 
+\mbox{\hyperlink{classfifo__3_a494463dacee8834b96f942cb18def5d9}{o\+\_\+rd\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_WIDTH}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_a4ae46ac76eb0b839bf69bbcc116911e7}\label{classfifo__3_a4ae46ac76eb0b839bf69bbcc116911e7} 
+\mbox{\hyperlink{classfifo__3_a4ae46ac76eb0b839bf69bbcc116911e7}{o\+\_\+empty}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classfifo__3_ada70e984576fcc9e6526750ac58780ea}\label{classfifo__3_ada70e984576fcc9e6526750ac58780ea} 
+\mbox{\hyperlink{classfifo__3_ada70e984576fcc9e6526750ac58780ea}{o\+\_\+rd\+\_\+data\+\_\+burst}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_WIDTH}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{*}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_DEPTH}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+UART RX Buffer für ein Bootloader Paket. 
+
+Dieser Buffer fasst ein gesamtes Bootloader Paket (3 Byte). Sobald der Buffer voll ist, signalisiert er dem Decoder, dass die Verarbeitung des empfangenen Paketes erfolgen kann. 
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/fifo\+\_\+3.\+vhd\end{DoxyCompactItemize}

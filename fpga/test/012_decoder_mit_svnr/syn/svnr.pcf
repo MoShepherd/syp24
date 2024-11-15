@@ -1,0 +1,73 @@
+#############################################################
+# Physical Constraint File
+#############################################################
+##### Einer  DIS1.D0      PMOD1.11     P2_1	  136
+##### Einer  DIS1.D1      PMOD1.9      P1_1	  144
+##### Einer  DIS1.D2      PMOD1.10     P8_1	  138
+##### Einer  DIS1.D3      PMOD1.12     P7_1	  137
+##### Zehner DIS2.D0      PMOD1.8      P9_1	  139
+##### Zehner DIS2.D1      PMOD1.6      P10_1	  141
+##### Zehner DIS2.D2      PMOD1.7      P3_1	  143
+##### Zehner DIS2.D3      PMOD1.5      P4_1       142
+#####           -         PMOD1.3      GND
+#####           -         PMOD1.4      GND   
+
+# 2 Digit Hex Anhzeige an PMOD1
+set_io  einer[0]   136
+set_io  einer[1]   144
+set_io  einer[2]   138
+set_io  einer[3]   137
+set_io zehner[0]   139
+set_io zehner[1]   141
+set_io zehner[2]   143
+set_io zehner[3]   142
+
+# Clock 12 MHz Pin 21, 50MHz Pin 52
+#set_io clk         21    # 12 MHz Clock
+set_io clk         52    # 50 MHz Clock
+
+set_io ws2812_out 2   # PMOD3.0 P1_3  Pin 11
+
+
+set_io beep 4  # PMOD 3.1 P2_3 Pin 9
+#Leds
+set_io led[0] 112
+set_io led[1] 113
+set_io led[2] 114
+set_io led[3] 115
+set_io led[4] 116
+set_io led[5] 117
+set_io led[6] 118
+set_io led[7] 119
+
+#Buttons/Switch
+set_io btn[0] 122 
+set_io btn[1] 124
+set_io btn[2] 125
+set_io btn[3] 128
+set_io btn[4] 129
+set_io sw[0] 130
+set_io sw[1] 134
+#############################################################
+# Taster / Pin  (aktiv low, also gedrückt = 0)
+# SW1      122
+# SW2      124
+# SW3      125
+# SW4      128
+# SW5      129
+#
+# Schiebeschalter (
+#
+# SW6      130
+# SW7      134
+#
+# LEDs
+# D1       112
+# D2       113
+# D3       114
+# D4       115
+# D5       116
+# D6       117
+# D7       118
+# D8       119
+

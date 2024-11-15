@@ -1,0 +1,18 @@
+\doxysection{rtl/bootloader/runner.vhd-\/\+Dateireferenz}
+\hypertarget{runner_8vhd}{}\label{runner_8vhd}\index{rtl/bootloader/runner.vhd@{rtl/bootloader/runner.vhd}}
+
+
+State-\/\+Machine, die nach Füllen des DPRAMs den gesamten Inhalt sukzessiv in den SVNR RAM kopiert.  
+
+
+\doxysubsubsection*{Entwurfseinheiten}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrunner}{runner}} entity
+\begin{DoxyCompactList}\small\item\em State-\/\+Machine, die nach Füllen des DPRAMs den gesamten Inhalt sukzessiv in den SVNR RAM kopiert. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+State-\/\+Machine, die nach Füllen des DPRAMs den gesamten Inhalt sukzessiv in den SVNR RAM kopiert. 
+
+Läuft iterativ über den Inhalt des gesamten DPRAMs, und schreibt den derzeitigen Inhalt in die ensprechende Addresse des SVNR Rams. Hierbei steuert der Runner das Setzen der erforderlichen Signale um auf den RAM zuzugreifen. Dabei folgt der Runner genau dem Timing des SVNR bei RAM-\/\+Zugriff. 

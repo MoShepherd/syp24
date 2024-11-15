@@ -1,0 +1,121 @@
+\doxysection{decoder Entwurfseinheit-\/\+Referenz}
+\hypertarget{classdecoder}{}\label{classdecoder}\index{decoder@{decoder}}
+
+
+Verarbeitet Bootloader Pakete und leitet diese an die entsprechenden Funktionalitäten des Bootloaders weiter.  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdecoder_a754743211e92f9caf6ae332e789fbe90}\label{classdecoder_a754743211e92f9caf6ae332e789fbe90} 
+\mbox{\hyperlink{classdecoder_a754743211e92f9caf6ae332e789fbe90}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdecoder_ae9ef345b06f9b1c82930eecabff00732}\label{classdecoder_ae9ef345b06f9b1c82930eecabff00732} 
+\mbox{\hyperlink{classdecoder_ae9ef345b06f9b1c82930eecabff00732}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\Hypertarget{classdecoder_a9adfa334e4a19fad42e637ea3fcc9346}\label{classdecoder_a9adfa334e4a19fad42e637ea3fcc9346} 
+\mbox{\hyperlink{classdecoder_a9adfa334e4a19fad42e637ea3fcc9346}{numeric\+\_\+std}}   
+\item 
+\Hypertarget{classdecoder_acdcc010bdef070e84ff499c67a777fdd}\label{classdecoder_acdcc010bdef070e84ff499c67a777fdd} 
+\mbox{\hyperlink{classdecoder_acdcc010bdef070e84ff499c67a777fdd}{fifo\+\_\+3\+\_\+type}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdecoder_a3f15a09c3bf1c4afd888dc09aec1799b}\label{classdecoder_a3f15a09c3bf1c4afd888dc09aec1799b} 
+\mbox{\hyperlink{classdecoder_a3f15a09c3bf1c4afd888dc09aec1799b}{i\+\_\+rst\+\_\+sync}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classdecoder_a8cf2cce67bcdf9a95693a3ffe7f3d69c}\label{classdecoder_a8cf2cce67bcdf9a95693a3ffe7f3d69c} 
+\mbox{\hyperlink{classdecoder_a8cf2cce67bcdf9a95693a3ffe7f3d69c}{i\+\_\+clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classdecoder_ac44f96399a82d2db1c000a29ac552dbe}\label{classdecoder_ac44f96399a82d2db1c000a29ac552dbe} 
+\mbox{\hyperlink{classdecoder_ac44f96399a82d2db1c000a29ac552dbe}{i\+\_\+rd\+\_\+data\+\_\+burst}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_WIDTH}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{*}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_DEPTH}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em 3 Byte -\/ 1 Bootloader Paket Input aus dem FIFO RX Input Buffer \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a1839a2a59bfa0de8f97f98c03fec2a99}\label{classdecoder_a1839a2a59bfa0de8f97f98c03fec2a99} 
+\mbox{\hyperlink{classdecoder_a1839a2a59bfa0de8f97f98c03fec2a99}{i\+\_\+read}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Read Signal welches die anliegenden 3 Byte. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_afc9ea5e6523a312cd87450797eec89d1}\label{classdecoder_afc9ea5e6523a312cd87450797eec89d1} 
+\mbox{\hyperlink{classdecoder_afc9ea5e6523a312cd87450797eec89d1}{i\+\_\+bp\+\_\+edit\+\_\+done}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert Breakpoint Hinzufuegen/\+Loeschen abgeschlossen. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_af5275e09f2c4c887f3a6583429b4e5b8}\label{classdecoder_af5275e09f2c4c887f3a6583429b4e5b8} 
+\mbox{\hyperlink{classdecoder_af5275e09f2c4c887f3a6583429b4e5b8}{i\+\_\+cpu\+\_\+halt}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert CPU ist angehalten (Enweder in Breakpoint gefahren, oder im Single-\/\+Step Modus Step vollzogen) \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a65945b968e0d23eb4931e9641219029f}\label{classdecoder_a65945b968e0d23eb4931e9641219029f} 
+\mbox{\hyperlink{classdecoder_a65945b968e0d23eb4931e9641219029f}{i\+\_\+halt\+\_\+address}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Indiziert die Adresse, an der die CPU angehalten hat. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a414a4677ca57f3aea101368de2bef817}\label{classdecoder_a414a4677ca57f3aea101368de2bef817} 
+\mbox{\hyperlink{classdecoder_a414a4677ca57f3aea101368de2bef817}{i\+\_\+tx\+\_\+done}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert ein gesamtes Bootloader Paket (3 Byte) per UART uebertragen. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a590aa0f753c7aca4835690282887bb5d}\label{classdecoder_a590aa0f753c7aca4835690282887bb5d} 
+\mbox{\hyperlink{classdecoder_a590aa0f753c7aca4835690282887bb5d}{o\+\_\+flush}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Bootloader Paket ist erfolgreich gelesen -\/ Signalisiert Starten der TX Response. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_af647c5316e3d1e14ff9d06be07cfe885}\label{classdecoder_af647c5316e3d1e14ff9d06be07cfe885} 
+\mbox{\hyperlink{classdecoder_af647c5316e3d1e14ff9d06be07cfe885}{o\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_WIDTH}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{*}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{c\_DEPTH}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Gibt direkt das zuletzt vollstaendig gelesene Bootloader RX Paket nach aussen. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_abce02a6b6c42231ed3492f147e784ab5}\label{classdecoder_abce02a6b6c42231ed3492f147e784ab5} 
+\mbox{\hyperlink{classdecoder_abce02a6b6c42231ed3492f147e784ab5}{o\+\_\+status}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{X}\textcolor{vhdlchar}{ }\textcolor{keyword}{"{} 000001 "{}}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Status/\+Response Paket, welches von UART\+\_\+tx abgegriffen und bei Statusabfrage versendet wird. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a5e8a802fdacfb6e3fa505457fc5e8b4c}\label{classdecoder_a5e8a802fdacfb6e3fa505457fc5e8b4c} 
+\mbox{\hyperlink{classdecoder_a5e8a802fdacfb6e3fa505457fc5e8b4c}{i\+\_\+runner\+\_\+done}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert Kopieren von DPRAM in den SVNR RAM erfolgreich abgeschlossen -\/ Wenn das Signal high ist, ist die RAM Uebertragung vollstaendig abgeschlossen. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a51aa3d1869e1cf1912a5fcb4390d1519}\label{classdecoder_a51aa3d1869e1cf1912a5fcb4390d1519} 
+\mbox{\hyperlink{classdecoder_a51aa3d1869e1cf1912a5fcb4390d1519}{o\+\_\+ram\+\_\+addr}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{9} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classdecoder_af817082f3b63b9ee7458eed1bcc75abc}\label{classdecoder_af817082f3b63b9ee7458eed1bcc75abc} 
+\mbox{\hyperlink{classdecoder_af817082f3b63b9ee7458eed1bcc75abc}{o\+\_\+ram\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classdecoder_a9f8c1c7b21f578d7a7b8608f94bae169}\label{classdecoder_a9f8c1c7b21f578d7a7b8608f94bae169} 
+\mbox{\hyperlink{classdecoder_a9f8c1c7b21f578d7a7b8608f94bae169}{o\+\_\+ram\+\_\+wen}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classdecoder_a7983e196a9a38358a2cf405c12c22196}\label{classdecoder_a7983e196a9a38358a2cf405c12c22196} 
+\mbox{\hyperlink{classdecoder_a7983e196a9a38358a2cf405c12c22196}{o\+\_\+ram\+\_\+runner\+\_\+begin}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Startet das Kopieren von DPRAM in den SVNR RAM durch den Runner. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a2bd8a25f9c4cbada71e5f7af76c23a87}\label{classdecoder_a2bd8a25f9c4cbada71e5f7af76c23a87} 
+\mbox{\hyperlink{classdecoder_a2bd8a25f9c4cbada71e5f7af76c23a87}{o\+\_\+ram\+\_\+uploading}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert eine laufende RAM Uebertragung. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a70267e82f8c6a6315633056221a749dd}\label{classdecoder_a70267e82f8c6a6315633056221a749dd} 
+\mbox{\hyperlink{classdecoder_a70267e82f8c6a6315633056221a749dd}{o\+\_\+ram\+\_\+data\+\_\+valid}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Indiziert die Integritaet des DPRAMs an den Runner. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a6a8a675dc5499ef7abc8407ba1148462}\label{classdecoder_a6a8a675dc5499ef7abc8407ba1148462} 
+\mbox{\hyperlink{classdecoder_a6a8a675dc5499ef7abc8407ba1148462}{o\+\_\+breakpoint\+\_\+add}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert Hinzufuegen eines Breakpoints an den Breakpoint-\/\+Controller. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a6f20149d84ad901b977ed519de0fa8e3}\label{classdecoder_a6f20149d84ad901b977ed519de0fa8e3} 
+\mbox{\hyperlink{classdecoder_a6f20149d84ad901b977ed519de0fa8e3}{o\+\_\+breakpoint\+\_\+delete}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signalisiert Loeschen eines Breakpoints an den Breakpoint-\/\+Controller. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_acb2339905381253ae04aebc5441214d8}\label{classdecoder_acb2339905381253ae04aebc5441214d8} 
+\mbox{\hyperlink{classdecoder_acb2339905381253ae04aebc5441214d8}{o\+\_\+breakpoint\+\_\+value}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Adresse des Hinzuzufuegenden/ zu Loeschenden Breakpoints. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_a92a741fa5db13dc5f77d8b7a5bfc492c}\label{classdecoder_a92a741fa5db13dc5f77d8b7a5bfc492c} 
+\mbox{\hyperlink{classdecoder_a92a741fa5db13dc5f77d8b7a5bfc492c}{o\+\_\+cpu\+\_\+run}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em run/continue Signal fuer Breakpoint Controller und/oder Single-\/\+Step \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_ace3a67d091dff7486de6012a7626594b}\label{classdecoder_ace3a67d091dff7486de6012a7626594b} 
+\mbox{\hyperlink{classdecoder_ace3a67d091dff7486de6012a7626594b}{o\+\_\+svnr\+\_\+reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em SVNR Reset. \end{DoxyCompactList}\item 
+\Hypertarget{classdecoder_ad8c1dff0880dadc21a7342c232aea3f8}\label{classdecoder_ad8c1dff0880dadc21a7342c232aea3f8} 
+\mbox{\hyperlink{classdecoder_ad8c1dff0880dadc21a7342c232aea3f8}{o\+\_\+tx\+\_\+trig}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Startet UART TX Response Paketuebertragung. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Verarbeitet Bootloader Pakete und leitet diese an die entsprechenden Funktionalitäten des Bootloaders weiter. 
+
+Bietet Signale zum Beschreiben des SVNR Rams ({\ttfamily o\+\_\+ram\+\_\+addr}, {\ttfamily o\+\_\+ram\+\_\+data}, {\ttfamily o\+\_\+ram\+\_\+wen}, {\ttfamily o\+\_\+ram\+\_\+runner\+\_\+begin}, {\ttfamily o\+\_\+ram\+\_\+uploading}) , sowie das {\ttfamily cpu\+\_\+en} Signal, welches die CPU des SVNRs steuern kann.
+
+Auf jedes empfangene Bootloader Paket gibt der Decoder eine Response über {\ttfamily o\+\_\+status} an den UART TX weiter, welcher an die Host App zurück gesendet wird. Diese Response kann entweder als einfache Statusinformationen/\+Acknowledgment dienen, oder angeforderte Daten zurückgeben. ~\newline
+ Die Hauptaufgabe des Decoders liegt in seiner Statemachine, in der die UART Inputs verarbeitet werden und entsprechende Aktionen in der Programmlogik des Bootloaders ausgeführt werden. Diese Logik umfasst\+:
+\begin{DoxyItemize}
+\item Korrektes Kopieren des Binärimage in den SVNR RAM
+\item Prüfung der Integrität einer vollständigen Übertragung des Binärimage
+\item Erzeugen von Statusmeldungen/\+Fehlermeldungen, welche als Response an die Host App zurück übertragen werden werden sollen
+\item Stati zum Einhalten der Reihenfolge aller Debugger Funktionalitäten, hierzu gehört\+:
+\item Breakpoints hinzufügen/löschen
+\item SVNR CPU starten/stoppen 
+\end{DoxyItemize}
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/\mbox{\hyperlink{decoder_8vhd}{decoder.\+vhd}}\end{DoxyCompactItemize}

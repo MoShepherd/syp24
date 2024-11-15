@@ -1,0 +1,26 @@
+\doxysection{rtl/bootloader/single\+\_\+step.vhd-\/\+Dateireferenz}
+\hypertarget{single__step_8vhd}{}\label{single__step_8vhd}\index{rtl/bootloader/single\_step.vhd@{rtl/bootloader/single\_step.vhd}}
+
+
+Koordiniert das Einzelschrittverfahren der SVNR CPU ~\newline
+  
+
+
+\doxysubsubsection*{Entwurfseinheiten}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsingle__step}{single\+\_\+step}} entity
+\begin{DoxyCompactList}\small\item\em Koordiniert das Einzelschrittverfahren der SVNR CPU ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+Koordiniert das Einzelschrittverfahren der SVNR CPU ~\newline
+ 
+
+Diese Komponente ist nicht getestet, und somit auch sicher nicht korrekt implementiert! Das Konzept ist aber recht simpel\+: Die Komponente erzeugt im Single-\/\+Step Modus das cpu\+\_\+en Signal, welches die CPU des SVNR aktiviert.
+\begin{DoxyEnumerate}
+\item Mit {\ttfamily i\+\_\+run} wird die CPU gestartet und {\ttfamily o\+\_\+cpu\+\_\+en} wird auf `\textquotesingle{}1'{\ttfamily gesetzt.}
+\item {\ttfamily Sobald die CPU einen Schritt ausgeführt hat/ der Program Counter sich um 1 inkrementiert (angezeigt durch das Signal}i\+\_\+cpu\+\_\+step\+\_\+fin{\ttfamily ), wird}o\+\_\+cpu\+\_\+en{\ttfamily auf}\textquotesingle{}0\textquotesingle{}{\ttfamily gesetzt.}
+\item {\ttfamily Jetzt wartet der Single Step wieder auf ein}i\+\_\+run\`{} um den nächsten Step auszuführen. 
+\end{DoxyEnumerate}

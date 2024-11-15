@@ -1,0 +1,76 @@
+\doxysection{bootloader\+\_\+top Entwurfseinheit-\/\+Referenz}
+\hypertarget{classbootloader__top}{}\label{classbootloader__top}\index{bootloader\_top@{bootloader\_top}}
+
+
+top Entit‰t des Bootloaders, enth‰lt die gesamte Bootloader Funktionalit‰t ~\newline
+  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbootloader__top_ae8ccb95a3cf5ab4d8ea5a4b554a66d5b}\label{classbootloader__top_ae8ccb95a3cf5ab4d8ea5a4b554a66d5b} 
+\mbox{\hyperlink{classbootloader__top_ae8ccb95a3cf5ab4d8ea5a4b554a66d5b}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbootloader__top_a2b507bca6096a585410765e4c6137c13}\label{classbootloader__top_a2b507bca6096a585410765e4c6137c13} 
+\mbox{\hyperlink{classbootloader__top_a2b507bca6096a585410765e4c6137c13}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\Hypertarget{classbootloader__top_a479140c6eb73978d3184d9d412b80341}\label{classbootloader__top_a479140c6eb73978d3184d9d412b80341} 
+\mbox{\hyperlink{classbootloader__top_a479140c6eb73978d3184d9d412b80341}{numeric\+\_\+std}}   
+\item 
+\Hypertarget{classbootloader__top_a1782e4543d67d6b803b148ce9b57c3f6}\label{classbootloader__top_a1782e4543d67d6b803b148ce9b57c3f6} 
+\mbox{\hyperlink{classbootloader__top_a1782e4543d67d6b803b148ce9b57c3f6}{fifo\+\_\+3\+\_\+type}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbootloader__top_aba3acc54057d105c5e2ff9af771b5426}\label{classbootloader__top_aba3acc54057d105c5e2ff9af771b5426} 
+\mbox{\hyperlink{classbootloader__top_aba3acc54057d105c5e2ff9af771b5426}{i\+\_\+\+Clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classbootloader__top_a7f860890e9b2bde688f9d7c337bb949e}\label{classbootloader__top_a7f860890e9b2bde688f9d7c337bb949e} 
+\mbox{\hyperlink{classbootloader__top_a7f860890e9b2bde688f9d7c337bb949e}{i\+\_\+rxd}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Serielle UART RX Daten. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_adf4214886327b6149abc3fc787c48137}\label{classbootloader__top_adf4214886327b6149abc3fc787c48137} 
+\mbox{\hyperlink{classbootloader__top_adf4214886327b6149abc3fc787c48137}{i\+\_\+program\+\_\+counter}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Program Counter des SVNR. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_a84671bd5617803865b868c493e243180}\label{classbootloader__top_a84671bd5617803865b868c493e243180} 
+\mbox{\hyperlink{classbootloader__top_a84671bd5617803865b868c493e243180}{i\+\_\+cpu\+\_\+step\+\_\+fin}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Wird high wenn die SVNR CPU einen Step vollzogen hat. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_a317023d208e6ff5aa8c871fbd70e84a7}\label{classbootloader__top_a317023d208e6ff5aa8c871fbd70e84a7} 
+\mbox{\hyperlink{classbootloader__top_a317023d208e6ff5aa8c871fbd70e84a7}{o\+\_\+txd}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Serielle UART TX Daten. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_a08553eebe9bce3f896b914c199d1bbf5}\label{classbootloader__top_a08553eebe9bce3f896b914c199d1bbf5} 
+\mbox{\hyperlink{classbootloader__top_a08553eebe9bce3f896b914c199d1bbf5}{o\+\_\+svnr\+\_\+cpu\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em CPU enable fuer den SVNR. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_ad6dac9704fa4136b6e98194b30e1e4ae}\label{classbootloader__top_ad6dac9704fa4136b6e98194b30e1e4ae} 
+\mbox{\hyperlink{classbootloader__top_ad6dac9704fa4136b6e98194b30e1e4ae}{o\+\_\+svnr\+\_\+ram\+\_\+address}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Wenn Bootloader SVNR-\/\+RAM Read/\+Write Kontrolle hat (bspw. bei Image-\/\+Upload oder Debug RAM Abfrage)\+: Addresse des zuzugreifendem RAM. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_a8f1a1e1d18d4d82c245deb6fb4cd9d96}\label{classbootloader__top_a8f1a1e1d18d4d82c245deb6fb4cd9d96} 
+\mbox{\hyperlink{classbootloader__top_a8f1a1e1d18d4d82c245deb6fb4cd9d96}{o\+\_\+svnr\+\_\+ram\+\_\+data\+\_\+in}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Wenn Bootloader SVNR-\/\+RAM Write Kontrolle hat (bspw. bei Image-\/\+Upload)\+: RAM Daten an der Adresse von \`{}o\+\_\+svnr\+\_\+ram\+\_\+address\`{}. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_ab9978c1a8c76b76c0c28cbff8887e498}\label{classbootloader__top_ab9978c1a8c76b76c0c28cbff8887e498} 
+\mbox{\hyperlink{classbootloader__top_ab9978c1a8c76b76c0c28cbff8887e498}{o\+\_\+svnr\+\_\+wnr}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Wenn Bootloader SVNR-\/\+RAM Read/\+Write Kontrolle hat\+: wnr Signal fuer SVNR (Siehe SVNR Dokumentation) \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_a3f64c9e898e476df2a88df1f027474eb}\label{classbootloader__top_a3f64c9e898e476df2a88df1f027474eb} 
+\mbox{\hyperlink{classbootloader__top_a3f64c9e898e476df2a88df1f027474eb}{o\+\_\+svnr\+\_\+addrstrb}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Wenn Bootloader SVNR-\/\+RAM Read/\+Write Kontrolle hat\+: addrstrb Signal fuer SVNR (Siehe SVNR Dokumentation) \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_a4fbc2f1d91bf74ea488c9339989caf19}\label{classbootloader__top_a4fbc2f1d91bf74ea488c9339989caf19} 
+\mbox{\hyperlink{classbootloader__top_a4fbc2f1d91bf74ea488c9339989caf19}{o\+\_\+svnr\+\_\+run}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Startet den SVNR -\/ zusaetzlich zu cpu\+\_\+en benoetigt. \end{DoxyCompactList}\item 
+\Hypertarget{classbootloader__top_a23c730c0bf0deb76de5ba402afac6b5e}\label{classbootloader__top_a23c730c0bf0deb76de5ba402afac6b5e} 
+\mbox{\hyperlink{classbootloader__top_a23c730c0bf0deb76de5ba402afac6b5e}{o\+\_\+svnr\+\_\+reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Sorgt fuer einen reset der SVNR CPU. Program Counter und alle Register werden genullt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausf√ºhrliche Beschreibung}
+top Entit‰t des Bootloaders, enth‰lt die gesamte Bootloader Funktionalit‰t ~\newline
+ 
+
+Stellt Ports zur direkten Interaktion mit SVNR bereit. Direkte Interaktion mit FPGA Pins erfolgt durch\+: i\+\_\+rxd 
+
+Die Dokumentation f√ºr diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/\mbox{\hyperlink{bootloader__top_8vhd}{bootloader\+\_\+top.\+vhd}}\end{DoxyCompactItemize}

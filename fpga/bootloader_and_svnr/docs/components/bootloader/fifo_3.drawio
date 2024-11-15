@@ -1,0 +1,46 @@
+<mxfile host="Electron" modified="2024-02-01T15:34:05.361Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="2su67dXsW06PZ-xr1bwV" version="21.2.8" type="device">
+  <diagram name="Seite-1" id="1DdBGCkQfgjVxy8bUu3-">
+    <mxGraphModel dx="876" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Z-NiarzhrOgyThVnsodr-1" value="entity fifo_3 is&#xa;    port (&#xa;        i_rst_sync : in std_logic;&#xa;        i_clk      : in std_logic;&#xa;&#xa;&#xa;        -- FIFO Write Interface&#xa;        i_wr_en   : in std_logic;&#xa;        i_wr_data : in std_logic_vector(c_WIDTH - 1 downto 0);&#xa;        o_full    : out std_logic;&#xa;&#xa;&#xa;        -- FIFO Read Interface&#xa;        i_rd_en     : in std_logic;&#xa;        o_rd_data   : out std_logic_vector(c_WIDTH - 1 downto 0);&#xa;        o_empty     : out std_logic;&#xa;        o_rd_data_burst : out std_logic_vector( (c_WIDTH * c_DEPTH)- 1 downto 0 )&#xa;    );&#xa;end fifo_3;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" width="470" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-3" value="i_clk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-4" value="i_rst_sync" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry y="30" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-5" value="i_wr_en" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry y="60" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-6" value="o_full" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="190" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-7" value="o_rd_data" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="160" y="30" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-8" value="o_empty" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="170" y="60" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-9" value="fifo_3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="90" y="45" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-10" value="i_rd_en" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z-NiarzhrOgyThVnsodr-11" value="o_rd_data_burst" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="130" y="90" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M--bSSFUnLW9ocgtpg2y-1" value="i_wr_data" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="120" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

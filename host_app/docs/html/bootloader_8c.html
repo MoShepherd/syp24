@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>host_app: main/src/bootloader.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">host_app
+   </div>
+   <div id="projectbrief">Client Applikation des SVNR-Bootloaders</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5c982d53a68cdbcd421152b4020263a9.html">main</a></li><li class="navelem"><a class="el" href="dir_2101cd0b22112584ff59816a4bc911f7.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle"><div class="title">bootloader.c-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;ncurses.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="uart_8h_source.html">../../uart/include/uart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="allefunktionen_8h_source.html">../includes/allefunktionen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="statusbar_8h_source.html">../includes/statusbar.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für bootloader.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="bootloader_8c__incl.png" border="0" usemap="#amain_2src_2bootloader_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a8a25febfe7fa1335d3fa12a052d4c7c4" id="r_a8a25febfe7fa1335d3fa12a052d4c7c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a25febfe7fa1335d3fa12a052d4c7c4">bootloader</a> ()</td></tr>
+<tr class="memdesc:a8a25febfe7fa1335d3fa12a052d4c7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a8a25febfe7fa1335d3fa12a052d4c7c4" title="bootloader(): Seite vom Menüpunkt &quot;Bootloader&quot; wird geöffnet.">bootloader()</a>: Seite vom Menüpunkt "Bootloader" wird geöffnet.  <br /></td></tr>
+<tr class="separator:a8a25febfe7fa1335d3fa12a052d4c7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a4584b2762b7bb51655594ed0854b3969" id="r_a4584b2762b7bb51655594ed0854b3969"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4584b2762b7bb51655594ed0854b3969">current_binary</a></td></tr>
+<tr class="memdesc:a4584b2762b7bb51655594ed0854b3969"><td class="mdescLeft">&#160;</td><td class="mdescRight">speichert Dateipfad hinter "Current Binary: " (Bootloader)  <br /></td></tr>
+<tr class="separator:a4584b2762b7bb51655594ed0854b3969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea53ae199e75f00244cb09d11e7b24d" id="r_a1ea53ae199e75f00244cb09d11e7b24d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ea53ae199e75f00244cb09d11e7b24d">modusFilechooser</a></td></tr>
+<tr class="memdesc:a1ea53ae199e75f00244cb09d11e7b24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">für <a class="el" href="allefunktionen_8h.html#a48924acb10cfd3bf3cb170d134f05f8f" title="filechooser(): Öffnet bei Aufruf den Dateimanager des Host PCs">filechooser()</a>, bestimmt in welche Variable der Dateipfad gespeichert wird  <br /></td></tr>
+<tr class="separator:a1ea53ae199e75f00244cb09d11e7b24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1e0e72dd773439e333c84dd762a9c3" id="r_a4e1e0e72dd773439e333c84dd762a9c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e1e0e72dd773439e333c84dd762a9c3">c</a></td></tr>
+<tr class="memdesc:a4e1e0e72dd773439e333c84dd762a9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">für switch-cases  <br /></td></tr>
+<tr class="separator:a4e1e0e72dd773439e333c84dd762a9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19654fc7adf235ce5ee3a8c1ec69be6" id="r_ad19654fc7adf235ce5ee3a8c1ec69be6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad19654fc7adf235ce5ee3a8c1ec69be6">fd_uart</a></td></tr>
+<tr class="separator:ad19654fc7adf235ce5ee3a8c1ec69be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742cda7da9192ce964d73452a11f2825" id="r_a742cda7da9192ce964d73452a11f2825"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a742cda7da9192ce964d73452a11f2825">mem_image</a></td></tr>
+<tr class="separator:a742cda7da9192ce964d73452a11f2825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b90bca2cfd3bea203413de232648d48" id="r_a6b90bca2cfd3bea203413de232648d48"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b90bca2cfd3bea203413de232648d48">mem_size</a></td></tr>
+<tr class="separator:a6b90bca2cfd3bea203413de232648d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a3f3db6df856bbab69448f00500d78" id="r_a25a3f3db6df856bbab69448f00500d78"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25a3f3db6df856bbab69448f00500d78">packet_header</a></td></tr>
+<tr class="separator:a25a3f3db6df856bbab69448f00500d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0da593ef89beeb87e3d57eb14a2a1e" id="r_a8f0da593ef89beeb87e3d57eb14a2a1e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f0da593ef89beeb87e3d57eb14a2a1e">packet_data</a></td></tr>
+<tr class="separator:a8f0da593ef89beeb87e3d57eb14a2a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac830316ab0474d713720bfd02c6205e3" id="r_ac830316ab0474d713720bfd02c6205e3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac830316ab0474d713720bfd02c6205e3">packet_buf</a> [3]</td></tr>
+<tr class="separator:ac830316ab0474d713720bfd02c6205e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a8a25febfe7fa1335d3fa12a052d4c7c4" name="a8a25febfe7fa1335d3fa12a052d4c7c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a25febfe7fa1335d3fa12a052d4c7c4">&#9670;&#160;</a></span>bootloader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bootloader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a8a25febfe7fa1335d3fa12a052d4c7c4" title="bootloader(): Seite vom Menüpunkt &quot;Bootloader&quot; wird geöffnet.">bootloader()</a>: Seite vom Menüpunkt "Bootloader" wird geöffnet. </p>
+<p>Nach Aufruf werden im Terminal drei neue Optionen angezeigt, sowie eine ähnliche Anzeige, die wie "Current File: " im Auswahlmenü den Dateipfad der Binärdatei anzeigt, die man über "Load Binary" auswählt.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Noch zu erledigen</a></b></dt><dd>Execute wurde noch nicht implementiert. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a id="a4e1e0e72dd773439e333c84dd762a9c3" name="a4e1e0e72dd773439e333c84dd762a9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1e0e72dd773439e333c84dd762a9c3">&#9670;&#160;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>für switch-cases </p>
+
+</div>
+</div>
+<a id="a4584b2762b7bb51655594ed0854b3969" name="a4584b2762b7bb51655594ed0854b3969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4584b2762b7bb51655594ed0854b3969">&#9670;&#160;</a></span>current_binary</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* current_binary</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>speichert Dateipfad hinter "Current Binary: " (Bootloader) </p>
+
+</div>
+</div>
+<a id="ad19654fc7adf235ce5ee3a8c1ec69be6" name="ad19654fc7adf235ce5ee3a8c1ec69be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19654fc7adf235ce5ee3a8c1ec69be6">&#9670;&#160;</a></span>fd_uart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fd_uart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a742cda7da9192ce964d73452a11f2825" name="a742cda7da9192ce964d73452a11f2825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742cda7da9192ce964d73452a11f2825">&#9670;&#160;</a></span>mem_image</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* mem_image</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b90bca2cfd3bea203413de232648d48" name="a6b90bca2cfd3bea203413de232648d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b90bca2cfd3bea203413de232648d48">&#9670;&#160;</a></span>mem_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">off_t mem_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ea53ae199e75f00244cb09d11e7b24d" name="a1ea53ae199e75f00244cb09d11e7b24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea53ae199e75f00244cb09d11e7b24d">&#9670;&#160;</a></span>modusFilechooser</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int modusFilechooser</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>für <a class="el" href="allefunktionen_8h.html#a48924acb10cfd3bf3cb170d134f05f8f" title="filechooser(): Öffnet bei Aufruf den Dateimanager des Host PCs">filechooser()</a>, bestimmt in welche Variable der Dateipfad gespeichert wird </p>
+
+</div>
+</div>
+<a id="ac830316ab0474d713720bfd02c6205e3" name="ac830316ab0474d713720bfd02c6205e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac830316ab0474d713720bfd02c6205e3">&#9670;&#160;</a></span>packet_buf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t packet_buf[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f0da593ef89beeb87e3d57eb14a2a1e" name="a8f0da593ef89beeb87e3d57eb14a2a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f0da593ef89beeb87e3d57eb14a2a1e">&#9670;&#160;</a></span>packet_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t packet_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25a3f3db6df856bbab69448f00500d78" name="a25a3f3db6df856bbab69448f00500d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a3f3db6df856bbab69448f00500d78">&#9670;&#160;</a></span>packet_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t packet_header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2024-02-01T14:31:29.725Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="HksYyTuckjxMTeTGAnhp" version="21.2.8" type="device">
+  <diagram name="Seite-1" id="NKe3LcDaQvhEL5gTPyzI">
+    <mxGraphModel dx="876" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-2" value="i_Clk" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-3" value="i_TX_DV" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="30" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-4" value="i_TX_Byte" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="60" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-5" value="o_TX_Active" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="150" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-6" value="o_TX_Serial" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="150" y="30" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-7" value="&amp;nbsp; &amp;nbsp; o_TX_Done" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="140" y="60" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-8" value="UART_TX" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eM2uy2YSG3u7DVQmgbez-9" value="entity UART_TX is&#xa;  generic (&#xa;  -- 50000000 / 115200 = 434.028 Clocks Per Bit.&#xa;    g_CLKS_PER_BIT : integer := 434     -- Needs to be set correctly&#xa;    );&#xa;  port (&#xa;    i_Clk       : in  std_logic;&#xa;    i_TX_DV     : in  std_logic;&#xa;    i_TX_Byte   : in  std_logic_vector(7 downto 0);&#xa;    o_TX_Active : out std_logic;&#xa;    o_TX_Serial : out std_logic;&#xa;    o_TX_Done   : out std_logic&#xa;    );&#xa;end UART_TX;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" width="390" height="220" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

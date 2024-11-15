@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SVNR Bootloader - FPGA: Breakpoint_Controller Entwurfseinheit-Referenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SVNR Bootloader - FPGA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#Bibliotheken">Bibliotheken</a> &#124;
+<a href="#Schnittstellen">Schnittstellen</a> &#124;
+<a href="#Use_20Klauseln">Use Klauseln</a>  </div>
+  <div class="headertitle"><div class="title">Breakpoint_Controller Entwurfseinheit-Referenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Kontrolliert das Erzeugen/Löschen von Breakpoints, und überprüft ob ein Breakpoint im derzeitigen CPU Takt vorliegt.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Bibliotheken" name="Bibliotheken"></a>
+Bibliotheken</h2></td></tr>
+ <tr class="memitem:ae4400ace365a0efae8ef33a429a0532b" id="r_ae4400ace365a0efae8ef33a429a0532b"><td class="memItemLeft" align="right" valign="top"><a id="ae4400ace365a0efae8ef33a429a0532b" name="ae4400ace365a0efae8ef33a429a0532b"></a>
+<a class="el" href="#ae4400ace365a0efae8ef33a429a0532b">IEEE</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Use_20Klauseln" name="Use_20Klauseln"></a>
+Use Klauseln</h2></td></tr>
+ <tr class="memitem:a5f2cc9deb5a476e262c8ed36513a5f04" id="r_a5f2cc9deb5a476e262c8ed36513a5f04"><td class="memItemLeft" align="right" valign="top"><a id="a5f2cc9deb5a476e262c8ed36513a5f04" name="a5f2cc9deb5a476e262c8ed36513a5f04"></a>
+<a class="el" href="#a5f2cc9deb5a476e262c8ed36513a5f04">STD_LOGIC_1164</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Schnittstellen" name="Schnittstellen"></a>
+Schnittstellen</h2></td></tr>
+ <tr class="memitem:a27910fbb94f03fc41e856affdecadbde" id="r_a27910fbb94f03fc41e856affdecadbde"><td class="memItemLeft" align="right" valign="top"><a id="a27910fbb94f03fc41e856affdecadbde" name="a27910fbb94f03fc41e856affdecadbde"></a>
+<a class="el" href="#a27910fbb94f03fc41e856affdecadbde">i_clk</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">STD_LOGIC</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a685862bd87865378cb52512a61583d45" id="r_a685862bd87865378cb52512a61583d45"><td class="memItemLeft" align="right" valign="top"><a id="a685862bd87865378cb52512a61583d45" name="a685862bd87865378cb52512a61583d45"></a>
+<a class="el" href="#a685862bd87865378cb52512a61583d45">i_program_counter</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a685862bd87865378cb52512a61583d45"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Program Counter des SVNR. <br /></td></tr>
+<tr class="memitem:a9c985ee2ee7189374f9b43eeeb2a4296" id="r_a9c985ee2ee7189374f9b43eeeb2a4296"><td class="memItemLeft" align="right" valign="top"><a id="a9c985ee2ee7189374f9b43eeeb2a4296" name="a9c985ee2ee7189374f9b43eeeb2a4296"></a>
+<a class="el" href="#a9c985ee2ee7189374f9b43eeeb2a4296">i_breakpoint_add</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">STD_LOGIC</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a9c985ee2ee7189374f9b43eeeb2a4296"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet Hinzufuegen eines neuen Breakpoints. <br /></td></tr>
+<tr class="memitem:a2759d24144d3c9fb4c989983f1b88622" id="r_a2759d24144d3c9fb4c989983f1b88622"><td class="memItemLeft" align="right" valign="top"><a id="a2759d24144d3c9fb4c989983f1b88622" name="a2759d24144d3c9fb4c989983f1b88622"></a>
+<a class="el" href="#a2759d24144d3c9fb4c989983f1b88622">i_breakpoint_delete</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">STD_LOGIC</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a2759d24144d3c9fb4c989983f1b88622"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet Loeschen eines neuen Breakpoints. <br /></td></tr>
+<tr class="memitem:aa0167f8e9cb6c69cd3db4f07ac274df8" id="r_aa0167f8e9cb6c69cd3db4f07ac274df8"><td class="memItemLeft" align="right" valign="top"><a id="aa0167f8e9cb6c69cd3db4f07ac274df8" name="aa0167f8e9cb6c69cd3db4f07ac274df8"></a>
+<a class="el" href="#aa0167f8e9cb6c69cd3db4f07ac274df8">i_breakpoint_value</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span> <span class="vhdldigit">15</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:aa0167f8e9cb6c69cd3db4f07ac274df8"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Breakpointadresse des hinzuzufuegenden (`i_breakpoint_add`), oder des zu loeschenden (`i_breakpoint_delete`) Breakpoints. <br /></td></tr>
+<tr class="memitem:ad454ee508a0082f391b304f1dc979eed" id="r_ad454ee508a0082f391b304f1dc979eed"><td class="memItemLeft" align="right" valign="top"><a id="ad454ee508a0082f391b304f1dc979eed" name="ad454ee508a0082f391b304f1dc979eed"></a>
+<a class="el" href="#ad454ee508a0082f391b304f1dc979eed">i_breakpoint_enable</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ad454ee508a0082f391b304f1dc979eed"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Nicht in Nutzung! Soll Breakpoints insgesamt aktivieren/deaktivieren. <br /></td></tr>
+<tr class="memitem:a9b3a6aa83b08c08511ed48721d21527a" id="r_a9b3a6aa83b08c08511ed48721d21527a"><td class="memItemLeft" align="right" valign="top"><a id="a9b3a6aa83b08c08511ed48721d21527a" name="a9b3a6aa83b08c08511ed48721d21527a"></a>
+<a class="el" href="#a9b3a6aa83b08c08511ed48721d21527a">i_run</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a9b3a6aa83b08c08511ed48721d21527a"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Verwertet das run Signal aus dem Decoder und erzeugt mit der Breakpoint Logik `o_cpu_en`. <br /></td></tr>
+<tr class="memitem:a04ec78abec3e05615f5d5342648e290a" id="r_a04ec78abec3e05615f5d5342648e290a"><td class="memItemLeft" align="right" valign="top"><a id="a04ec78abec3e05615f5d5342648e290a" name="a04ec78abec3e05615f5d5342648e290a"></a>
+<a class="el" href="#a04ec78abec3e05615f5d5342648e290a">o_cpu_en</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">STD_LOGIC</span><span class="vhdlchar"> </span><span class="vhdlchar">:</span><span class="vhdlchar">=</span><span class="vhdlchar"> </span><span class="vhdlchar">&#39;</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">&#39;</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a04ec78abec3e05615f5d5342648e290a"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Cpu_enable Signal fuer die SVNR CPU. <br /></td></tr>
+<tr class="memitem:af42615399cef31ab271c53e773849ad7" id="r_af42615399cef31ab271c53e773849ad7"><td class="memItemLeft" align="right" valign="top"><a id="af42615399cef31ab271c53e773849ad7" name="af42615399cef31ab271c53e773849ad7"></a>
+<a class="el" href="#af42615399cef31ab271c53e773849ad7">o_cpu_halt</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:af42615399cef31ab271c53e773849ad7"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Indiziert einen gefundenen Breakpoint. <br /></td></tr>
+<tr class="memitem:aadd0863b6da15575dbbaf5c0d063665a" id="r_aadd0863b6da15575dbbaf5c0d063665a"><td class="memItemLeft" align="right" valign="top"><a id="aadd0863b6da15575dbbaf5c0d063665a" name="aadd0863b6da15575dbbaf5c0d063665a"></a>
+<a class="el" href="#aadd0863b6da15575dbbaf5c0d063665a">o_edit_done</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">STD_LOGIC</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:aadd0863b6da15575dbbaf5c0d063665a"><td class="mdescLeft">&#160;</td><td class="mdescLeft">&#160;</td><td class="mdescRight">Indiziert Loeschen/Hinzufuegen abgeschlossen. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>Kontrolliert das Erzeugen/Löschen von Breakpoints, und überprüft ob ein Breakpoint im derzeitigen CPU Takt vorliegt. </p>
+<p>Die State-Machine dient zur Koordination von Erzeugung/Löschen der Breakpoints. Die Breakpoints werden in einem Array gespeichert, es können maximal 16 Breakpoints gleichzeitig bestehen. 0XFFFF beschreibt einen leeren/nicht aktivierten Breakpoint in der Liste. So kann ein Breakpoint bei bspw. Addresse <em>0x0000</em> erzeugt werden. Die Addresse <em>0xFFFF</em> spielt im SVNR keine Rolle, da dessen Addressraum nur <em>1024</em> oder <em>0x0400</em> Addressen umfasst. Der Index der ersten freuen Stelle des Arrays wird stets gespeichert, sodass Breakpoints an jeder Stelle des Arrays dynamisch gelöscht/hinzugefügt werden können. </p>
+</div><hr/>Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>rtl/bootloader/<a class="el" href="breakpoint__controller_8vhd.html">breakpoint_controller.vhd</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

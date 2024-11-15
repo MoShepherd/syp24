@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SVNR Bootloader - FPGA: fifo_3 Entwurfseinheit-Referenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SVNR Bootloader - FPGA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#Bibliotheken">Bibliotheken</a> &#124;
+<a href="#Schnittstellen">Schnittstellen</a> &#124;
+<a href="#Use_20Klauseln">Use Klauseln</a>  </div>
+  <div class="headertitle"><div class="title">fifo_3 Entwurfseinheit-Referenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>UART RX Buffer für ein Bootloader Paket.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Bibliotheken" name="Bibliotheken"></a>
+Bibliotheken</h2></td></tr>
+ <tr class="memitem:a0084fe4d82c2bb696e8b248b2e1212f8" id="r_a0084fe4d82c2bb696e8b248b2e1212f8"><td class="memItemLeft" align="right" valign="top"><a id="a0084fe4d82c2bb696e8b248b2e1212f8" name="a0084fe4d82c2bb696e8b248b2e1212f8"></a>
+<a class="el" href="#a0084fe4d82c2bb696e8b248b2e1212f8">ieee</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Use_20Klauseln" name="Use_20Klauseln"></a>
+Use Klauseln</h2></td></tr>
+ <tr class="memitem:a78102623d64b4d242a7b39588227b693" id="r_a78102623d64b4d242a7b39588227b693"><td class="memItemLeft" align="right" valign="top"><a id="a78102623d64b4d242a7b39588227b693" name="a78102623d64b4d242a7b39588227b693"></a>
+<a class="el" href="#a78102623d64b4d242a7b39588227b693">std_logic_1164</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+<tr class="memitem:ac94c0f2a3f2291f8058b33976a2cc3ae" id="r_ac94c0f2a3f2291f8058b33976a2cc3ae"><td class="memItemLeft" align="right" valign="top"><a id="ac94c0f2a3f2291f8058b33976a2cc3ae" name="ac94c0f2a3f2291f8058b33976a2cc3ae"></a>
+<a class="el" href="#ac94c0f2a3f2291f8058b33976a2cc3ae">numeric_std</a>&#160;</td><td class="memItemRight" valign="bottom">  </td></tr>
+<tr class="memitem:a629e53c5f6fa574736037a0adb346f1d" id="r_a629e53c5f6fa574736037a0adb346f1d"><td class="memItemLeft" align="right" valign="top"><a id="a629e53c5f6fa574736037a0adb346f1d" name="a629e53c5f6fa574736037a0adb346f1d"></a>
+<a class="el" href="#a629e53c5f6fa574736037a0adb346f1d">fifo_3_type</a>&#160;</td><td class="memItemRight" valign="bottom">   <b>Paket</b><em><a class="el" href="classfifo__3__type.html"> &lt;fifo_3_type&gt;</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="3"><h2 class="groupheader"><a id="Schnittstellen" name="Schnittstellen"></a>
+Schnittstellen</h2></td></tr>
+ <tr class="memitem:a8eca68c372980cc99499e682806343f2" id="r_a8eca68c372980cc99499e682806343f2"><td class="memItemLeft" align="right" valign="top"><a id="a8eca68c372980cc99499e682806343f2" name="a8eca68c372980cc99499e682806343f2"></a>
+<a class="el" href="#a8eca68c372980cc99499e682806343f2">i_rst_sync</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a60e6809f5e4ae7b15eeb3ee529ba3ac0" id="r_a60e6809f5e4ae7b15eeb3ee529ba3ac0"><td class="memItemLeft" align="right" valign="top"><a id="a60e6809f5e4ae7b15eeb3ee529ba3ac0" name="a60e6809f5e4ae7b15eeb3ee529ba3ac0"></a>
+<a class="el" href="#a60e6809f5e4ae7b15eeb3ee529ba3ac0">i_clk</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:ac3e414bc6899279dfffaa8227b049ff1" id="r_ac3e414bc6899279dfffaa8227b049ff1"><td class="memItemLeft" align="right" valign="top"><a id="ac3e414bc6899279dfffaa8227b049ff1" name="ac3e414bc6899279dfffaa8227b049ff1"></a>
+<a class="el" href="#ac3e414bc6899279dfffaa8227b049ff1">i_wr_en</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:ae35287078e24f7c34f12af1090645fb0" id="r_ae35287078e24f7c34f12af1090645fb0"><td class="memItemLeft" align="right" valign="top"><a id="ae35287078e24f7c34f12af1090645fb0" name="ae35287078e24f7c34f12af1090645fb0"></a>
+<a class="el" href="#ae35287078e24f7c34f12af1090645fb0">i_wr_data</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">c_WIDTH</span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a6d9bc6e9a972d8bc732c353ce58e8f96" id="r_a6d9bc6e9a972d8bc732c353ce58e8f96"><td class="memItemLeft" align="right" valign="top"><a id="a6d9bc6e9a972d8bc732c353ce58e8f96" name="a6d9bc6e9a972d8bc732c353ce58e8f96"></a>
+<a class="el" href="#a6d9bc6e9a972d8bc732c353ce58e8f96">o_full</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:adffc94944981a8164b3f858694140f00" id="r_adffc94944981a8164b3f858694140f00"><td class="memItemLeft" align="right" valign="top"><a id="adffc94944981a8164b3f858694140f00" name="adffc94944981a8164b3f858694140f00"></a>
+<a class="el" href="#adffc94944981a8164b3f858694140f00">i_rd_en</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">in</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a494463dacee8834b96f942cb18def5d9" id="r_a494463dacee8834b96f942cb18def5d9"><td class="memItemLeft" align="right" valign="top"><a id="a494463dacee8834b96f942cb18def5d9" name="a494463dacee8834b96f942cb18def5d9"></a>
+<a class="el" href="#a494463dacee8834b96f942cb18def5d9">o_rd_data</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">c_WIDTH</span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:a4ae46ac76eb0b839bf69bbcc116911e7" id="r_a4ae46ac76eb0b839bf69bbcc116911e7"><td class="memItemLeft" align="right" valign="top"><a id="a4ae46ac76eb0b839bf69bbcc116911e7" name="a4ae46ac76eb0b839bf69bbcc116911e7"></a>
+<a class="el" href="#a4ae46ac76eb0b839bf69bbcc116911e7">o_empty</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memitem:ada70e984576fcc9e6526750ac58780ea" id="r_ada70e984576fcc9e6526750ac58780ea"><td class="memItemLeft" align="right" valign="top"><a id="ada70e984576fcc9e6526750ac58780ea" name="ada70e984576fcc9e6526750ac58780ea"></a>
+<a class="el" href="#ada70e984576fcc9e6526750ac58780ea">o_rd_data_burst</a> &#160;</td><td class="memItemLeft" align="right" valign="top"> <b><b><span class="keywordflow">out</span><span class="vhdlchar"> </span></b></b>&#160;</td><td class="memItemRight" valign="bottom"> <b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">c_WIDTH</span><span class="vhdlchar"> </span><span class="vhdlchar">*</span><span class="vhdlchar"> </span><span class="vhdlchar">c_DEPTH</span><span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">AusfÃ¼hrliche Beschreibung</h2>
+<div class="textblock"><p>UART RX Buffer für ein Bootloader Paket. </p>
+<p>Dieser Buffer fasst ein gesamtes Bootloader Paket (3 Byte). Sobald der Buffer voll ist, signalisiert er dem Decoder, dass die Verarbeitung des empfangenen Paketes erfolgen kann. </p>
+</div><hr/>Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>rtl/bootloader/<b>fifo_3.vhd</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

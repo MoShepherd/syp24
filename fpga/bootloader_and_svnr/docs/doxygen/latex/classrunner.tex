@@ -1,0 +1,62 @@
+\doxysection{runner Entwurfseinheit-\/\+Referenz}
+\hypertarget{classrunner}{}\label{classrunner}\index{runner@{runner}}
+
+
+State-\/\+Machine, die nach Füllen des DPRAMs den gesamten Inhalt sukzessiv in den SVNR RAM kopiert.  
+
+
+\doxysubsubsection*{Bibliotheken}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classrunner_ac5b8b48339bbb4f65cb171d155443312}\label{classrunner_ac5b8b48339bbb4f65cb171d155443312} 
+\mbox{\hyperlink{classrunner_ac5b8b48339bbb4f65cb171d155443312}{IEEE}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Klauseln}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classrunner_aea067e0b3c53cc97108a069d1bd52be1}\label{classrunner_aea067e0b3c53cc97108a069d1bd52be1} 
+\mbox{\hyperlink{classrunner_aea067e0b3c53cc97108a069d1bd52be1}{STD\+\_\+\+LOGIC\+\_\+1164}}   
+\item 
+\Hypertarget{classrunner_a9ebb75df551a4c2a1a6b76e96a341fd4}\label{classrunner_a9ebb75df551a4c2a1a6b76e96a341fd4} 
+\mbox{\hyperlink{classrunner_a9ebb75df551a4c2a1a6b76e96a341fd4}{NUMERIC\+\_\+\+STD}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Schnittstellen}
+ \begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classrunner_a5d4f3a70bdf51675a1f3df18ef47e03e}\label{classrunner_a5d4f3a70bdf51675a1f3df18ef47e03e} 
+\mbox{\hyperlink{classrunner_a5d4f3a70bdf51675a1f3df18ef47e03e}{i\+\_\+\+Clk}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\Hypertarget{classrunner_a194ed59ef8ed084235d99e5d51746b97}\label{classrunner_a194ed59ef8ed084235d99e5d51746b97} 
+\mbox{\hyperlink{classrunner_a194ed59ef8ed084235d99e5d51746b97}{i\+\_\+\+Begin}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Starte Kopieren von DPRAM in SVNR RAM. \end{DoxyCompactList}\item 
+\Hypertarget{classrunner_a328f757578b04b263d51e92af66e5fff}\label{classrunner_a328f757578b04b263d51e92af66e5fff} 
+\mbox{\hyperlink{classrunner_a328f757578b04b263d51e92af66e5fff}{o\+\_\+\+Done}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Kopieren on DPRAM in SVNR RAM erfolgreich abgeschlossen. \end{DoxyCompactList}\item 
+\Hypertarget{classrunner_a26f5da7bb8214dc4bc647bd8416a61d3}\label{classrunner_a26f5da7bb8214dc4bc647bd8416a61d3} 
+\mbox{\hyperlink{classrunner_a26f5da7bb8214dc4bc647bd8416a61d3}{i\+\_\+dpram\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Derzeitige DPRAM Daten an Adresse \`{}o\+\_\+dpram\+\_\+raddr\`{}. \end{DoxyCompactList}\item 
+\Hypertarget{classrunner_a963caa7699ff49ec129ab9d5d0f83dba}\label{classrunner_a963caa7699ff49ec129ab9d5d0f83dba} 
+\mbox{\hyperlink{classrunner_a963caa7699ff49ec129ab9d5d0f83dba}{o\+\_\+dpram\+\_\+raddr}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{9} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Gleich wie \`{}o\+\_\+svnr\+\_\+ram\+\_\+address\`{}. \end{DoxyCompactList}\item 
+\Hypertarget{classrunner_a64dc7f45982e6ac8529874ac59e2b09e}\label{classrunner_a64dc7f45982e6ac8529874ac59e2b09e} 
+\mbox{\hyperlink{classrunner_a64dc7f45982e6ac8529874ac59e2b09e}{o\+\_\+svnr\+\_\+ram\+\_\+address}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Gleich wie \`{}o\+\_\+dpram\+\_\+raddr\`{}. \end{DoxyCompactList}\item 
+\Hypertarget{classrunner_ae17492eeb47bf01abef62b41c5a78d18}\label{classrunner_ae17492eeb47bf01abef62b41c5a78d18} 
+\mbox{\hyperlink{classrunner_ae17492eeb47bf01abef62b41c5a78d18}{o\+\_\+svnr\+\_\+ram\+\_\+data\+\_\+in}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Gleich wie \`{}i\+\_\+dpram\+\_\+data\`{}. \end{DoxyCompactList}\item 
+\Hypertarget{classrunner_a66db4f8a6f476a60af9b4a02ae9abb28}\label{classrunner_a66db4f8a6f476a60af9b4a02ae9abb28} 
+\mbox{\hyperlink{classrunner_a66db4f8a6f476a60af9b4a02ae9abb28}{o\+\_\+svnr\+\_\+wnr}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em SVNR wnr Signal zur RAM Kontrolle (Siehe SVNR Dokumentation) \end{DoxyCompactList}\item 
+\Hypertarget{classrunner_a0481c2aa487cda96b203b3ac4ae26890}\label{classrunner_a0481c2aa487cda96b203b3ac4ae26890} 
+\mbox{\hyperlink{classrunner_a0481c2aa487cda96b203b3ac4ae26890}{o\+\_\+svnr\+\_\+addrstrb}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em SVNR addrstrb Signal zur RAM Kontrolle (Siehe SVNR Dokumentation) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{AusfÃ¼hrliche Beschreibung}
+State-\/\+Machine, die nach Füllen des DPRAMs den gesamten Inhalt sukzessiv in den SVNR RAM kopiert. 
+
+Läuft iterativ über den Inhalt des gesamten DPRAMs, und schreibt den derzeitigen Inhalt in die ensprechende Addresse des SVNR Rams. Hierbei steuert der Runner das Setzen der erforderlichen Signale um auf den RAM zuzugreifen. Dabei folgt der Runner genau dem Timing des SVNR bei RAM-\/\+Zugriff. 
+
+Die Dokumentation fÃ¼r diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+rtl/bootloader/\mbox{\hyperlink{runner_8vhd}{runner.\+vhd}}\end{DoxyCompactItemize}
